@@ -243,7 +243,7 @@
   "file": "painting-ps.jpg",
   "w": 1400,
   "h": 1033,
-  "alt": "A colorful painting of fish, signed PS"
+  "alt": "A colorful painting of fish by Paul Shuey, signed PS"
  },
  "logo-drumline": {
   "file": "logo-drumline.jpg",
@@ -292,5 +292,11 @@
   "w": 800,
   "h": 156,
   "alt": "Angelo State University Jazz Combos logo"
+ },
+ "offered-bite": {
+  "file": "offered-bite.jpg",
+  "w": 1000,
+  "h": 966,
+  "alt": "Two hands in shadow, one holding a red apple and one offering a bitten green apple"
  }
 }
