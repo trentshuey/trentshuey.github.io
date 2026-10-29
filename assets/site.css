@@ -1255,3 +1255,29 @@ html { scroll-padding-top: 150px; }
 .hb-excerpt-group h4 { font-size: 1rem; border-radius: var(--organic-sm); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .hb-excerpt-group dt { font-size: 0.95rem; }
 .event-date .m { text-transform: none; letter-spacing: 0; }
+
+/* Handbook PDF: same brushwork and type as the site, designed in grayscale for black-and-white printing */
+@media print {
+  body:has(.hb-doc) {
+    --ink: #111111; --muted: #444444; --ultra: #111111; --navy: #111111; --steel: #111111; --sienna: #333333;
+    --rule: #BBBBBB; --paper: #F0F0F0; --yellow: #BDBDBD; --red: #4D4D4D; --green: #8A8A8A; --orange: #9E9E9E; --cobalt: #A8A8A8;
+    --silver: #BDBDBD; --silver-dark: #555555; --focus: #111111; --ultra-deep: #111111; --white: #FFFFFF;
+    color: #111111;
+  }
+  body:has(.hb-doc) .to-top { display: none !important; }
+  .hb-doc .strokes { filter: grayscale(1) contrast(1.05); width: 100%; margin-left: 0; height: 1.25in; }
+  .hb-cover { background: none; color: #111111; border-radius: 0; padding: 0.4in 0 0; }
+  .hb-cover h1 { font-size: 54pt; font-stretch: 84%; line-height: 0.9; color: #111111; }
+  .hb-cover .page-intro, .hb-cover .hb-revised, .hb-cover .hb-eyebrow { color: #333333; }
+  .hb-cover .strokes { margin-top: 0.5in; }
+  .hb-part-head { background: none; color: #111111; padding: 0 0 12pt; border-radius: 0; border-bottom: 2pt solid #111111; }
+  .hb-part-head::before {
+    content: ""; display: block; height: 20pt; width: 2.8in; margin: 0 0 12pt -4pt; background: #444444;
+    -webkit-mask: var(--mask-swatch) no-repeat left center / 100% 100%; mask: var(--mask-swatch) no-repeat left center / 100% 100%;
+  }
+  .hb-part-head h2, .hb-part-head .hb-eyebrow, .hb-part-intro { color: #111111; }
+  .hb-part-head h2 { font-stretch: 86%; font-size: 30pt; }
+  .hb-excerpt-group h4 { background: #222222; color: #FFFFFF; }
+  .hb-doc .section-head h2::after { background: #9A9A9A; }
+  .hb-doc .table thead th { border-bottom-color: #111111; color: #111111; }
+}
