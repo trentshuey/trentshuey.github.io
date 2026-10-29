@@ -10,6 +10,23 @@
   toTop();
   window.addEventListener('pageshow', toTop);
 
+  // Back to top: a button that appears once the page is scrolled, plus the footer link
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var topBtn = document.querySelector('.to-top');
+  if (topBtn) {
+    var showTop = function () { topBtn.classList.toggle('is-shown', window.scrollY > 700); };
+    window.addEventListener('scroll', showTop, { passive: true });
+    showTop();
+  }
+  document.querySelectorAll('a[href="#top"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      var brand = document.querySelector('.brand');
+      if (brand) brand.focus({ preventScroll: true });
+    });
+  });
+
   // Mobile menu
   var btn = document.querySelector('.menu-btn');
   var nav = document.getElementById('site-nav');

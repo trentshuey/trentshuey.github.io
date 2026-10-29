@@ -929,3 +929,22 @@ button.btn { font-family: var(--font); cursor: pointer; }
 .row-logo img[src*="ram-horns"] { height: 46px; }
 @media (max-width: 600px) { .row-logo .logo-tile img { height: 30px; } .row-logo img { height: 44px; } }
 .rows h3 .row-logo { flex-basis: 100%; margin: 6px 0 0; }
+
+/* ---------- Back to top ---------- */
+
+.footer-top { margin-left: auto; font-weight: 600; }
+.to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 60;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 14px 10px 12px; border-radius: 999px;
+  background: var(--navy); color: var(--white); text-decoration: none;
+  font-weight: 700; font-size: 0.95rem; box-shadow: 0 6px 18px rgba(10, 27, 51, 0.25);
+  border: 2px solid var(--white);
+}
+.to-top svg { width: 18px; height: 18px; }
+.to-top:hover { background: var(--steel); text-decoration: none; }
+.to-top:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.js .to-top { opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; }
+.js .to-top.is-shown { opacity: 1; visibility: visible; transform: none; }
+@media (max-width: 520px) { .to-top { right: 14px; bottom: 14px; padding: 10px; } .to-top span { display: none; } }
+@media print { .to-top, .footer-top { display: none !important; } }
