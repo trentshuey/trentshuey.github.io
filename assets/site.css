@@ -921,3 +921,11 @@ button.btn { font-family: var(--font); cursor: pointer; }
   .program-image { max-width: 220px; }
 }
 @media (max-width: 520px) { .event.has-poster { grid-template-columns: 64px minmax(0, 1fr); } }
+
+/* Logos beside ensemble names */
+.row-logo { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-left: 6px; }
+.row-logo .logo-tile { padding: 8px 12px; border-radius: 5px; }
+.row-logo .logo-tile img { height: 38px; width: auto; border-radius: 0; }
+.row-logo img[src*="ram-horns"] { height: 46px; }
+@media (max-width: 600px) { .row-logo .logo-tile img { height: 30px; } .row-logo img { height: 44px; } }
+.rows h3 .row-logo { flex-basis: 100%; margin: 6px 0 0; }
