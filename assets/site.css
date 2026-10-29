@@ -907,3 +907,4 @@ button.btn { font-family: var(--font); cursor: pointer; }
 .rud-wide { grid-column: 1 / -1; }
 .notation .st.st-row { text-anchor: start; letter-spacing: 0.08em; }
 .notation .st.grace { text-anchor: end; letter-spacing: 0.04em; }
+.table td .detail { display: block; color: var(--muted); font-size: 0.98rem; margin-top: 2px; font-weight: 600; }
