@@ -29,6 +29,7 @@ PROGRAMS = [
             ("Terry Riley", "<i>In C</i>", ""),
         ],
         "links": [("Event details", "events.html#asu-percussion-ensemble-2026-11-03")],
+        "image": "poster-asupe-2026-11-03",
     },
     {
         "id": "jazz-combos-2026-10-31", "date": "2026-10-31", "group": "jazz",
@@ -49,6 +50,7 @@ PROGRAMS = [
             ]),
         ],
         "links": [("Program (PDF)", "assets/docs/programs/2026-10-31-asu-jazz-combos.pdf")],
+        "image": "poster-combos-2026-10-31-orange",
     },
     {
         "id": "jazz-ensemble-2026-10-13", "date": "2026-10-13", "group": "jazz",
@@ -93,6 +95,7 @@ PROGRAMS = [
         "ensemble": "ASU Percussion Ensemble", "title": "<i>Glimmer</i>",
         "venue": "Elta Joyce Murphey Auditorium",
         "intro": "The ensemble's first concert in ASU's newly renovated auditorium.",
+        "image": "glimmer-ensemble",
         "pieces": [
             ("Tom&aacute;&scaron; Svoboda", "<i>Morning Prayer</i>", ""),
             ("Kirk Gay", "<i>Fear Cage</i>", ""),

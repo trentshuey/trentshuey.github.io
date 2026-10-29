@@ -239,8 +239,13 @@ def event_item(e, prefix="", hidden=False):
     links.append(f'<a href="{prefix}assets/ics/{e["id"]}.ics" download>Add to calendar</a>')
     end_utc = e["end_dt"].astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     hide = " hidden" if hidden else ""
+    poster, cls = "", "event"
+    if e.get("image"):
+        cls = "event has-poster"
+        poster = (f'<a class="event-poster gallery-item" href="{prefix}assets/img/{IMAGES[e["image"]]["file"]}">'
+                  f'{img_tag(e["image"], prefix)}</a>')
     return (
-        f'<li class="event" id="{e["id"]}" data-end="{end_utc}"{hide}>'
+        f'<li class="{cls}" id="{e["id"]}" data-end="{end_utc}"{hide}>'
         f'<time class="event-date" datetime="{s.isoformat(timespec="minutes")}">'
         f'<span class="visually-hidden">{full_date}</span>'
         f'<span class="m" aria-hidden="true">{s:%b}</span><span class="d" aria-hidden="true">{s.day}</span>'
@@ -248,7 +253,7 @@ def event_item(e, prefix="", hidden=False):
         f'<div class="event-body"><p class="event-group">{html.escape(e["group"])}</p>'
         f'<h3>{e["title"]}</h3>'
         f'<p class="event-meta">{_clock(s)} &middot; {venue}</p>{note}'
-        f'<p class="event-links">{"".join(links)}</p></div></li>'
+        f'<p class="event-links">{"".join(links)}</p></div>{poster}</li>'
     )
 
 
@@ -329,9 +334,13 @@ def program_archive(prefix=""):
                 for label, href in prog["links"]
             )
             body.append(f'<p class="program-links">{links}</p>')
+        image = ""
+        if prog.get("image"):
+            image = (f'<a class="program-image gallery-item" href="{prefix}assets/img/{IMAGES[prog["image"]]["file"]}">'
+                     f'{img_tag(prog["image"], prefix)}</a>')
         items.append(
             f'<li class="program" id="{prog["id"]}" data-group="{prog["group"]}">'
-            f'<p class="program-date">{shown}{venue}</p><div>{"".join(body)}</div></li>'
+            f'<div><p class="program-date">{shown}{venue}</p>{image}</div><div>{"".join(body)}</div></li>'
         )
     return (
         f'<div class="filters" role="group" aria-label="Show programs by ensemble" data-target="#program-list" hidden>{buttons}</div>'

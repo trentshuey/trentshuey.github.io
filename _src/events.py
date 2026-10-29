@@ -19,6 +19,7 @@ EVENTS = [
         "map": "The House of FiFi DuBois, 123 S. Chadbourne St., San Angelo, TX",
         "note": "Concert at 4:00, open jam at 5:00. Every musician on stage is in costume. Bring your instrument and sit in.",
         "link": ("Program", "programs.html#jazz-combos-2026-10-31"),
+        "image": "poster-combos-2026-10-31",
     },
     {
         "start": "2026-11-03T19:00", "end": "2026-11-03T20:30",
@@ -28,6 +29,7 @@ EVENTS = [
         "map": "Elta Joyce Murphey Auditorium, Angelo State University, San Angelo, TX",
         "note": "Var&egrave;se, <i>Ionisation</i>; Mahler, <i>Adagietto</i> from Symphony No. 5, arranged by Grubbs; and Terry Riley, <i>In C</i>.",
         "link": ("Program", "programs.html#percussion-ensemble-2026-11-03"),
+        "image": "poster-asupe-2026-11-03",
     },
     {
         "start": "2026-11-07T18:00", "end": "2026-11-07T21:30",

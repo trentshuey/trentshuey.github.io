@@ -908,3 +908,16 @@ button.btn { font-family: var(--font); cursor: pointer; }
 .notation .st.st-row { text-anchor: start; letter-spacing: 0.08em; }
 .notation .st.grace { text-anchor: end; letter-spacing: 0.04em; }
 .table td .detail { display: block; color: var(--muted); font-size: 0.98rem; margin-top: 2px; font-weight: 600; }
+
+/* Posters and photos beside events and programs */
+.event.has-poster { grid-template-columns: 84px minmax(0, 1fr) 150px; }
+.event-poster { margin: 0; border-radius: 6px; overflow: hidden; align-self: start; border: 1px solid var(--rule); }
+.event-poster img { width: 150px; height: auto; display: block; }
+.program-image { display: block; margin: 14px 0 0; max-width: 180px; border-radius: 6px; overflow: hidden; border: 1px solid var(--rule); }
+.program-image img { width: 100%; height: auto; display: block; }
+@media (max-width: 720px) {
+  .event.has-poster { grid-template-columns: 84px minmax(0, 1fr); }
+  .event.has-poster .event-poster { grid-column: 2; max-width: 200px; }
+  .program-image { max-width: 220px; }
+}
+@media (max-width: 520px) { .event.has-poster { grid-template-columns: 64px minmax(0, 1fr); } }
