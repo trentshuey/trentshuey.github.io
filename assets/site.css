@@ -1331,3 +1331,8 @@ html { scroll-padding-top: 150px; }
 .route li:nth-child(6n) { --stop: var(--yellow); }
 .route strong { display: block; font-size: 1.2rem; color: var(--ink); }
 .route span { display: block; color: var(--muted); font-size: 1rem; }
+
+/* Recent sessions (jazz page): a timeline whose titles link into the program archive */
+.timeline > div[hidden] { display: none; }
+.sessions dd > a { font-weight: 680; }
+.session-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 6px; font-size: 1rem; }

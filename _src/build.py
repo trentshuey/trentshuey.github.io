@@ -324,6 +324,7 @@ def program_archive(prefix=""):
     items = []
     for prog in PROGRAMS:
         shown, when = _program_date(prog["date"])
+        shown = prog.get("date_label", shown)
         venue = f'<span class="where">{prog["venue"]}</span>' if prog.get("venue") else ""
         badge = ""
         if when >= today:
@@ -357,6 +358,47 @@ def program_archive(prefix=""):
         f'<div class="filters" role="group" aria-label="Show programs by ensemble" data-target="#program-list" hidden>{buttons}</div>'
         f'<ol class="programs" id="program-list">\n' + "\n".join(items) + "\n</ol>"
     )
+
+
+def recent_sessions(group, prefix="", limit=8):
+    """The latest concerts from the program archive for one group, newest first.
+
+    Concerts that have not happened yet are written out hidden, with data-after, so site.js
+    can add them to the list once they are over, without waiting for a rebuild.
+    """
+    today = datetime.now(TZ).replace(hour=0, minute=0, second=0, microsecond=0)
+    rows, shown_count = [], 0
+    for prog in PROGRAMS:
+        if prog["group"] != group:
+            continue
+        shown, when = _program_date(prog["date"])
+        shown = prog.get("date_short", prog.get("date_label", shown))
+        title = prog.get("title") or prog["ensemble"]
+        venue = prog.get("venue", "")
+        bare_venue = venue[4:] if venue.startswith("The ") else venue
+        if venue and bare_venue not in title:
+            needs_the = venue.startswith("The ") or re.search(r"College of|Center$|Gallery$", venue)
+            detail = f'{prog["ensemble"]} at {"the " + bare_venue if needs_the else venue}'
+        else:
+            detail = prog["ensemble"]
+        links = "".join(
+            f'<a href="{href if href.startswith("http") else prefix + href}">{label}</a>'
+            for label, href in prog.get("links", []) if "events.html" not in href
+        )
+        links = f'<span class="session-links">{links}</span>' if links else ""
+        attrs = ""
+        if when >= today:
+            after = (when + timedelta(hours=18)).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            attrs = f' data-after="{after}" hidden'
+        else:
+            shown_count += 1
+        rows.append(
+            f'<div{attrs}><dt>{shown}</dt><dd><a href="{prefix}programs.html#{prog["id"]}">{title}</a>'
+            f'<span class="detail">{detail}</span>{links}</dd></div>'
+        )
+        if shown_count >= limit:
+            break
+    return f'<dl class="timeline sessions" data-limit="{limit}">\n' + "\n".join(rows) + "\n</dl>"
 
 
 SOCIAL_ICONS = {
@@ -535,6 +577,10 @@ def build():
             .replace("{{videocount}}", str(video_count()))
             .replace("{{events}}", events_page(events, prefix) if "{{events}}" in body else "")
             .replace("{{events_next}}", events_next(events, prefix) if "{{events_next}}" in body else "")
+            .replace("{{events_jazz}}",
+                     events_next([e for e in events if "jazz" in e["group"].lower()], prefix)
+                     if "{{events_jazz}}" in body else "")
+            .replace("{{sessions_jazz}}", recent_sessions("jazz", prefix) if "{{sessions_jazz}}" in body else "")
             .replace("{{programs}}", program_archive(prefix) if "{{programs}}" in body else "")
             .replace("{{rudiments}}", rudiments_render.page() if "{{rudiments}}" in body else "")
             .replace("{{social}}", social_section() if "{{social}}" in body else "")

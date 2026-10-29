@@ -100,6 +100,17 @@
     var limit = parseInt(list.getAttribute('data-limit'), 10) || 3;
     list.querySelectorAll('.event').forEach(function (item, i) { item.hidden = i >= limit; });
   });
+  // Recent sessions: add concerts once they have happened, and keep the list to its limit
+  document.querySelectorAll('.sessions[data-limit]').forEach(function (list) {
+    var limit = parseInt(list.getAttribute('data-limit'), 10) || 8;
+    var shown = 0;
+    Array.prototype.forEach.call(list.children, function (item) {
+      var after = Date.parse(item.getAttribute('data-after') || '');
+      var ready = isNaN(after) || after < now;
+      item.hidden = !ready || shown >= limit;
+      if (!item.hidden) shown++;
+    });
+  });
   document.querySelectorAll('.event-month').forEach(function (month) {
     if (!month.querySelector('.event')) month.remove();
   });
@@ -125,6 +136,10 @@
       });
     });
     filters.hidden = false;
+    // programs.html#jazz (or #percussion, #other) opens with that filter already on
+    var want = location.hash.slice(1);
+    var start = /^[a-z]+$/.test(want) && filters.querySelector('button[data-filter="' + want + '"]');
+    if (start) start.click();
   }
 
   // Request forms: build a ready-to-send email from the answers (nothing is stored on this site)
