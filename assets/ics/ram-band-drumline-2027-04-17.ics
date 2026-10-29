@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//trentshuey.com//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ram-band-drumline-2027-04-17@trentshuey.com
+DTSTAMP:20270417T140000Z
+DTSTART:20270417T140000Z
+DTEND:20270417T160000Z
+SUMMARY:Ram Band Drumline: ASU Drumline Clinic
+LOCATION:Angelo State University
+DESCRIPTION:Details to come.
+URL:https://www.trentshuey.com/events#ram-band-drumline-2027-04-17
+END:VEVENT
+END:VCALENDAR

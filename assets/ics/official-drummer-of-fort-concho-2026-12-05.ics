@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//trentshuey.com//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:official-drummer-of-fort-concho-2026-12-05@trentshuey.com
+DTSTAMP:20261205T150000Z
+DTSTART:20261205T150000Z
+DTEND:20261206T010000Z
+SUMMARY:Official Drummer of Fort Concho: Christmas at Old Fort Concho
+LOCATION:Fort Concho\, San Angelo\, TX
+DESCRIPTION:Dr. Shuey on the fort's original 1867 drum.
+URL:https://www.trentshuey.com/events#official-drummer-of-fort-concho-2026-12-05
+END:VEVENT
+END:VCALENDAR

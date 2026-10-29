@@ -1,0 +1,73 @@
+<!--
+title: Alumni
+description: Graduates of the Angelo State University percussion studio, teaching and performing across Texas and beyond.
+nav: students
+-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Alumni</h1>
+        <p class="page-intro">Graduates of the ASU percussion studio are teaching and performing across Texas and beyond.</p>
+        {{keys}}
+      </div>
+    </header>
+
+    <section class="band band-white">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Where they are now</h2>
+        </div>
+        <ul class="people">
+          <li><strong>Tony Aguilar</strong><span>Head Percussion Director, Monterey High School, Lubbock</span></li>
+          <li><strong>Coulter McWilliams</strong><span>Percussion Director, Lake View High School, San Angelo</span></li>
+          <li><strong>Jose Gonzales</strong><span>ASU Concerto Competition winner, now in graduate study at West Virginia University</span></li>
+          <li><strong>Adrian Ortega</strong><span>Teaching and performing</span></li>
+          <li><strong>Isaias Torres</strong><span>Teaching and performing</span></li>
+          <li><strong>Destiny Flores</strong><span>Teaching and performing</span></li>
+          <li><strong>Allison Culwell</strong><span>Teaching and performing</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" id="update">
+      <div class="wrap split">
+        <div>
+          <h2>Studied with Dr. Shuey?</h2>
+          <div class="prose">
+            <p>Tell us where you are and what you are doing. Teaching jobs, graduate school, gigs, recordings, and news are all welcome, and they help current students see where the degree can take them.</p>
+            <p class="form-note">The form opens a ready-to-send email in your email app. Nothing is stored on this website, and you will only be listed here if you check the box.</p>
+          </div>
+        </div>
+        <form class="form" data-mailto="{{email}}" data-subject="Alumni update" action="mailto:{{email}}?subject=Alumni%20update" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="field"><label for="a-name">Name <span class="req" aria-hidden="true">*</span></label><input id="a-name" name="name" type="text" autocomplete="name" required data-label="Name"></div>
+            <div class="field"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" data-label="Email"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="a-year">Graduation year</label><input id="a-year" name="year" type="text" inputmode="numeric" data-label="Graduation year"></div>
+            <div class="field"><label for="a-degree">Degree</label><input id="a-degree" name="degree" type="text" placeholder="B.M., B.A., minor..." data-label="Degree"></div>
+          </div>
+          <div class="field"><label for="a-now">What you are doing now</label><input id="a-now" name="now" type="text" placeholder="Position, school or organization" data-label="Now"></div>
+          <div class="field"><label for="a-city">City</label><input id="a-city" name="city" type="text" data-label="City"></div>
+          <div class="field"><label for="a-news">News, links, or a note for current students</label><textarea id="a-news" name="news" data-label="News"></textarea></div>
+          <fieldset class="field" data-label="List me on the alumni page">
+            <legend class="visually-hidden">Permission</legend>
+            <label class="check"><input type="checkbox" name="list" value="Yes"> It is OK to list my name and position on this page.</label>
+          </fieldset>
+          <div class="actions"><button class="btn btn-dark" type="submit">Send update</button></div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="band band-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Come back and play</h2>
+          <p>Alumni are always welcome at concerts and jam sessions. See what is coming up.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-light" href="events.html">Events</a>
+          <a class="btn btn-outline-light" href="programs.html">Concert programs</a>
+        </div>
+      </div>
+    </section>

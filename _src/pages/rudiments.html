@@ -1,0 +1,62 @@
+<!--
+title: Interactive Rudiments
+description: All 40 Percussive Arts Society International Drum Rudiments with notation, sticking, and playback at any tempo, from the Angelo State University percussion studio.
+nav: students
+-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Rudiments</h1>
+        <p class="page-intro">All 40 Percussive Arts Society International Drum Rudiments. Press play to hear any rudiment at your tempo and follow the sticking as it plays.</p>
+        {{keys}}
+      </div>
+    </header>
+
+    <div class="rud-controls" hidden>
+      <div class="wrap rud-controls-inner">
+        <div class="rud-tempo">
+          <label for="rud-bpm">Tempo <output id="rud-bpm-out" for="rud-bpm">80</output> bpm</label>
+          <input id="rud-bpm" type="range" min="40" max="200" step="2" value="80">
+        </div>
+        <label class="check rud-opt"><input id="rud-click" type="checkbox" checked> Metronome</label>
+        <label class="check rud-opt"><input id="rud-left" type="checkbox"> Lead with left</label>
+        <button class="btn btn-dark rud-draw" type="button">Draw four</button>
+      </div>
+    </div>
+
+    <section class="band band-tight band-white">
+      <div class="wrap">
+        <div class="split">
+          <div class="prose">
+            <p>All 40 are on the <a href="studio.html#skills-test">Skills Assessment Test</a>. Each must be played from memory, eight times in succession without error, and the panel draws four. <b>Draw four</b> picks four at random, just like the test.</p>
+            <p class="muted small">Start slowly enough for complete accuracy, then raise the tempo in steps only while accuracy holds. Right-hand strokes sound slightly to the right and left-hand strokes slightly to the left, so you can hear the sticking with headphones.</p>
+          </div>
+          <div>
+            <nav aria-label="Rudiment families"><ul class="rud-jump">{{rudiment_jump}}</ul></nav>
+            <div class="rud-drawn" hidden aria-live="polite">
+              <p class="kicker">Your four</p>
+              <ol></ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-tight">
+      <div class="wrap rud-list">
+        {{rudiments}}
+        <p class="muted small note">Notation and sticking follow the official <a href="https://pas.org/rudiments/">PAS International Drum Rudiments</a> sheet, which you can download free from the Percussive Arts Society. Rudiments marked Original 26 are the 26 standard American drum rudiments that PAS adopted in 1984 as part of the 40.</p>
+      </div>
+    </section>
+
+    <section class="band band-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Keep going</h2>
+          <p>The studio handbook has the full Skills Assessment Test, required method books, and more.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-light" href="handbook.html#skills-test">Skills Assessment Test</a>
+          <a class="btn btn-outline-light" href="resources.html">Studio resources</a>
+        </div>
+      </div>
+    </section>

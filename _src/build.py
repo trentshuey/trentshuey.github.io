@@ -16,9 +16,15 @@ import html
 import pathlib
 import re
 import sys
+import urllib.parse
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from videos import ALL as VIDEOS, SECTIONS as VIDEO_SECTIONS  # noqa: E402
+from events import EVENTS  # noqa: E402
+from programs import PROGRAMS  # noqa: E402
+import rudiments_render  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = ROOT / "_src" / "pages"
@@ -35,14 +41,20 @@ LINKS = {
     "dissertation": "https://hdl.handle.net/2142/106958",
 }
 
+# Visitor count: set to the GoatCounter site code (the "xyz" in xyz.goatcounter.com)
+# once that account exists. Left empty, no counting script is added.
+GOATCOUNTER_CODE = ""
+# Google Search Console HTML-tag verification token, if that method is used.
+SITE_VERIFICATION = ""
+
 NAV = [
     ("about", "About", "about.html"),
     ("percussion", "Percussion", "percussion.html"),
     ("jazz", "Jazz", "jazz.html"),
     ("performances", "Performances", "performances.html"),
-    ("research", "Research", "research.html"),
+    ("events", "Events", "events.html"),
     ("videos", "Videos", "videos.html"),
-    ("press", "Press", "press.html"),
+    ("students", "Students", "resources.html"),
     ("contact", "Contact", "contact.html"),
 ]
 
@@ -145,6 +157,188 @@ def video_count():
     return sum(len(items) for _, _, items in VIDEO_SECTIONS)
 
 
+TZ = ZoneInfo("America/Chicago")
+MONTHS = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."]
+DAYS = ["Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat.", "Sun."]
+
+
+def _local(value):
+    return datetime.strptime(value, "%Y-%m-%dT%H:%M").replace(tzinfo=TZ)
+
+
+def _clock(d):
+    hour = d.hour % 12 or 12
+    return f"{hour}:{d.minute:02d} {'a.m.' if d.hour < 12 else 'p.m.'}"
+
+
+def _plain(text):
+    return html.unescape(re.sub(r"<[^>]+>", "", text))
+
+
+def _slug(text):
+    return re.sub(r"[^a-z0-9]+", "-", _plain(text).lower()).strip("-")
+
+
+def upcoming_events(now=None):
+    """Events that have not ended yet, soonest first, with display fields filled in."""
+    now = now or datetime.now(TZ)
+    out = []
+    for e in EVENTS:
+        start = _local(e["start"])
+        end = _local(e["end"]) if e.get("end") else start + timedelta(hours=2)
+        if end < now:
+            continue
+        item = dict(e, start_dt=start, end_dt=end)
+        item["id"] = f"{_slug(e['group'])}-{start:%Y-%m-%d}"
+        out.append(item)
+    return sorted(out, key=lambda x: x["start_dt"])
+
+
+def _ics_text(value):
+    return value.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+
+
+def write_ics(events):
+    """One small calendar file per event, for the "Add to calendar" links."""
+    folder = ROOT / "assets" / "ics"
+    folder.mkdir(parents=True, exist_ok=True)
+    for old in folder.glob("*.ics"):
+        old.unlink()
+    for e in events:
+        utc = lambda d: d.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")  # noqa: E731
+        lines = [
+            "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//trentshuey.com//events//EN",
+            "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "BEGIN:VEVENT",
+            f"UID:{e['id']}@trentshuey.com",
+            f"DTSTAMP:{utc(e['start_dt'])}",
+            f"DTSTART:{utc(e['start_dt'])}",
+            f"DTEND:{utc(e['end_dt'])}",
+            f"SUMMARY:{_ics_text(e['group'] + ': ' + _plain(e['title']))}",
+            f"LOCATION:{_ics_text(e.get('map') or _plain(e['venue']))}",
+            f"DESCRIPTION:{_ics_text(_plain(e.get('note', '')))}",
+            f"URL:{SITE_URL}/events#{e['id']}",
+            "END:VEVENT", "END:VCALENDAR",
+        ]
+        (folder / f"{e['id']}.ics").write_text("\r\n".join(lines) + "\r\n", encoding="utf-8")
+
+
+def event_item(e, prefix="", hidden=False):
+    s = e["start_dt"]
+    full_date = f"{s:%A}, {s:%B} {s.day}, {s.year}"
+    venue = e["venue"]
+    if e.get("map"):
+        q = urllib.parse.quote_plus(e["map"])
+        venue = f'<a href="https://www.google.com/maps/search/?api=1&amp;query={q}">{venue}</a>'
+    note = f'<p class="event-note">{e["note"]}</p>' if e.get("note") else ""
+    links = []
+    if e.get("link"):
+        label, href = e["link"]
+        if not href.startswith("http"):
+            href = prefix + href
+        links.append(f'<a href="{href}">{label}</a>')
+    links.append(f'<a href="{prefix}assets/ics/{e["id"]}.ics" download>Add to calendar</a>')
+    end_utc = e["end_dt"].astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    hide = " hidden" if hidden else ""
+    return (
+        f'<li class="event" id="{e["id"]}" data-end="{end_utc}"{hide}>'
+        f'<time class="event-date" datetime="{s.isoformat(timespec="minutes")}">'
+        f'<span class="visually-hidden">{full_date}</span>'
+        f'<span class="m" aria-hidden="true">{s:%b}</span><span class="d" aria-hidden="true">{s.day}</span>'
+        f'<span class="w" aria-hidden="true">{DAYS[s.weekday()]}</span></time>'
+        f'<div class="event-body"><p class="event-group">{html.escape(e["group"])}</p>'
+        f'<h3>{e["title"]}</h3>'
+        f'<p class="event-meta">{_clock(s)} &middot; {venue}</p>{note}'
+        f'<p class="event-links">{"".join(links)}</p></div></li>'
+    )
+
+
+def events_page(events, prefix=""):
+    if not events:
+        return '<p class="events-empty">New dates are posted here as soon as they are set.</p>'
+    groups = {}
+    for e in events:
+        groups.setdefault((e["start_dt"].year, e["start_dt"].month), []).append(e)
+    parts = []
+    for (year, month), items in groups.items():
+        lis = "\n".join(event_item(e, prefix) for e in items)
+        parts.append(
+            f'<section class="event-month"><h2>{datetime(year, month, 1):%B} {year}</h2>'
+            f'<ol class="events">\n{lis}\n</ol></section>'
+        )
+    parts.append('<p class="events-empty" hidden>New dates are posted here as soon as they are set.</p>')
+    return "\n".join(parts)
+
+
+def events_next(events, prefix="", limit=3):
+    # A few extra items are included (hidden) so the list stays full after site.js removes past ones.
+    lis = "\n".join(event_item(e, prefix, hidden=i >= limit) for i, e in enumerate(events[: limit + 4]))
+    return (
+        f'<ol class="events events-compact" data-limit="{limit}">\n{lis}\n</ol>'
+        '<p class="events-empty" hidden>New dates are posted on the events page as soon as they are set.</p>'
+    )
+
+
+PROGRAM_GROUPS = [("all", "All"), ("percussion", "Percussion Ensemble"), ("jazz", "Jazz"), ("other", "Other")]
+
+
+def _program_date(value):
+    parts = [int(x) for x in value.split("-")]
+    if len(parts) == 2:
+        return f"{MONTHS[parts[1] - 1]} {parts[0]}", datetime(parts[0], parts[1], 28, tzinfo=TZ)
+    d = datetime(*parts, tzinfo=TZ)
+    return f"{MONTHS[d.month - 1]} {d.day}, {d.year}", d
+
+
+def _pieces(items):
+    lis = []
+    for composer, title, detail in items:
+        by = f' <span class="by">{composer}</span>' if composer else ""
+        sep = "," if composer else ""
+        extra = f'<span class="with">{detail}</span>' if detail else ""
+        lis.append(f"<li>{title}{sep}{by}{extra}</li>")
+    return '<ul class="rep">' + "".join(lis) + "</ul>"
+
+
+def program_archive(prefix=""):
+    today = datetime.now(TZ).replace(hour=0, minute=0, second=0, microsecond=0)
+    buttons = "".join(
+        f'<button type="button" data-filter="{key}" aria-pressed="{"true" if key == "all" else "false"}">{label}</button>'
+        for key, label in PROGRAM_GROUPS
+    )
+    items = []
+    for prog in PROGRAMS:
+        shown, when = _program_date(prog["date"])
+        venue = f'<span class="where">{prog["venue"]}</span>' if prog.get("venue") else ""
+        badge = ""
+        if when >= today:
+            until = (when + timedelta(days=1)).strftime("%Y-%m-%d")
+            badge = f' <span class="badge" data-until="{until}">Coming up</span>'
+        title = prog.get("title") or prog["ensemble"]
+        body = [f'<p class="kicker">{prog["ensemble"]}</p>', f"<h3>{title}{badge}</h3>"]
+        if prog.get("intro"):
+            body.append(f'<p class="intro">{prog["intro"]}</p>')
+        if prog.get("pieces"):
+            body.append(_pieces(prog["pieces"]))
+        for heading, pieces in prog.get("sets", []):
+            body.append(f'<p class="rep-head">{heading}</p>' + _pieces(pieces))
+        if prog.get("personnel"):
+            body.append(f'<p class="personnel">{prog["personnel"]}</p>')
+        if prog.get("links"):
+            links = "".join(
+                f'<a href="{href if href.startswith("http") else prefix + href}">{label}</a>'
+                for label, href in prog["links"]
+            )
+            body.append(f'<p class="program-links">{links}</p>')
+        items.append(
+            f'<li class="program" id="{prog["id"]}" data-group="{prog["group"]}">'
+            f'<p class="program-date">{shown}{venue}</p><div>{"".join(body)}</div></li>'
+        )
+    return (
+        f'<div class="filters" role="group" aria-label="Show programs by ensemble" data-target="#program-list" hidden>{buttons}</div>'
+        f'<ol class="programs" id="program-list">\n' + "\n".join(items) + "\n</ol>"
+    )
+
+
 def nav_html(current, prefix):
     items = []
     for key, label, href in NAV:
@@ -170,7 +364,7 @@ LAYOUT = """<!doctype html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
-  <link rel="stylesheet" href="{prefix}assets/site.css">
+  <link rel="stylesheet" href="{prefix}assets/site.css">{verification}
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -203,6 +397,28 @@ LAYOUT = """<!doctype html>
           <p><a href="mailto:{email}">{email}</a><br>Office {office_phone}</p>
         </div>
         <div>
+          <h2>Students</h2>
+          <ul>
+            <li><a href="{prefix}resources.html">Studio resources</a></li>
+            <li><a href="{prefix}handbook.html">Studio handbook</a></li>
+            <li><a href="{prefix}rudiments.html">Rudiments</a></li>
+            <li><a href="{prefix}studio.html">Studio info</a></li>
+            <li><a href="{prefix}auditions.html">Auditions</a></li>
+            <li><a href="{prefix}alumni.html">Alumni</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>More</h2>
+          <ul>
+            <li><a href="{prefix}events.html">Events</a></li>
+            <li><a href="{prefix}programs.html">Concert programs</a></li>
+            <li><a href="{prefix}research.html">Research</a></li>
+            <li><a href="{prefix}press.html">Press</a></li>
+            <li><a href="{prefix}composers.html">Writing for percussion</a></li>
+            <li><a href="{prefix}recital.html">Book a marimba recital</a></li>
+          </ul>
+        </div>
+        <div>
           <h2>Elsewhere</h2>
           <ul>
             <li><a href="{youtube}">YouTube</a></li>
@@ -210,19 +426,17 @@ LAYOUT = """<!doctype html>
             <li><a href="{asu_profile}">ASU faculty profile</a></li>
             <li><a href="{prefix}cv.html">CV and teaching philosophy</a></li>
           </ul>
-        </div>
-        <div>
-          <h2>Family</h2>
+          <h2 class="footer-sub">Family</h2>
           <ul>
             <li><a href="{prefix}paul.html">Paul Thomas Shuey</a></li>
             <li><a href="{prefix}christmas.html">Christmas recordings</a></li>
           </ul>
         </div>
       </div>
-      <p class="footer-base">&copy; 2026 Trent W. Shuey</p>
+      <p class="footer-base"><span>&copy; 2026 Trent W. Shuey</span>{visits}</p>
     </div>
   </footer>
-  <script src="{prefix}assets/site.js" defer></script>
+{analytics}  <script src="{prefix}assets/site.js" defer></script>
 </body>
 </html>
 """
@@ -240,6 +454,17 @@ def parse(path):
 
 def build():
     written = []
+    events = upcoming_events()
+    write_ics(events)
+    if GOATCOUNTER_CODE:
+        base = f"https://{GOATCOUNTER_CODE}.goatcounter.com"
+        analytics = f'  <script data-goatcounter="{base}/count" async src="https://gc.zgo.at/count.js"></script>\n'
+        visits = f'<span class="visits" data-total="{base}/counter/TOTAL.json" hidden></span>'
+    else:
+        analytics = visits = ""
+    verification = (
+        f'\n  <meta name="google-site-verification" content="{SITE_VERIFICATION}">' if SITE_VERIFICATION else ""
+    )
     for path in sorted(PAGES.glob("*.html")):
         meta, body = parse(path)
         slug = path.stem
@@ -249,6 +474,11 @@ def build():
             .replace("{{keys}}", keys_svg())
             .replace("{{videolibrary}}", video_library() if "{{videolibrary}}" in body else "")
             .replace("{{videocount}}", str(video_count()))
+            .replace("{{events}}", events_page(events, prefix) if "{{events}}" in body else "")
+            .replace("{{events_next}}", events_next(events, prefix) if "{{events_next}}" in body else "")
+            .replace("{{programs}}", program_archive(prefix) if "{{programs}}" in body else "")
+            .replace("{{rudiments}}", rudiments_render.page() if "{{rudiments}}" in body else "")
+            .replace("{{rudiment_jump}}", rudiments_render.jump_links() if "{{rudiment_jump}}" in body else "")
         )
         body = re.sub(r"\{\{video:([\w-]{11})\}\}", lambda m: video_figure(m.group(1)), body)
         body = re.sub(r"\{\{img:([\w-]+)(?:\|(\w+))?\}\}",
@@ -267,6 +497,9 @@ def build():
             prefix=prefix,
             nav=nav_html(meta.get("nav", ""), prefix),
             body=body.rstrip(),
+            analytics=analytics,
+            visits=visits,
+            verification=verification,
             **LINKS,
         )
         if "—" in out:

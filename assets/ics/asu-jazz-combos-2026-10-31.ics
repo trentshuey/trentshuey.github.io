@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//trentshuey.com//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:asu-jazz-combos-2026-10-31@trentshuey.com
+DTSTAMP:20261031T210000Z
+DTSTART:20261031T210000Z
+DTEND:20261031T230000Z
+SUMMARY:ASU Jazz Combos: Halloween Concert and Jam Session
+LOCATION:The House of FiFi DuBois\, 123 S. Chadbourne St.\, San Angelo\, TX
+DESCRIPTION:Concert at 4:00\, open jam at 5:00. Every musician on stage is in costume. Bring your instrument and sit in.
+URL:https://www.trentshuey.com/events#asu-jazz-combos-2026-10-31
+END:VEVENT
+END:VCALENDAR

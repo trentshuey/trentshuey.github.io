@@ -1,0 +1,3304 @@
+[
+ {
+  "n": 1,
+  "name": "Single Stroke Roll",
+  "category": "I. Roll Rudiments: A. Single Stroke Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Eight 16th notes beamed in two groups of four (2 beats). No accents.",
+  "pas_sticking_rows": [
+   "RLRLRLRL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Vic Firth poster writes it in 32nds (16 notes); same alternating sticking. Followed PAS."
+ },
+ {
+  "n": 2,
+  "name": "Single Stroke Four",
+  "category": "I. Roll Rudiments: A. Single Stroke Roll Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Each group = one 16th-note triplet (3 notes, '3' bracket) plus one 8th note = 1 beat; two groups shown (2 beats). NO accents printed.",
+  "pas_sticking_rows": [
+   "RLRL RLRL",
+   "LRLR LRLR"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Two sticking rows printed: top RLRL RLRL, bottom LRLR LRLR, so each group starts on the SAME hand (it does not alternate group to group); the bottom row is the left-lead option. No accent on the 4th note on the PAS sheet (some method books add one). Vic Firth poster matches exactly (16th triplet + 8th, no accent). Wikipedia text agrees ('a triplet followed by an eighth note')."
+ },
+ {
+  "n": 3,
+  "name": "Single Stroke Seven",
+  "category": "I. Roll Rudiments: A. Single Stroke Roll Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Six 16th-note sextuplet notes ('6' bracket, double beam) = 1 beat, then a quarter note = 1 beat (2 beats total). No accents printed.",
+  "pas_sticking_rows": [
+   "RLRLRLR",
+   "LRLRLRL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 7,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Only one group is printed, with two sticking rows (RLRLRLR, or LRLRLRL for left lead). Seventh note is an unaccented quarter. Vic Firth poster identical; Wikipedia: 'a sextuplet followed by a quarter note'."
+ },
+ {
+  "n": 4,
+  "name": "Multiple Bounce Roll",
+  "category": "I. Roll Rudiments: B. Multiple Bounce Roll Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "A single half note with a 'z' (multiple bounce) through the stem. No sticking printed on the PAS sheet.",
+  "pas_sticking_rows": [],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 1,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "h",
+    "accent": false,
+    "grace": "",
+    "buzz": true,
+    "tie": false,
+    "double": false,
+    "hand_printed": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. dur 'h' (half note) is outside the requested code list but is what is printed (open notehead). No hand is printed; 'R' is a placeholder start hand (alternating R L R L buzz strokes). Vic Firth poster writes a whole note with z and 'R L R L R L R L etc.'. Followed PAS for the written value."
+ },
+ {
+  "n": 5,
+  "name": "Triple Stroke Roll",
+  "category": "I. Roll Rudiments: B. Multiple Bounce Roll Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Twelve notes as four 16th-note triplets ('3' over each), beamed in pairs (2 beats). No accents.",
+  "pas_sticking_rows": [
+   "RRRLLLRRRLLL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 12,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Vic Firth poster identical. (Some secondary sites write 8th-note triplets; not followed.)"
+ },
+ {
+  "n": 6,
+  "name": "Double Stroke Open Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "A single half note with three slashes (roll abbreviation); sticking printed beneath: RRLLRRLL. Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "RRLLRRLL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 16,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "h",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLLRRLLRRLL"
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. dur 'h' (half note, open notehead) is outside the requested code list but is what is printed. The sheet prints only 8 sticking letters as a pattern; a measured half note with 3 slashes = 16 32nds. Vic Firth poster uses a whole note with 3 slashes ('RRLLRRLL... etc.'). Followed PAS."
+ },
+ {
+  "n": 7,
+  "name": "Five Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "'5' over each group. Each group = 8th note with 2 slashes tied to an accented 8th (beamed pair) = 1 beat; two groups, alternating (2 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R R L L"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 10,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "RRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "LLRR"
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Accent only on the release note. Groups alternate (RRLL R, LLRR L). Vic Firth poster matches (RRLLR / LLRRL)."
+ },
+ {
+  "n": 8,
+  "name": "Six Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "'6' over each group. Each group = accented 16th + 8th with 2 slashes (roll) tied to accented 16th = 1 beat; two identical groups (2 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  L R  L",
+   "L  R L  R"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 12,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "LLRR",
+    "hand_printed": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "LLRR",
+    "hand_printed": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Accents on the first and last note of each group (so two accents back to back across the group boundary). The printed sticking gives only the outer notes (R ... L, or L ... R for left lead); the roll note's hand is implied by the stroke count (R LLRR L). Groups do NOT alternate. Vic Firth poster agrees (shows the same rhythm plus interpretations); Wikipedia text agrees."
+ },
+ {
+  "n": 9,
+  "name": "Seven Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "'7' over each group. Each group = dotted 8th with 2 slashes tied to an accented 16th = 1 beat; two identical groups (2 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  L R  L",
+   "L  R L  R"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 14,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8.",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "RRLLRR"
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8.",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "RRLLRR"
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. dur '8.' = dotted 8th (not in the requested code list). Groups do NOT alternate on the sheet (R...L R...L, or L...R L...R). Accent only on the release."
+ },
+ {
+  "n": 10,
+  "name": "Nine Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "'9' over each group. Each group = quarter note with 3 slashes tied to an accented quarter = 2 beats; two groups, alternating (4 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  R L  L"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 18,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "LLRRLLRR"
+   },
+   {
+    "hand": "L",
+    "dur": "q",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Groups alternate (R...R, L...L). Accent only on the release."
+ },
+ {
+  "n": 11,
+  "name": "Ten Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "'10' over each group. Each group = quarter with 3 slashes tied to two accented 16ths (R L), then an 8th rest = 2 beats; two identical groups (4 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  RL R  RL",
+   "L  LR L  LR"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 20,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "rest": true,
+    "hand": "",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "rest": true,
+    "hand": "",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. BOTH final 16ths are accented. Groups do NOT alternate. The 8th rest is printed; rest events use rest: true and an empty hand."
+ },
+ {
+  "n": 12,
+  "name": "Eleven Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "'11' over each group. Each group = quarter with 3 slashes tied to a 16th with 1 slash (diddle), then an accented 16th, then an 8th rest = 2 beats; two identical groups (4 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  RL R  RL",
+   "L  LR L  LR"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 22,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": true,
+    "slashes": 1,
+    "strokes": "RR"
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "rest": true,
+    "hand": "",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": true,
+    "slashes": 1,
+    "strokes": "RR"
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "rest": true,
+    "hand": "",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Unlike the ten stroke, only the LAST 16th is accented; the first 16th carries a single slash (RR). Groups do NOT alternate. Tie drawn from the quarter roll to the slashed 16th only."
+ },
+ {
+  "n": 13,
+  "name": "Thirteen Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "'13' over each group. Each group = quarter with 3 slashes tied to an 8th with 2 slashes tied to an accented 8th = 2 beats; two groups, alternating (4 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  R L  L"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 26,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "RRLL",
+    "hand_printed": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "LLRRLLRR"
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "LLRR",
+    "hand_printed": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Groups alternate (R...R, L...L). Middle roll note has no printed letter; hand implied."
+ },
+ {
+  "n": 14,
+  "name": "Fifteen Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "'15' over each group. Each group = quarter with 3 slashes tied to a dotted 8th with 2 slashes tied to an accented 16th = 2 beats; two identical groups (4 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  L R  L",
+   "L  R L  R"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 30,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "8.",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "RRLLRR",
+    "hand_printed": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "8.",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 2,
+    "strokes": "RRLLRR",
+    "hand_printed": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. dur '8.' = dotted 8th. Groups do NOT alternate (R...L R...L, or L...R L...R)."
+ },
+ {
+  "n": 15,
+  "name": "Seventeen Stroke Roll",
+  "category": "I. Roll Rudiments: C. Double Stroke Open Roll Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "'17' over each group. Each group = half note with 3 slashes tied to an accented quarter = 3 beats; two groups, alternating (6 beats). Roll notes are written as a single note with slashes on the stem (double: true); 'slashes' and 'strokes' give the measured 32nd-note expansion (2 slashes on an 8th = 4 strokes, on a dotted 8th = 6, 3 slashes on a quarter = 8, on a half = 16, 1 slash on a 16th = 2). The curved line from roll note to release note is recorded as tie: true.",
+  "pas_sticking_rows": [
+   "R  R L  L"
+  ],
+  "total_beats_quarter": 6.0,
+  "primary_strokes": 34,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "h",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "RRLLRRLLRRLLRRLL"
+   },
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "h",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": true,
+    "double": true,
+    "slashes": 3,
+    "strokes": "LLRRLLRRLLRRLLRR"
+   },
+   {
+    "hand": "L",
+    "dur": "q",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. dur 'h' = half note (open notehead). Groups alternate."
+ },
+ {
+  "n": 16,
+  "name": "Single Paradiddle",
+  "category": "II. Diddle Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two groups of four 16ths (2 beats); accent on the first note of each group. Diddles written out.",
+  "pas_sticking_rows": [
+   "RLRRLRLL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Vic Firth poster and Wikipedia agree."
+ },
+ {
+  "n": 17,
+  "name": "Double Paradiddle",
+  "category": "II. Diddle Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two groups of six 16ths, each beamed as one group with NO tuplet number (compound meter: each group = dotted quarter, i.e. 6/8 feel); accent on the first note of each group.",
+  "pas_sticking_rows": [
+   "RLRLRRLRLRLL"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 12,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. No '6' printed, so these are plain 16ths in a compound grouping, not sextuplets."
+ },
+ {
+  "n": 18,
+  "name": "Triple Paradiddle",
+  "category": "II. Diddle Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Two groups of eight 16ths (each 4+4, 2 beats per group, 4 beats total); accent on the first note of each group.",
+  "pas_sticking_rows": [
+   "RLRLRLRRLRLRLRLL"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 16,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly."
+ },
+ {
+  "n": 19,
+  "name": "Single Paradiddle-Diddle",
+  "category": "II. Diddle Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Two groups of six 16ths, no tuplet number (compound grouping, each group = dotted quarter); accent on the first note of each group.",
+  "pas_sticking_rows": [
+   "RLRRLL RLRRLL",
+   "LRLLRR LRLLRR"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 12,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Does NOT alternate: both groups RLRRLL (bottom row LRLLRR LRLLRR is the left-lead option)."
+ },
+ {
+  "n": 20,
+  "name": "Flam",
+  "category": "III. Flam Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two quarter notes, each with one grace note (lR, rL). No accents.",
+  "pas_sticking_rows": [
+   "lR rL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 2,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "q",
+    "accent": false,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Vic Firth poster uses an accented 8th-note exercise version; followed PAS."
+ },
+ {
+  "n": 21,
+  "name": "Flam Accent",
+  "category": "III. Flam Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two groups of three 8th notes, beamed in 3s with NO triplet number (compound meter, each group = dotted quarter, 6/8 feel); accent on the flam.",
+  "pas_sticking_rows": [
+   "lR L R rL R L"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 6,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Not marked as triplets on the PAS sheet; if your player is in simple time, treat as 8th-note triplets ('8t') for the same sound."
+ },
+ {
+  "n": 22,
+  "name": "Flam Tap",
+  "category": "III. Flam Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two groups of four 16ths (2 beats); flams on notes 1 and 3 of each group, both accented.",
+  "pas_sticking_rows": [
+   "lR R rL L lR R rL L"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly."
+ },
+ {
+  "n": 23,
+  "name": "Flamacue",
+  "category": "III. Flam Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Four 16ths (1 beat) then a flammed quarter note (1 beat). Accent on the SECOND 16th only; the first flam and the final flam are unaccented.",
+  "pas_sticking_rows": [
+   "lR L R L lR",
+   "rL R L R rL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 5,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Only one group printed with two sticking rows (bottom row rL R L R rL = left lead). Wikipedia text agrees (first note and downbeat flammed, second note accented)."
+ },
+ {
+  "n": 24,
+  "name": "Flam Paradiddle",
+  "category": "III. Flam Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two groups of four 16ths (2 beats); flam and accent on the first note of each group.",
+  "pas_sticking_rows": [
+   "lR L R R rL R L L"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly."
+ },
+ {
+  "n": 25,
+  "name": "Single Flammed Mill",
+  "category": "III. Flam Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Two groups of four 16ths (2 beats); flam and accent on the first note of each group.",
+  "pas_sticking_rows": [
+   "lR R L R rL L R L"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Flam is on the first note of the diddle (lR R), i.e. an inverted paradiddle with a flam."
+ },
+ {
+  "n": 26,
+  "name": "Flam Paradiddle-Diddle",
+  "category": "III. Flam Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two groups of six 16ths, no tuplet number (compound grouping, each group = dotted quarter); flam and accent on the first note of each group.",
+  "pas_sticking_rows": [
+   "lR L R R L L rL R L L R R"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 12,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Alternates group to group (unlike #19)."
+ },
+ {
+  "n": 27,
+  "name": "Pataflafla",
+  "category": "III. Flam Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Two identical groups of four 16ths (2 beats); flams on notes 1 and 4 of each group, both accented.",
+  "pas_sticking_rows": [
+   "lR L R rL lR L R rL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Both groups start lR (non-alternating)."
+ },
+ {
+  "n": 28,
+  "name": "Swiss Army Triplet",
+  "category": "III. Flam Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Two 16th-note triplets ('3' over each), beamed together (1 beat); flam and accent on the first note of each triplet.",
+  "pas_sticking_rows": [
+   "lR R L lR R L",
+   "rL L R rL L R"
+  ],
+  "total_beats_quarter": 1.0,
+  "primary_strokes": 6,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Non-alternating; bottom row is the left-lead option."
+ },
+ {
+  "n": 29,
+  "name": "Inverted Flam Tap",
+  "category": "III. Flam Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Two groups of four 16ths (2 beats); flams on notes 1 and 3 of each group, both accented.",
+  "pas_sticking_rows": [
+   "lR L rL R lR L rL R"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Primary-stroke sticking R L L R R L L R: each flam lands on the second note of a diddle (Wikipedia: diddles offset by one 16th)."
+ },
+ {
+  "n": 30,
+  "name": "Flam Drag",
+  "category": "III. Flam Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Each group = 8th + two 16ths + 8th beamed together (dotted quarter, compound 6/8 feel); two groups, alternating. Flam and accent on the first note. The drag is WRITTEN OUT as two 16th notes, not as grace notes.",
+  "pas_sticking_rows": [
+   "lR L L R rL R R L"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "l",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "r",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Secondary beam spans only notes 2-3, confirming 8-16-16-8."
+ },
+ {
+  "n": 31,
+  "name": "Drag",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Two quarter notes, each preceded by two beamed 16th grace notes (llR, rrL). No accents.",
+  "pas_sticking_rows": [
+   "llR rrL"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 2,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "q",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "q",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly."
+ },
+ {
+  "n": 32,
+  "name": "Single Drag Tap",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = two 8ths (llR, accented L) = 1 beat; two groups, alternating (2 beats).",
+  "pas_sticking_rows": [
+   "llR L rrL R"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 4,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Accent on the tap (second note), not the drag."
+ },
+ {
+  "n": 33,
+  "name": "Double Drag Tap",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = three 8ths beamed together (llR, llR, accented L) = dotted quarter (compound 6/8 feel); two groups, alternating.",
+  "pas_sticking_rows": [
+   "llR llR L rrL rrL R"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 6,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Accent only on the third note."
+ },
+ {
+  "n": 34,
+  "name": "Lesson 25",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = 16th (llR) + 16th (L) + accented 8th (R) = 1 beat; two identical groups (2 beats).",
+  "pas_sticking_rows": [
+   "llR L R llR L R",
+   "rrL R L rrL R L"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 6,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Non-alternating; bottom row is the left-lead option. Vic Firth poster matches (16-16-8 with accent on the 8th)."
+ },
+ {
+  "n": 35,
+  "name": "Single Dragadiddle",
+  "category": "IV. Drag Rudiments",
+  "nard_26": false,
+  "meter_or_grouping": "Two groups of four 16ths (2 beats). The first 16th of each group carries ONE slash (a written diddle, RR or LL) and an accent; no grace notes.",
+  "pas_sticking_rows": [
+   "RR L R R LL R L L"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 10,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": true,
+    "slashes": 1,
+    "strokes": "RR"
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": true,
+    "slashes": 1,
+    "strokes": "LL"
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. The 'drag' is notated as a slashed (diddled) accented 16th, not as two grace notes. Vic Firth poster notates it identically. Wikipedia's prose ('a paradiddle whose first note is a drag') is looser; followed PAS."
+ },
+ {
+  "n": 36,
+  "name": "Drag Paradiddle #1",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = accented 8th + four 16ths (first with llR drag) = dotted quarter (compound 6/8 feel); two groups, alternating.",
+  "pas_sticking_rows": [
+   "R llR L R R L rrL R L L"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 10,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Only the first note is accented. Vic Firth poster matches."
+ },
+ {
+  "n": 37,
+  "name": "Drag Paradiddle #2",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = two beamed 8ths (accented R, then llR) + four 16ths (llR L R R) = 2 beats; two groups, alternating (4 beats).",
+  "pas_sticking_rows": [
+   "R llR llR L R R L rrL rrL R L L"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 12,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Only ONE accent per group (first note). Wikipedia's prose says 'two accented notes'; the PAS sheet and the Vic Firth poster both show a single accent. Followed PAS."
+ },
+ {
+  "n": 38,
+  "name": "Single Ratamacue",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = 16th-note triplet (llR L R, '3' bracket) + accented 8th = 1 beat; two groups, alternating (2 beats).",
+  "pas_sticking_rows": [
+   "llR L R L rrL R L R"
+  ],
+  "total_beats_quarter": 2.0,
+  "primary_strokes": 8,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Accent on the 4th (last) note. Vic Firth poster matches."
+ },
+ {
+  "n": 39,
+  "name": "Double Ratamacue",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = 8th (llR) + 16th-note triplet (llR L R) + accented 8th, all on one beam = dotted quarter (compound 6/8 feel); two groups, alternating.",
+  "pas_sticking_rows": [
+   "llR llR L R L rrL rrL R L R"
+  ],
+  "total_beats_quarter": 3.0,
+  "primary_strokes": 10,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Accent only on the last note of each group."
+ },
+ {
+  "n": 40,
+  "name": "Triple Ratamacue",
+  "category": "IV. Drag Rudiments",
+  "nard_26": true,
+  "meter_or_grouping": "Each group = two beamed 8ths (llR, llR) + [16th-note triplet (llR L R) + accented 8th] = 2 beats; two groups, alternating (4 beats).",
+  "pas_sticking_rows": [
+   "llR llR llR L R L rrL rrL rrL R L R"
+  ],
+  "total_beats_quarter": 4.0,
+  "primary_strokes": 12,
+  "notes": [
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "ll",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "8",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "rr",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "L",
+    "dur": "16t",
+    "accent": false,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   },
+   {
+    "hand": "R",
+    "dur": "8",
+    "accent": true,
+    "grace": "",
+    "buzz": false,
+    "tie": false,
+    "double": false
+   }
+  ],
+  "notes_on_sources": "PAS sheet (pas.org PDF) viewed directly. Accent only on the last note of each group."
+ }
+]

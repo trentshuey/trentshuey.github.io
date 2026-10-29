@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//trentshuey.com//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ram-band-and-drumline-2026-11-07@trentshuey.com
+DTSTAMP:20261108T000000Z
+DTSTART:20261108T000000Z
+DTEND:20261108T033000Z
+SUMMARY:Ram Band and Drumline: Home football
+LOCATION:LeGrand Stadium\, Angelo State University\, San Angelo\, TX
+DESCRIPTION:Kickoff at 6:00 p.m.
+URL:https://www.trentshuey.com/events#ram-band-and-drumline-2026-11-07
+END:VEVENT
+END:VCALENDAR

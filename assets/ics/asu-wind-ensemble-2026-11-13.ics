@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//trentshuey.com//events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:asu-wind-ensemble-2026-11-13@trentshuey.com
+DTSTAMP:20261114T010000Z
+DTSTART:20261114T010000Z
+DTEND:20261114T023000Z
+SUMMARY:ASU Wind Ensemble: The Lord of the Rings Symphony
+LOCATION:Murphey Performance Hall\, Angelo State University\, San Angelo\, TX
+DESCRIPTION:
+URL:https://www.trentshuey.com/events#asu-wind-ensemble-2026-11-13
+END:VEVENT
+END:VCALENDAR
