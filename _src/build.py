@@ -37,6 +37,7 @@ LINKS = {
     "office_phone": "325-486-6036",
     "youtube": "https://www.youtube.com/@TrentShuey",
     "instagram": "https://www.instagram.com/drtrentshuey/",
+    "hikes_youtube": "https://www.youtube.com/@ShueyHikes",
     "soundcloud": "https://soundcloud.com/trentshuey",
     "asu_profile": "https://www.angelo.edu/live/profiles/3140-trent-shuey",
     "music_form": "https://www.angelo.edu/departments/visual-performing-arts/music/prospective-music-student-form/",
@@ -361,6 +362,7 @@ def program_archive(prefix=""):
 SOCIAL_ICONS = {
     "instagram": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg>',
     "youtube": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>',
+    "hikes": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 19.5 9 8l3.6 6.2 2.2-3.6 6.7 8.9z" fill="currentColor"/><circle cx="17.5" cy="5.5" r="2" fill="currentColor"/></svg>',
     "soundcloud": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17h9.2a3.3 3.3 0 0 0 .4-6.6A5 5 0 0 0 9 8.6z" fill="currentColor"/><path d="M3 13v4M5.2 11.5V17M7.2 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
 }
 
@@ -370,6 +372,7 @@ def social_section():
         ("instagram", "Instagram", "@drtrentshuey", "Photos and short videos, from the stage to the trail.", LINKS["instagram"]),
         ("youtube", "YouTube", "@TrentShuey", "Concerts, solos, and the ensembles in action.", LINKS["youtube"]),
         ("soundcloud", "SoundCloud", "trentshuey", "Recordings to listen to anywhere.", LINKS["soundcloud"]),
+        ("hikes", "Shuey Hikes", "@ShueyHikes", "Camping, backpacking, and national park road trips.", LINKS["hikes_youtube"]),
     ]
     items = "".join(
         f'<li><a class="social-card social-{key}" href="{href}" rel="me noopener">'
@@ -465,6 +468,7 @@ LAYOUT = """<!doctype html>
             <li><a href="{prefix}press.html">Press</a></li>
             <li><a href="{prefix}composers.html">Writing for percussion</a></li>
             <li><a href="{prefix}recital.html">Book a marimba recital</a></li>
+            <li><a href="{prefix}shuey-hikes.html">Shuey Hikes</a></li>
           </ul>
         </div>
         <div>

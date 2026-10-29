@@ -454,5 +454,35 @@
   "w": 864,
   "h": 1080,
   "alt": "Poster: ASU Jazz Combos Halloween concert and jam session, Oct. 31, 4 to 6 p.m., free"
+ },
+ "hikes-zion-narrows": {
+  "file": "hikes-zion-narrows.jpg",
+  "w": 1600,
+  "h": 900,
+  "alt": "Dr. Shuey alone in the Zion Narrows, wading orange floodwater between red canyon walls"
+ },
+ "hikes-badge": {
+  "file": "hikes-badge.jpg",
+  "w": 640,
+  "h": 640,
+  "alt": "Shuey Hikes badge: a gold mountain peak inside a compass ring on navy"
+ },
+ "hikes-ep-zion": {
+  "file": "hikes-ep-zion.jpg",
+  "w": 1280,
+  "h": 720,
+  "alt": "Shuey Hikes episode card: Zion, 3 days in the canyon, with Watchman Campground, Scout's Lookout, and the Narrows"
+ },
+ "hikes-ep-bryce": {
+  "file": "hikes-ep-bryce.jpg",
+  "w": 1280,
+  "h": 720,
+  "alt": "Shuey Hikes episode card: Bryce Canyon, hoodoo country"
+ },
+ "hikes-ep-snake-river": {
+  "file": "hikes-ep-snake-river.jpg",
+  "w": 1280,
+  "h": 720,
+  "alt": "Shuey Hikes episode card: Snake River, first light, Burley, Idaho"
  }
 }
