@@ -251,7 +251,7 @@ def page():
             drawn_width, notation = svg(r)
             wide = " rud-wide" if drawn_width > 600 else ""
             items.append(
-                f'<article class="rud{wide}" id="r{r["n"]}" data-n="{r["n"]}">'
+                f'<article class="rud{wide} fam-{slug}" id="r{r["n"]}" data-n="{r["n"]}">'
                 f'<div class="rud-head"><p class="rud-num">{r["n"]}</p>'
                 f'<h3 class="rud-name">{html.escape(r["name"])}</h3>{tags}'
                 f'<button class="rud-play" type="button" data-n="{r["n"]}" aria-pressed="false" hidden>'

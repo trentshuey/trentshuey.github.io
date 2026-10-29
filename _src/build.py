@@ -25,6 +25,7 @@ from videos import ALL as VIDEOS, SECTIONS as VIDEO_SECTIONS  # noqa: E402
 from events import EVENTS  # noqa: E402
 from programs import PROGRAMS  # noqa: E402
 import rudiments_render  # noqa: E402
+import paint  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = ROOT / "_src" / "pages"
@@ -60,9 +61,10 @@ NAV = [
 
 
 def marimba_svg():
-    """A marimba seen from above: 24 bars, cord holes, cords and frame rails."""
+    """A marimba seen from above, its 24 bars painted in the colors of Paul Shuey's fish painting."""
     n, x0, pitch, width, center = 24, 30, 47.5, 35, 128
     lengths = [222 * (0.976 ** i) for i in range(n)]
+    colors = paint.marimba_bar_colors(n)
     upper, lower, bars = [], [], []
     for i, length in enumerate(lengths):
         x = x0 + i * pitch
@@ -73,17 +75,18 @@ def marimba_svg():
         lower.append(f"{cx:.1f},{y2:.1f}")
         bars.append(
             f'<g class="bar-group"><rect class="bar" x="{x:.1f}" y="{top:.1f}" width="{width}" '
-            f'height="{length:.1f}" rx="4"/><circle class="hole" cx="{cx:.1f}" cy="{y1:.1f}" r="3.2"/>'
+            f'height="{length:.1f}" rx="6" style="fill:{colors[i]}"/><circle class="hole" cx="{cx:.1f}" cy="{y1:.1f}" r="3.2"/>'
             f'<circle class="hole" cx="{cx:.1f}" cy="{y2:.1f}" r="3.2"/></g>'
         )
     rails = "".join(
-        f'<polyline class="rail" points="{" ".join(p)}" style="stroke:var(--navy-deep);stroke-width:16;fill:none;stroke-linecap:round"/>'
+        f'<polyline class="rail" points="{" ".join(p)}" style="fill:none;stroke-width:16;stroke-linecap:round"/>'
         for p in (upper, lower)
     )
     cords = "".join(f'<polyline class="cord" points="{" ".join(p)}"/>' for p in (upper, lower))
+    rough = paint._filter("rough-marimba", 24, 4, "0.03 0.05")
     return (
         '<svg class="marimba" viewBox="0 0 1200 256" aria-hidden="true" focusable="false">'
-        + rails + cords + "".join(bars) + "</svg>"
+        f'<defs>{rough}</defs><g filter="url(#rough-marimba)">' + rails + "</g>" + "".join(bars) + cords + "</svg>"
     )
 
 
@@ -239,9 +242,12 @@ def event_item(e, prefix="", hidden=False):
     links.append(f'<a href="{prefix}assets/ics/{e["id"]}.ics" download>Add to calendar</a>')
     end_utc = e["end_dt"].astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     hide = " hidden" if hidden else ""
-    poster, cls = "", "event"
+    group = e["group"].lower()
+    tone = ("tone-red" if "percussion" in group else "tone-blue" if "jazz" in group
+            else "tone-yellow" if ("ram band" in group or "drumline" in group) else "tone-sienna")
+    poster, cls = "", f"event {tone}"
     if e.get("image"):
-        cls = "event has-poster"
+        cls = f"event has-poster {tone}"
         poster = (f'<a class="event-poster gallery-item" href="{prefix}assets/img/{IMAGES[e["image"]]["file"]}">'
                   f'{img_tag(e["image"], prefix)}</a>')
     return (
@@ -252,7 +258,7 @@ def event_item(e, prefix="", hidden=False):
         f'<span class="w" aria-hidden="true">{DAYS[s.weekday()]}</span></time>'
         f'<div class="event-body"><p class="event-group">{html.escape(e["group"])}</p>'
         f'<h3>{e["title"]}</h3>'
-        f'<p class="event-meta">{_clock(s)} &middot; {venue}</p>{note}'
+        f'<p class="event-meta">{_clock(s)} at {venue}</p>{note}'
         f'<p class="event-links">{"".join(links)}</p></div>{poster}</li>'
     )
 
@@ -368,11 +374,9 @@ LAYOUT = """<!doctype html>
   <meta property="og:title" content="{title_full}">
   <meta property="og:description" content="{description}">
   <meta property="og:url" content="{canonical}">
-  <meta name="theme-color" content="#0A1B33">
+  <meta name="theme-color" content="#22359A">
   <link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+  <link rel="preload" href="{prefix}assets/fonts/bricolage-grotesque.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="{prefix}assets/site.css">{verification}
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -380,7 +384,7 @@ LAYOUT = """<!doctype html>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="{prefix}index.html">Trent W. Shuey</a>
+      <a class="brand" href="{prefix}index.html"><svg class="brand-fish" viewBox="0 0 48 28" aria-hidden="true" focusable="false"><path d="M46 14C40 3 22 2 12 12L3 5l3 9-3 9 9-7c10 10 28 9 34-2Z" fill="#6E95D9"/><path d="M16 9q9-5 20 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".6"/><circle cx="37" cy="12" r="2.6" fill="#8A4A22"/></svg>Trent W. Shuey</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Menu
@@ -398,6 +402,7 @@ LAYOUT = """<!doctype html>
   </main>
 
   <footer class="site-footer">
+    {footerband}
     <div class="wrap">
       <div class="footer-grid">
         <div>
@@ -442,7 +447,7 @@ LAYOUT = """<!doctype html>
           </ul>
         </div>
       </div>
-      <p class="footer-base"><span>&copy; 2026 Trent W. Shuey</span>{visits}<a class="footer-top" href="#top">Back to top</a></p>
+      <p class="footer-base"><span>&copy; 2026 Trent W. Shuey</span><span>Colors and brushwork after a painting by <a href="{prefix}paul.html">Paul Thomas Shuey</a></span>{visits}<a class="footer-top" href="#top">Back to top</a></p>
     </div>
   </footer>
 {analytics}  <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7m7-7l7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Top</span></a>
@@ -460,6 +465,9 @@ def parse(path):
         key, _, value = line.partition(":")
         meta[key.strip()] = value.strip()
     return meta, text[m.end():]
+
+
+FOOTER_BAND = paint.footer_band()
 
 
 def build():
@@ -481,7 +489,8 @@ def build():
         prefix = meta.get("prefix", "")
         body = (
             body.replace("{{marimba}}", marimba_svg())
-            .replace("{{keys}}", keys_svg())
+            .replace("{{keys}}", paint.page_band(slug))
+            .replace("{{herocanvas}}", paint.hero_canvas())
             .replace("{{videolibrary}}", video_library() if "{{videolibrary}}" in body else "")
             .replace("{{videocount}}", str(video_count()))
             .replace("{{events}}", events_page(events, prefix) if "{{events}}" in body else "")
@@ -510,6 +519,7 @@ def build():
             analytics=analytics,
             visits=visits,
             verification=verification,
+            footerband=FOOTER_BAND,
             **LINKS,
         )
         if "—" in out:

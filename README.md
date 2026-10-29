@@ -8,6 +8,8 @@ Website of Dr. Trent W. Shuey, percussionist and educator at Angelo State Univer
 - The page text lives in `_src/pages/`. Shared pieces (the menu, footer, and keyboard graphic) live in `_src/build.py`.
 - After changing anything in `_src/`, run `python3 _src/build.py` to regenerate the pages.
 - Styles are in `assets/site.css`; the menu, video player, and keyboard animation are in `assets/site.js`.
+- The look comes from a fish painting by Paul Thomas Shuey. `_src/paint.py` paints the brushstrokes under each page title, around the home page name, and above the footer, in the painting's colors. Each page gets its own strokes, and they stay the same from build to build.
+- The typeface is Bricolage Grotesque (SIL Open Font License), served from `assets/fonts/`.
 
 ## Things that change often
 
