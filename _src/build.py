@@ -36,6 +36,7 @@ LINKS = {
     "email": "trent.shuey@angelo.edu",
     "office_phone": "325-486-6036",
     "youtube": "https://www.youtube.com/@TrentShuey",
+    "instagram": "https://www.instagram.com/drtrentshuey/",
     "soundcloud": "https://soundcloud.com/trentshuey",
     "asu_profile": "https://www.angelo.edu/live/profiles/3140-trent-shuey",
     "music_form": "https://www.angelo.edu/departments/visual-performing-arts/music/prospective-music-student-form/",
@@ -45,6 +46,9 @@ LINKS = {
 # Visitor count: set to the GoatCounter site code (the "xyz" in xyz.goatcounter.com)
 # once that account exists. Left empty, no counting script is added.
 GOATCOUNTER_CODE = ""
+# Instagram posts to show on the home page (full post links, e.g. https://www.instagram.com/p/XXXX/).
+# Left empty, the section shows the account cards only.
+INSTAGRAM_POSTS = []
 # Google Search Console HTML-tag verification token, if that method is used.
 SITE_VERIFICATION = ""
 
@@ -354,6 +358,37 @@ def program_archive(prefix=""):
     )
 
 
+SOCIAL_ICONS = {
+    "instagram": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg>',
+    "youtube": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>',
+    "soundcloud": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17h9.2a3.3 3.3 0 0 0 .4-6.6A5 5 0 0 0 9 8.6z" fill="currentColor"/><path d="M3 13v4M5.2 11.5V17M7.2 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+}
+
+
+def social_section():
+    cards = [
+        ("instagram", "Instagram", "@drtrentshuey", "Photos and short videos, from the stage to the trail.", LINKS["instagram"]),
+        ("youtube", "YouTube", "@TrentShuey", "Concerts, solos, and the ensembles in action.", LINKS["youtube"]),
+        ("soundcloud", "SoundCloud", "trentshuey", "Recordings to listen to anywhere.", LINKS["soundcloud"]),
+    ]
+    items = "".join(
+        f'<li><a class="social-card social-{key}" href="{href}" rel="me noopener">'
+        f'<span class="social-icon">{SOCIAL_ICONS[key]}</span>'
+        f'<span class="social-text"><strong>{name}</strong><span class="social-handle">{handle}</span>'
+        f'<span class="social-note">{note}</span></span></a></li>'
+        for key, name, handle, note, href in cards
+    )
+    out = f'<ul class="social-cards">{items}</ul>'
+    if INSTAGRAM_POSTS:
+        posts = "".join(
+            f'<blockquote class="instagram-media" data-instgrm-permalink="{html.escape(u, quote=True)}" data-instgrm-version="14">'
+            f'<a href="{html.escape(u, quote=True)}">View this post on Instagram</a></blockquote>'
+            for u in INSTAGRAM_POSTS[:3]
+        )
+        out += f'<div class="insta-posts" data-embed="https://www.instagram.com/embed.js">{posts}</div>'
+    return out
+
+
 def nav_html(current, prefix):
     items = []
     for key, label, href in NAV:
@@ -435,6 +470,7 @@ LAYOUT = """<!doctype html>
         <div>
           <h2>Elsewhere</h2>
           <ul>
+            <li><a href="{instagram}">Instagram</a></li>
             <li><a href="{youtube}">YouTube</a></li>
             <li><a href="{soundcloud}">SoundCloud</a></li>
             <li><a href="{asu_profile}">ASU faculty profile</a></li>
@@ -497,6 +533,7 @@ def build():
             .replace("{{events_next}}", events_next(events, prefix) if "{{events_next}}" in body else "")
             .replace("{{programs}}", program_archive(prefix) if "{{programs}}" in body else "")
             .replace("{{rudiments}}", rudiments_render.page() if "{{rudiments}}" in body else "")
+            .replace("{{social}}", social_section() if "{{social}}" in body else "")
             .replace("{{rudiment_jump}}", rudiments_render.jump_links() if "{{rudiment_jump}}" in body else "")
         )
         body = re.sub(r"\{\{video:([\w-]{11})\}\}", lambda m: video_figure(m.group(1)), body)

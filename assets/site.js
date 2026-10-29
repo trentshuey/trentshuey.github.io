@@ -160,6 +160,20 @@
     });
   });
 
+  // Instagram posts: load Instagram's embed script only when the section comes into view
+  var insta = document.querySelector('.insta-posts[data-embed]');
+  if (insta && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (!entries.some(function (en) { return en.isIntersecting; })) return;
+      io.disconnect();
+      var sc = document.createElement('script');
+      sc.async = true;
+      sc.src = insta.getAttribute('data-embed');
+      document.body.appendChild(sc);
+    }, { rootMargin: '400px' });
+    io.observe(insta);
+  }
+
   // Small visitor count in the footer (only when a counter is set up)
   var visits = document.querySelector('.visits[data-total]');
   if (visits && window.fetch) {
