@@ -25,7 +25,7 @@ PROGRAMS = [
         "venue": "Elta Joyce Murphey Auditorium",
         "pieces": [
             ("Edgard Var&egrave;se", "<i>Ionisation</i>", ""),
-            ("", "<i>Adagietto</i>", "Arranged by Grubbs"),
+            ("Gustav Mahler", "<i>Adagietto</i> from Symphony No. 5", "Arranged by Grubbs"),
             ("Terry Riley", "<i>In C</i>", ""),
         ],
         "links": [("Event details", "events.html#asu-percussion-ensemble-2026-11-03")],

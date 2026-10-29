@@ -26,7 +26,7 @@ EVENTS = [
         "group": "ASU Percussion Ensemble",
         "venue": "Elta Joyce Murphey Auditorium",
         "map": "Elta Joyce Murphey Auditorium, Angelo State University, San Angelo, TX",
-        "note": "Var&egrave;se, <i>Ionisation</i>; <i>Adagietto</i>, arranged by Grubbs; and Terry Riley, <i>In C</i>.",
+        "note": "Var&egrave;se, <i>Ionisation</i>; Mahler, <i>Adagietto</i> from Symphony No. 5, arranged by Grubbs; and Terry Riley, <i>In C</i>.",
         "link": ("Program", "programs.html#percussion-ensemble-2026-11-03"),
     },
     {
@@ -43,13 +43,6 @@ EVENTS = [
         "group": "ASU Jazz Ensemble",
         "venue": "Brooks &amp; Bates Theatre",
         "map": "Brooks & Bates Theatre, 82 Gillis St., San Angelo, TX",
-    },
-    {
-        "start": "2026-11-13T19:00", "end": "2026-11-13T20:30",
-        "title": "<i>The Lord of the Rings</i> Symphony",
-        "group": "ASU Wind Ensemble",
-        "venue": "Murphey Performance Hall",
-        "map": "Murphey Performance Hall, Angelo State University, San Angelo, TX",
     },
     {
         "start": "2026-11-14T16:00", "end": "2026-11-14T18:00",
