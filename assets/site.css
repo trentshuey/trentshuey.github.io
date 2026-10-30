@@ -1423,3 +1423,7 @@ html { scroll-padding-top: 150px; }
 .lesson-proof { border-left: 4px solid var(--yellow); padding-left: 14px; margin: 0 0 18px; max-width: 62ch; }
 #lessons .actions + .muted { margin-top: 14px; }
 .recital-photo { margin-top: 28px; }
+
+/* Two-column photo rows under a section (jazz page) */
+.photos-2 { margin-top: 36px; }
+.photos-2 .gallery { columns: 2 260px; }
