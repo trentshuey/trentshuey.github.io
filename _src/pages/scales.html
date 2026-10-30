@@ -1,0 +1,74 @@
+<!--
+title: Scales and Arpeggios
+description: Every major and harmonic minor key from the Angelo State University marimba skills test, with notation, four-mallet stickings, and playback at any tempo.
+nav: students
+-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Scales and Arpeggios</h1>
+        <p class="page-intro">Every major and harmonic minor key from the marimba skills test, with Dr. Shuey's stickings. Pick a key, then press play to hear it at your tempo and follow along as it plays.</p>
+        {{keys}}
+      </div>
+    </header>
+
+    <div class="rud-controls sc-controls" hidden>
+      <div class="wrap rud-controls-inner">
+        <p class="sc-now" aria-live="polite"><span class="sc-now-key">C major</span></p>
+        <button class="btn btn-dark sc-play-all" type="button" aria-pressed="false"><span>Play all</span></button>
+        <div class="rud-tempo">
+          <label for="sc-bpm">Tempo <output id="sc-bpm-out" for="sc-bpm">100</output> bpm</label>
+          <input id="sc-bpm" type="range" min="40" max="160" step="2" value="100">
+        </div>
+        <label class="check rud-opt"><input id="sc-click" type="checkbox" checked> Metronome</label>
+        <label class="check rud-opt"><input id="sc-loop" type="checkbox"> Loop</label>
+      </div>
+    </div>
+
+    <section class="band band-tight band-white" id="scales">
+      <div class="wrap">
+        <div class="sc-pick">
+          <div class="sc-mode" role="group" aria-label="Mode">
+            <button type="button" data-mode="major" aria-pressed="true">Major</button>
+            <button type="button" data-mode="minor" aria-pressed="false">Harmonic minor</button>
+          </div>
+          <nav class="sc-keys" aria-label="Major keys" data-mode="major">{{scale_keys_major}}</nav>
+          <nav class="sc-keys" aria-label="Harmonic minor keys" data-mode="minor" hidden>{{scale_keys_minor}}</nav>
+          <div class="sc-draw-row">
+            <button class="btn btn-outline-dark sc-draw" type="button">Draw keys</button>
+            <div class="sc-drawn" hidden aria-live="polite">
+              <p><b>Major:</b> <span class="sc-drawn-major"></span></p>
+              <p><b>Harmonic minor:</b> <span class="sc-drawn-minor"></span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc-intro">
+          <p>The order is the one on the test: chord inversions and arpeggio inversion permutations with four mallets, the scale with the inner mallets, and the arpeggio with two. Three octaves, from memory, at quarter note = 100. <b>Draw keys</b> picks four major and four harmonic minor keys at random, the way the panel does.</p>
+          <p class="muted small">Mallets are numbered 1 to 4 from left to right: 1 and 2 in the left hand, 3 and 4 in the right. The <a href="assets/docs/asu-skills-test-major-keys.pdf">printed packet</a> is written out in major; the harmonic minor keys here use the same pattern and stickings, with the third and sixth lowered and the raised seventh marked.</p>
+        </div>
+
+        <noscript><p class="sc-noscript">The notation and playback need JavaScript. The <a href="assets/docs/asu-skills-test-major-keys.pdf">printed packet</a> has every major key.</p></noscript>
+
+        <div class="sc-sheet">
+          <h2 class="sc-title"><span class="sc-title-key">C major</span></h2>
+          <div class="sc-sections"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-dark">
+      <div class="wrap split">
+        <div>
+          <div class="section-head">
+            <h2>Part of the Skills Assessment Test</h2>
+            <p>Four major and four harmonic minor keys are drawn, and all eight must pass. Rudiments and sight-reading make up the rest of the test.</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-light" href="rudiments.html">Practice the rudiments</a>
+            <a class="btn btn-outline-light" href="studio.html#skills-test">How the test works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{{scales_data}}
+    <script src="assets/scales.js" defer></script>

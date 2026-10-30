@@ -25,6 +25,7 @@ from videos import ALL as VIDEOS, SECTIONS as VIDEO_SECTIONS  # noqa: E402
 from events import EVENTS  # noqa: E402
 from programs import PROGRAMS  # noqa: E402
 import rudiments_render  # noqa: E402
+import scales_render  # noqa: E402
 import paint  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -496,6 +497,7 @@ LAYOUT = """<!doctype html>
             <li><a href="{prefix}resources.html">Studio resources</a></li>
             <li><a href="{prefix}handbook.html">Studio handbook</a></li>
             <li><a href="{prefix}rudiments.html">Rudiments</a></li>
+            <li><a href="{prefix}scales.html">Scales and arpeggios</a></li>
             <li><a href="{prefix}studio.html">Studio info</a></li>
             <li><a href="{prefix}auditions.html">Auditions</a></li>
             <li><a href="{prefix}alumni.html">Alumni</a></li>
@@ -585,6 +587,9 @@ def build():
             .replace("{{rudiments}}", rudiments_render.page() if "{{rudiments}}" in body else "")
             .replace("{{social}}", social_section() if "{{social}}" in body else "")
             .replace("{{rudiment_jump}}", rudiments_render.jump_links() if "{{rudiment_jump}}" in body else "")
+            .replace("{{scales_data}}", scales_render.data_script() if "{{scales_data}}" in body else "")
+            .replace("{{scale_keys_major}}", scales_render.key_buttons("major") if "{{scale_keys_major}}" in body else "")
+            .replace("{{scale_keys_minor}}", scales_render.key_buttons("minor") if "{{scale_keys_minor}}" in body else "")
         )
         body = re.sub(r"\{\{video:([\w-]{11})\}\}", lambda m: video_figure(m.group(1)), body)
         body = re.sub(r"\{\{img:([\w-]+)(?:\|(\w+))?\}\}",
