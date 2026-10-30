@@ -1,5 +1,5 @@
 {
- "source": "ASU Skills Test: Major Keys (marimba packet). Pattern and stickings are identical in every key; only the register changes.",
+ "source": "ASU Skills Test: Major Keys (marimba packet). Pattern, stickings, staff placement, and beaming are the same on every page; only the register changes. Chords are split between the staves at middle C.",
  "sections": [
   {
    "name": "Chord inversions",
@@ -121,7 +121,8 @@
      ],
      "r": "q"
     }
-   ]
+   ],
+   "beam": 1
   },
   {
    "name": "Arpeggio inversion permutations",
@@ -518,7 +519,9 @@
      "r": "8",
      "s": "1"
     }
-   ]
+   ],
+   "beam": 4,
+   "staves": "bbbbbbttttttttttttttttttttttttttttttttttttttttttttbbbbbb"
   },
   {
    "name": "Scale",
@@ -817,7 +820,9 @@
      "r": "8",
      "s": "3"
     }
-   ]
+   ],
+   "beam": 3,
+   "staves": "bbbbbbttttttttttttttttttttttttttttttbbbbbb"
   },
   {
    "name": "Arpeggio",
@@ -955,7 +960,9 @@
      "r": "h",
      "s": "2"
     }
-   ]
+   ],
+   "beam": 3,
+   "staves": "bbbttttttttttttbbbb"
   }
  ],
  "register": {

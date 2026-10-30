@@ -6,7 +6,7 @@ nav: students
     <header class="page-head">
       <div class="wrap">
         <h1>Scales and Arpeggios</h1>
-        <p class="page-intro">Every major and harmonic minor key from the marimba skills test, with Dr. Shuey's stickings. Pick a key, then press play to hear it at your tempo and follow along as it plays.</p>
+        <p class="page-intro">Every major and harmonic minor key from the marimba skills test, with Dr. Shuey's stickings. Pick a key, then press play to hear the whole page at your tempo, one section flowing into the next, and follow along as it plays.</p>
         {{keys}}
       </div>
     </header>
@@ -14,7 +14,7 @@ nav: students
     <div class="rud-controls sc-controls" hidden>
       <div class="wrap rud-controls-inner">
         <p class="sc-now" aria-live="polite"><span class="sc-now-key">C major</span></p>
-        <button class="btn btn-dark sc-play-all" type="button" aria-pressed="false"><span>Play all</span></button>
+        <button class="btn btn-dark sc-play-all" type="button" aria-pressed="false"><span>Play</span></button>
         <div class="rud-tempo">
           <label for="sc-bpm">Tempo <output id="sc-bpm-out" for="sc-bpm">100</output> bpm</label>
           <input id="sc-bpm" type="range" min="40" max="160" step="2" value="100">
@@ -50,7 +50,10 @@ nav: students
         <noscript><p class="sc-noscript">The notation and playback need JavaScript. The <a href="assets/docs/asu-skills-test-major-keys.pdf">printed packet</a> has every major key.</p></noscript>
 
         <div class="sc-sheet">
-          <h2 class="sc-title"><span class="sc-title-key">C major</span></h2>
+          <div class="sc-title-row">
+            <h2 class="sc-title"><span class="sc-title-key">C major</span></h2>
+            <button class="btn btn-dark sc-play-all" type="button" aria-pressed="false" hidden><span>Play</span></button>
+          </div>
           <div class="sc-sections"></div>
         </div>
       </div>

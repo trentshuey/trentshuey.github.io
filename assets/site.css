@@ -1360,7 +1360,10 @@ html { scroll-padding-top: 150px; }
 .sc-intro { display: grid; gap: 4px 48px; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); margin-bottom: 8px; }
 .sc-intro p { margin: 0 0 12px; max-width: 62ch; }
 @media (max-width: 800px) { .sc-intro { grid-template-columns: 1fr; } }
-.sc-title { margin: 28px 0 4px; }
+.sc-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 28px 0 6px; }
+.sc-title { margin: 0; }
+.sc-title-row .btn { flex: none; }
+.sc-title-row .btn[hidden] { display: none; }
 .sc-sec { padding: 22px 0 12px; border-top: 2px solid var(--ink); }
 .sc-sec + .sc-sec { margin-top: 18px; }
 .sc-sec-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }

@@ -24,7 +24,7 @@
   var ACC_GLYPH = { '-1': 'accidentalFlat', '0': 'accidentalNatural', '1': 'accidentalSharp', '2': 'accidentalDoubleSharp' };
 
   // Engraving sizes, in staff spaces (Bravura's engraving defaults where it has them)
-  var BASS_TOP = 11, MID = { t: 2, b: 13 };
+  var BASS_TOP = 12, SYS_H = BASS_TOP + 4, MID = { t: 2, b: BASS_TOP + 2 };
   var HEAD_W = 1.18, STEM_W = 0.12, STEM_LEN = 3.5, BEAM_T = 0.5, LEDGER_T = 0.16, LEDGER_X = 0.4;
   var ACC_SLOT = 1.3;
 
@@ -41,7 +41,7 @@
   var bpmOut = document.getElementById('sc-bpm-out');
   var clickBox = document.getElementById('sc-click');
   var loopBox = document.getElementById('sc-loop');
-  var playAllBtn = controls.querySelector('.sc-play-all');
+  var playBtns = document.querySelectorAll('.sc-play-all');   // one in the sticky bar, one by the key name
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var current = null;      // key object
@@ -59,13 +59,13 @@
   }
 
   // d is the number of scale steps above the tonic
-  function spell(key, d, sig) {
+  function spell(key, d, sig, staff) {
     var step = key.step + d;
     var letter = step % 7;
     var midi = key.midi + MODES[key.mode][d % 7] + 12 * Math.floor(d / 7);
     var natural = 12 * (Math.floor(step / 7) + 1) + NAT[letter];
     var acc = midi - natural;
-    var staff = step >= 28 ? 't' : 'b';              // middle C and up on the treble staff
+    staff = staff || (step >= 28 ? 't' : 'b');       // chords split at middle C, as in the packet
     return {
       step: step, letter: letter, midi: midi, acc: acc, show: acc !== sig[letter], staff: staff,
       y: staff === 't' ? (38 - step) / 2 : BASS_TOP + (26 - step) / 2
@@ -79,13 +79,13 @@
       var events = sec.events.map(function (e, i) {
         var ev = {
           i: i, r: e.r, st: e.s || '', t: t, beats: BEATS[e.r], deg: e.d[0],
-          notes: e.d.map(function (d) { return spell(key, d, sig); })
+          notes: e.d.map(function (d) { return spell(key, d, sig, sec.staves ? sec.staves[i] : null); })
         };
         ev.hasAcc = ev.notes.some(function (n) { return n.show; });
         t += ev.beats;
         return ev;
       });
-      return { index: si, name: sec.name, events: events, beats: t };
+      return { index: si, name: sec.name, events: events, beats: t, beam: sec.beam || 1 };
     });
   }
 
@@ -95,7 +95,7 @@
     var out = [];
     sec.events.forEach(function (ev) {
       var last = out[out.length - 1];
-      if (ev.r === '8' && last && last.length === 1 && last[0].r === '8' && last[0].t % 1 === 0) last.push(ev);
+      if (ev.r === '8' && last && last.length < sec.beam && last[0].r === '8') last.push(ev);
       else out.push([ev]);
     });
     return out;
@@ -169,7 +169,7 @@
 
   function Drawing() {
     this.min = 0;
-    this.max = 15;
+    this.max = SYS_H;
   }
   Drawing.prototype.see = function (a, b) {
     if (a < this.min) this.min = a;
@@ -243,8 +243,8 @@
     [0, BASS_TOP].forEach(function (top) {
       for (var l = 0; l < 5; l++) dw.rect(g, 0, top + l - 0.065, line.end, 0.13);
     });
-    dw.rect(g, -0.08, 0, 0.16, 15);
-    dw.glyph(g, 'brace', -1.25, 15, 1.7, 3.75, -15, 0);
+    dw.rect(g, -0.08, 0, 0.16, SYS_H);
+    dw.glyph(g, 'brace', -1.25, SYS_H, 1.7, SYS_H / 4, -SYS_H, 0);
     dw.glyph(g, 'gClef', 0.6, 3, 0, 0, -4.4, 2.64);
     dw.glyph(g, 'fClef', 0.6, BASS_TOP + 1, 0, 0, -1.05, 2.55);
     var n = Math.abs(key.sig);
@@ -275,67 +275,94 @@
     var byUnit = {};
     line.placed.forEach(function (p) { (byUnit[p.unit] = byUnit[p.unit] || []).push(p); });
 
+    var runOf = {};        // event index -> beamed run, so a run's stickings share a line
+    var runId = 0;
+
+    // A run of eighths on one staff under one beam, sloped like the packet's
+    function beamed(run, staff) {
+      var ys = run.map(function (p) { return p.ev.notes[0].y; });
+      var dir = stemDir(ys, staff);
+      var xs = run.map(function (p) { return dir === 'up' ? p.x + HEAD_W - STEM_W : p.x; });
+      var req = ys.map(function (y) { return idealEnd([y], staff, dir); });
+      var n = run.length;
+      var rise = Math.max(-1.25, Math.min(1.25, (ys[n - 1] - ys[0]) * 0.5));
+      var inner = ys.slice(1, -1);
+      if (inner.length) {
+        if (dir === 'up' && Math.min.apply(null, inner) < Math.min(ys[0], ys[n - 1])) rise = 0;
+        if (dir === 'down' && Math.max.apply(null, inner) > Math.max(ys[0], ys[n - 1])) rise = 0;
+      }
+      var slope = rise / (xs[n - 1] - xs[0]);
+      var start = dir === 'up' ? Infinity : -Infinity;
+      req.forEach(function (r, i) {
+        var c = r - slope * (xs[i] - xs[0]);
+        start = dir === 'up' ? Math.min(start, c) : Math.max(start, c);
+      });
+      var L = function (x) { return start + slope * (x - xs[0]); };
+      runId++;
+      run.forEach(function (p, i) {
+        var gg = groupFor(p.ev);
+        var nn = p.ev.notes[0];
+        ledgers(dw, gg, p.ev.notes, staff, p.x);
+        heads(dw, gg, p.ev.notes, p.x, false);
+        var end = L(xs[i]);
+        stemRect(dw, gg, p.x, dir, dir === 'up' ? nn.y - 0.168 : nn.y + 0.168, end);
+        if (dir === 'up') note(p.ev.i, staff, end, nn.y + 0.5);
+        else note(p.ev.i, staff, nn.y - 0.5, end);
+        runOf[p.ev.i] = runId;
+      });
+      var x1 = xs[0];
+      var x2 = xs[n - 1] + STEM_W;
+      var y1 = L(x1);
+      var y2 = L(x2);
+      var off = dir === 'up' ? BEAM_T : -BEAM_T;
+      dw.see(Math.min(y1, y2, y1 + off, y2 + off), Math.max(y1, y2, y1 + off, y2 + off));
+      make('polygon', {
+        points: [[x1, y1], [x2, y2], [x2, y2 + off], [x1, y1 + off]].map(function (q) { return r3(q[0]) + ',' + r3(q[1]); }).join(' '),
+        'class': 'beam'
+      }, g);
+    }
+
+    // A note or chord on its own. A chord split between the staves takes one stem, down from the bass part.
+    function single(p) {
+      var gg = groupFor(p.ev);
+      var split = p.ev.notes.some(function (q) { return q.staff === 't'; }) && p.ev.notes.some(function (q) { return q.staff === 'b'; });
+      ['t', 'b'].forEach(function (staff) {
+        var notes = p.ev.notes.filter(function (q) { return q.staff === staff; });
+        if (!notes.length) return;
+        var ys = notes.map(function (q) { return q.y; });
+        var top = Math.min.apply(null, ys);
+        var bot = Math.max.apply(null, ys);
+        ledgers(dw, gg, notes, staff, p.x);
+        heads(dw, gg, notes, p.x, p.ev.r === 'h');
+        if (split && staff === 't') { note(p.ev.i, staff, top - 0.5, bot + 0.5); return; }
+        var dir = split ? 'down' : stemDir(ys, staff);
+        var end = idealEnd(ys, staff, dir);
+        var sx = stemRect(dw, gg, p.x, dir, dir === 'up' ? bot - 0.168 : top + 0.168, end);
+        if (p.ev.r === '8') {
+          if (dir === 'up') dw.glyph(gg, 'flag8thUp', sx, end + 0.04, 0, 0, 0, 3.3);
+          else dw.glyph(gg, 'flag8thDown', sx, end - 0.13, 0, 0, -3.3, 0);
+        }
+        if (dir === 'up') note(p.ev.i, staff, end, bot + 0.5);
+        else note(p.ev.i, staff, top - 0.5, end);
+      });
+    }
+
+    // Within each beam group, consecutive eighths on the same staff share a beam
     Object.keys(byUnit).forEach(function (u) {
       var ps = byUnit[u];
-      // Two eighths on one staff, one note each: beam them
-      if (ps.length === 2 && ps[0].ev.r === '8' && ps[1].ev.r === '8' &&
-          ps[0].ev.notes.length === 1 && ps[1].ev.notes.length === 1 &&
-          ps[0].ev.notes[0].staff === ps[1].ev.notes[0].staff) {
-        var a = ps[0];
-        var b = ps[1];
-        var na = a.ev.notes[0];
-        var nb = b.ev.notes[0];
-        var staff = na.staff;
-        var dir = stemDir([na.y, nb.y], staff);
-        var ea = idealEnd([na.y], staff, dir);
-        var eb = idealEnd([nb.y], staff, dir);
-        var xa = dir === 'up' ? a.x + HEAD_W - STEM_W : a.x;
-        var xb = dir === 'up' ? b.x + HEAD_W - STEM_W : b.x;
-        var rise = Math.max(-1, Math.min(1, (nb.y - na.y) * 0.5));
-        var start = dir === 'up' ? Math.min(ea, eb - rise) : Math.max(ea, eb - rise);
-        var slope = rise / (xb - xa);
-        var L = function (x) { return start + slope * (x - xa); };
-        [a, b].forEach(function (p) {
-          var gg = groupFor(p.ev);
-          var nn = p.ev.notes[0];
-          ledgers(dw, gg, p.ev.notes, staff, p.x);
-          heads(dw, gg, p.ev.notes, p.x, false);
-          var sx = dir === 'up' ? p.x + HEAD_W - STEM_W : p.x;
-          var end = L(sx);
-          stemRect(dw, gg, p.x, dir, dir === 'up' ? nn.y - 0.168 : nn.y + 0.168, end);
-          if (dir === 'up') note(p.ev.i, staff, end, nn.y + 0.5);
-          else note(p.ev.i, staff, nn.y - 0.5, end);
-        });
-        var y1 = L(xa);
-        var y2 = L(xb);
-        var off = dir === 'up' ? BEAM_T : -BEAM_T;
-        var pts = [[xa, y1], [xb + STEM_W, y2 + slope * STEM_W], [xb + STEM_W, y2 + slope * STEM_W + off], [xa, y1 + off]];
-        dw.see(Math.min(y1, y2, y1 + off, y2 + off), Math.max(y1, y2, y1 + off, y2 + off));
-        make('polygon', { points: pts.map(function (q) { return r3(q[0]) + ',' + r3(q[1]); }).join(' '), 'class': 'beam' }, g);
-        return;
-      }
-      // Otherwise each event stands alone: one stem per staff, flags on eighths
+      var run = [];
+      var flush = function () {
+        if (run.length > 1) beamed(run, run[0].ev.notes[0].staff);
+        else if (run.length === 1) single(run[0]);
+        run = [];
+      };
       ps.forEach(function (p) {
-        var gg = groupFor(p.ev);
-        ['t', 'b'].forEach(function (staff) {
-          var notes = p.ev.notes.filter(function (q) { return q.staff === staff; });
-          if (!notes.length) return;
-          var ys = notes.map(function (q) { return q.y; });
-          var dir = stemDir(ys, staff);
-          var end = idealEnd(ys, staff, dir);
-          var top = Math.min.apply(null, ys);
-          var bot = Math.max.apply(null, ys);
-          ledgers(dw, gg, notes, staff, p.x);
-          heads(dw, gg, notes, p.x, p.ev.r === 'h');
-          var sx = stemRect(dw, gg, p.x, dir, dir === 'up' ? bot - 0.168 : top + 0.168, end);
-          if (p.ev.r === '8') {
-            if (dir === 'up') dw.glyph(gg, 'flag8thUp', sx, end + 0.04, 0, 0, 0, 3.3);
-            else dw.glyph(gg, 'flag8thDown', sx, end - 0.13, 0, 0, -3.3, 0);
-          }
-          if (dir === 'up') note(p.ev.i, staff, end, bot + 0.5);
-          else note(p.ev.i, staff, top - 0.5, end);
-        });
+        var beamable = p.ev.r === '8' && p.ev.notes.length === 1;
+        if (!beamable) { flush(); single(p); return; }
+        if (run.length && run[0].ev.notes[0].staff !== p.ev.notes[0].staff) flush();
+        run.push(p);
       });
+      flush();
     });
 
     // Stickings above the notes they belong to (treble above the staff, bass between the staves)
@@ -343,13 +370,13 @@
       if (!p.ev.st) return;
       var staff = p.ev.notes[0].staff;
       var top = tops[p.ev.i][staff];
-      var base = staff === 't' ? Math.min(-1.1, top - 0.8) : Math.min(BASS_TOP - 1.1, top - 0.8);
-      // keep a beamed pair's numbers on one line
-      var mate = line.placed.filter(function (q) { return q.unit === p.unit && q !== p && q.ev.st && q.ev.notes[0].staff === staff; })[0];
-      if (mate) {
-        var mt = tops[mate.ev.i][staff];
-        var mb = staff === 't' ? Math.min(-1.1, mt - 0.8) : Math.min(BASS_TOP - 1.1, mt - 0.8);
-        base = Math.min(base, mb);
+      var lift = function (t) { return staff === 't' ? Math.min(-1.1, t - 0.8) : Math.min(BASS_TOP - 1.1, t - 0.8); };
+      var base = lift(top);
+      // the numbers over one beam sit on one line
+      if (runOf[p.ev.i]) {
+        line.placed.forEach(function (q) {
+          if (runOf[q.ev.i] === runOf[p.ev.i]) base = Math.min(base, lift(tops[q.ev.i][staff]));
+        });
       }
       dw.text(groupFor(p.ev), p.ev.st, p.x + HEAD_W / 2, base, 1.45, 'st');
     });
@@ -382,8 +409,8 @@
 
     // Final barline at the end of the section
     if (line.last) {
-      dw.rect(g, line.end - 0.98, 0, 0.16, 15);
-      dw.rect(g, line.end - 0.5, 0, 0.5, 15);
+      dw.rect(g, line.end - 0.98, 0, 0.16, SYS_H);
+      dw.rect(g, line.end - 0.5, 0, 0.5, SYS_H);
     }
 
     var x0 = -1.7;
@@ -413,8 +440,7 @@
       wrap.setAttribute('aria-labelledby', 'sc-h-' + sec.index);
       var head = document.createElement('div');
       head.className = 'sc-sec-head';
-      head.innerHTML = '<div><h3 id="sc-h-' + sec.index + '">' + sec.name + '</h3><p>' + SUBTITLE[sec.index] + '</p></div>' +
-        '<button class="btn btn-outline-dark sc-play" type="button" data-sec="' + sec.index + '" aria-pressed="false"><span>Play</span></button>';
+      head.innerHTML = '<div><h3 id="sc-h-' + sec.index + '">' + sec.name + '</h3><p>' + SUBTITLE[sec.index] + '</p></div>';
       wrap.appendChild(head);
       var score = document.createElement('div');
       score.className = 'sc-score';
@@ -576,11 +602,11 @@
     }
   }
 
-  function setButton(btn, on) {
-    if (!btn) return;
-    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    var label = btn.querySelector('span');
-    label.textContent = on ? 'Stop' : (btn === playAllBtn ? 'Play all' : 'Play');
+  function setButtons(on) {
+    playBtns.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.querySelector('span').textContent = on ? 'Stop' : 'Play';
+    });
   }
 
   function stop() {
@@ -588,7 +614,7 @@
     clearInterval(playing.timer);
     playing.timeouts.forEach(clearTimeout);
     if (playing.sources) playing.sources = null;
-    setButton(playing.btn, false);
+    setButtons(false);
     clearMarks();
     if (ctx) {
       // Silence anything already scheduled
@@ -603,7 +629,7 @@
     playing = null;
   }
 
-  function start(list, btn) {
+  function start(list) {
     audio();
     stop();
     var items = [];
@@ -614,10 +640,10 @@
       beat += sec.beats;
     });
     playing = {
-      items: items, total: beat, idx: 0, btn: btn, timeouts: [], lastSystem: null,
+      items: items, total: beat, idx: 0, timeouts: [], lastSystem: null,
       beat: clickBox.checked ? -4 : 0, time: ctx.currentTime + 0.12
     };
-    setButton(btn, true);
+    setButtons(true);
     schedule();
     playing.timer = setInterval(schedule, 40);
   }
@@ -660,25 +686,22 @@
     }
   }
 
-  sheet.addEventListener('click', function (e) {
-    var btn = e.target.closest('.sc-play');
-    if (!btn) return;
-    if (playing && playing.btn === btn) { stop(); return; }
-    start([parseInt(btn.getAttribute('data-sec'), 10)], btn);
-  });
-  playAllBtn.addEventListener('click', function () {
-    if (playing && playing.btn === playAllBtn) { stop(); return; }
-    start([0, 1, 2, 3], playAllBtn);
+  // The whole page plays as one, each section flowing into the next
+  playBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (playing) { stop(); return; }
+      start([0, 1, 2, 3]);
+    });
   });
   bpmInput.addEventListener('input', function () { bpmOut.textContent = bpmInput.value; });
   document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); });
 
   if (!AC) {
-    playAllBtn.hidden = true;
+    playBtns.forEach(function (b) { b.hidden = true; });
     controls.querySelectorAll('.rud-tempo, .rud-opt').forEach(function (x) { x.hidden = true; });
   }
   controls.hidden = false;
+  if (AC) playBtns.forEach(function (b) { b.hidden = false; });
   var startId = location.hash.slice(1);
   setKey(byId[startId] ? byId[startId].id : 'c-major', !!byId[startId] && byId[startId].id !== startId);
-  if (!AC) sheet.querySelectorAll('.sc-play').forEach(function (b) { b.hidden = true; });
 })();
