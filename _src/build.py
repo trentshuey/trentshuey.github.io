@@ -27,6 +27,7 @@ from programs import PROGRAMS  # noqa: E402
 import rudiments_render  # noqa: E402
 import scales_render  # noqa: E402
 import jam  # noqa: E402
+import latin  # noqa: E402
 import paint  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -499,6 +500,7 @@ LAYOUT = """<!doctype html>
             <li><a href="{prefix}handbook.html">Studio handbook</a></li>
             <li><a href="{prefix}rudiments.html">Rudiments</a></li>
             <li><a href="{prefix}scales.html">Scales and arpeggios</a></li>
+            <li><a href="{prefix}latin.html">Latin grooves</a></li>
             <li><a href="{prefix}studio.html">Studio info</a></li>
             <li><a href="{prefix}auditions.html">Auditions</a></li>
             <li><a href="{prefix}alumni.html">Alumni</a></li>
@@ -585,6 +587,8 @@ def build():
                      events_next([e for e in events if "FiFi" in e["venue"]], prefix, limit=2)
                      if "{{events_jam}}" in body else "")
             .replace("{{jam_tunes}}", jam.tunes_table() if "{{jam_tunes}}" in body else "")
+            .replace("{{latin_grooves}}", latin.page() if "{{latin_grooves}}" in body else "")
+            .replace("{{latin_tabs}}", latin.tabs() if "{{latin_tabs}}" in body else "")
             .replace("{{events_jazz}}",
                      events_next([e for e in events if "jazz" in e["group"].lower()], prefix)
                      if "{{events_jazz}}" in body else "")

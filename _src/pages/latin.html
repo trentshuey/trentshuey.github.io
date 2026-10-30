@@ -1,0 +1,52 @@
+<!--
+title: Latin Percussion Grooves
+description: Hear how the Afro-Cuban percussion section fits together: clave, cascara, mambo bell, conga tumbao, bongo martillo, guiro, and bass in son montuno, mambo, and 6/8, with playback at any tempo.
+nav: percussion
+-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Latin Grooves</h1>
+        <p class="page-intro">How the Afro-Cuban percussion section locks together around the clave. Press play, then turn parts on and off to hear what each one adds.</p>
+        {{keys}}
+      </div>
+    </header>
+
+    <div class="rud-controls lp-controls" hidden>
+      <div class="wrap rud-controls-inner">
+        <button class="btn btn-dark lp-play" type="button" aria-pressed="false"><span>Play</span></button>
+        <div class="rud-tempo">
+          <label for="lp-bpm">Tempo <output id="lp-bpm-out" for="lp-bpm">168</output> bpm</label>
+          <input id="lp-bpm" type="range" min="60" max="240" step="2" value="168">
+        </div>
+        <div class="lp-toggle lp-dir" role="group" aria-label="Clave direction">
+          <button type="button" data-dir="32" aria-pressed="true">3-2</button>
+          <button type="button" data-dir="23" aria-pressed="false">2-3</button>
+        </div>
+        <div class="lp-toggle lp-type" role="group" aria-label="Clave">
+          <button type="button" data-type="son" aria-pressed="true">Son clave</button>
+          <button type="button" data-type="rumba" aria-pressed="false">Rumba clave</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="band band-white" id="grooves">
+      <div class="wrap">
+        <div class="lp-tabs" role="group" aria-label="Groove">{{latin_tabs}}</div>
+        <div class="lp-sheet">{{latin_grooves}}</div>
+        <p class="muted small note">Each part is shown in its basic form; players vary every one of them. The grid is two bars of eighth notes, with the clave's three side and two side marked above. Sounds are synthesized in your browser, so treat them as a guide and listen to the records for the real thing.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap split">
+        <div>
+          <h2>Where this comes from</h2>
+          <div class="prose">
+            <p>Dr. Shuey has played bongos and mambo bell for Tito Puente Jr., and the ASU jazz program has given a full semester to Afro-Cuban jazz, mambo, and salsa built on the clave. Percussion students learn these parts in lessons and play them in the jazz combos and the Big Band.</p>
+            <p><a href="jam.html">Jam sessions</a> &middot; <a href="jazz.html">ASU Jazz Ensembles</a> &middot; <a href="rudiments.html">Rudiments</a></p>
+          </div>
+        </div>
+        <figure class="photo">{{img:mambo-bell-signed}}</figure>
+      </div>
+    </section>
+<script src="assets/latin.js" defer></script>
