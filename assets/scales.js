@@ -31,6 +31,7 @@
   var keys = DATA.keys;
   var byId = {};
   keys.forEach(function (k) { byId[k.id] = k; });
+  Object.keys(DATA.aliases || {}).forEach(function (a) { byId[a] = byId[DATA.aliases[a]]; });
 
   var sheet = root.querySelector('.sc-sections');
   var titleKey = root.querySelector('.sc-title-key');
@@ -465,7 +466,7 @@
 
   window.addEventListener('hashchange', function () {
     var id = location.hash.slice(1);
-    if (byId[id] && (!current || id !== current.id)) setKey(id, false);
+    if (byId[id] && (!current || byId[id] !== current)) setKey(byId[id].id, byId[id].id !== id);
   });
 
   var resizeTimer = null;
@@ -677,6 +678,7 @@
     controls.querySelectorAll('.rud-tempo, .rud-opt').forEach(function (x) { x.hidden = true; });
   }
   controls.hidden = false;
-  setKey(byId[location.hash.slice(1)] ? location.hash.slice(1) : 'c-major', false);
+  var startId = location.hash.slice(1);
+  setKey(byId[startId] ? byId[startId].id : 'c-major', !!byId[startId] && byId[startId].id !== startId);
   if (!AC) sheet.querySelectorAll('.sc-play').forEach(function (b) { b.hidden = true; });
 })();

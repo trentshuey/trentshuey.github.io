@@ -19,11 +19,12 @@ GLYPHS = json.loads((HERE / "scales_glyphs.json").read_text(encoding="utf-8"))
 LETTERS = "CDEFGAB"
 SHOW = {"b": "♭", "#": "♯"}
 
+# Twelve keys in each mode, no enharmonic duplicates (the six-accidental keys are spelled with flats).
 # (name, key signature: + sharps / - flats, packet page whose register it uses)
 MAJOR = [("C", 0, "C"), ("F", -1, "F"), ("Bb", -2, "Bb"), ("Eb", -3, "Eb"), ("Ab", -4, "Ab"),
-         ("Db", -5, "Db"), ("Gb", -6, "Gb"), ("F#", 6, "F#"), ("B", 5, "B"), ("E", 4, "E"),
+         ("Db", -5, "Db"), ("Gb", -6, "Gb"), ("B", 5, "B"), ("E", 4, "E"),
          ("A", 3, "A"), ("D", 2, "D"), ("G", 1, "G")]
-MINOR = [("C", -3, "C"), ("F", -4, "F"), ("Bb", -5, "Bb"), ("Eb", -6, "Eb"), ("D#", 6, "Eb"),
+MINOR = [("C", -3, "C"), ("F", -4, "F"), ("Bb", -5, "Bb"), ("Eb", -6, "Eb"),
          ("G#", 5, "Ab"), ("C#", 4, "Db"), ("F#", 3, "F#"), ("B", 2, "B"), ("E", 1, "E"),
          ("A", 0, "A"), ("D", -1, "D"), ("G", -2, "G")]
 MODE_NAME = {"major": "major", "minor": "harmonic minor"}
@@ -56,7 +57,9 @@ def keys():
 
 
 def data_script():
-    data = {"sections": PATTERN["sections"], "keys": keys(), "glyphs": GLYPHS}
+    # Old links to the enharmonic spellings land on the key that replaced them
+    aliases = {"f-sharp-major": "g-flat-major", "d-sharp-minor": "e-flat-minor"}
+    data = {"sections": PATTERN["sections"], "keys": keys(), "aliases": aliases, "glyphs": GLYPHS}
     payload = json.dumps(data, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
     return f'<script type="application/json" id="scales-data">{payload}</script>'
 
