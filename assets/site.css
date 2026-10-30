@@ -1150,6 +1150,7 @@ main > section:nth-of-type(3n) .photo img { --shadow: var(--orange); }
 
 .docs { gap: 40px 36px; }
 .doc { background: transparent; border: 0; border-radius: 0; padding: 0; }
+.doc .actions { margin-top: 0; padding-top: 16px; }   /* buttons sit right under their text, not at the bottom of the row */
 .doc::before {
   content: ""; display: block; height: 30px; width: 78%; margin: 0 0 18px -6px; background: var(--swatch, var(--yellow));
   -webkit-mask: var(--mask-swatch) no-repeat left center / 100% 100%; mask: var(--mask-swatch) no-repeat left center / 100% 100%;
