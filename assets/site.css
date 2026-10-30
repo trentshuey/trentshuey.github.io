@@ -1381,3 +1381,35 @@ html { scroll-padding-top: 150px; }
   .sc-controls, .sc-pick, .sc-play, .sc-intro .muted { display: none !important; }
   .sc-system { fill: #111111; }
 }
+
+/* Jam sessions (jam.html) */
+.jam-101 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px 44px; }
+.jam-101 h3 { margin: 0 0 8px; }
+.jam-101 p { margin: 0 0 12px; max-width: 60ch; }
+.jam-inst { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 0 0 22px; }
+.jam-inst[hidden] { display: none; }
+.jam-inst button { font: inherit; text-align: left; padding: 12px 14px; border: 2.5px solid var(--ink); border-radius: var(--organic-sm); background: var(--white); color: var(--ink); cursor: pointer; font-weight: 760; font-size: 1.25rem; line-height: 1.15; }
+.jam-inst button small { display: block; font-weight: 500; font-size: 0.9rem; color: var(--muted); margin-top: 4px; }
+.jam-inst button[aria-pressed="true"] { background: var(--ultra); border-color: var(--ultra); color: var(--white); }
+.jam-inst button[aria-pressed="true"] small { color: var(--white); }
+.tunes th[scope="row"] { font-weight: 400; }
+.tunes .tune { display: block; font-weight: 720; color: var(--ink); font-style: italic; }
+.tunes .by { display: block; color: var(--muted); font-size: 0.95rem; }
+.tunes .key-cell { font-weight: 720; white-space: nowrap; color: var(--ink); }
+.tunes .tk-bridge { display: block; font-weight: 500; color: var(--muted); font-size: 0.95rem; }
+.tunes .tk-bridge .tk { font-weight: 500; }
+.tunes .set { white-space: nowrap; font-size: 0.95rem; }
+.form { display: inline-flex; flex-wrap: wrap; gap: 4px; vertical-align: middle; }
+.fc { display: inline-flex; align-items: baseline; gap: 2px; padding: 2px 8px; border-radius: 6px; background: var(--paper); border: 1.5px solid var(--rule); font-weight: 700; font-size: 0.92rem; color: var(--ink); }
+.fc small { font-weight: 500; font-size: 0.75rem; color: var(--muted); }
+.form-note { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+@media (max-width: 700px) {
+  .tunes thead { display: none; }
+  .tunes tr { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  .tunes th, .tunes td { border: 0; padding: 0; }
+  .tunes .key-cell { text-align: right; }
+  .tunes td:nth-child(3), .tunes td:nth-child(4) { grid-column: 1 / -1; }
+  .tunes td:nth-child(4) { color: var(--muted); }
+  .tunes .set { grid-column: 1 / -1; }
+}
+.jam-101 .jam-photo { margin: 0; align-self: start; }

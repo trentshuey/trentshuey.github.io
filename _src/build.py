@@ -26,6 +26,7 @@ from events import EVENTS  # noqa: E402
 from programs import PROGRAMS  # noqa: E402
 import rudiments_render  # noqa: E402
 import scales_render  # noqa: E402
+import jam  # noqa: E402
 import paint  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -507,6 +508,7 @@ LAYOUT = """<!doctype html>
           <h2>More</h2>
           <ul>
             <li><a href="{prefix}events.html">Events</a></li>
+            <li><a href="{prefix}jam.html">Jam sessions</a></li>
             <li><a href="{prefix}programs.html">Concert programs</a></li>
             <li><a href="{prefix}research.html">Research</a></li>
             <li><a href="{prefix}press.html">Press</a></li>
@@ -579,6 +581,10 @@ def build():
             .replace("{{videocount}}", str(video_count()))
             .replace("{{events}}", events_page(events, prefix) if "{{events}}" in body else "")
             .replace("{{events_next}}", events_next(events, prefix) if "{{events_next}}" in body else "")
+            .replace("{{events_jam}}",
+                     events_next([e for e in events if "FiFi" in e["venue"]], prefix, limit=2)
+                     if "{{events_jam}}" in body else "")
+            .replace("{{jam_tunes}}", jam.tunes_table() if "{{jam_tunes}}" in body else "")
             .replace("{{events_jazz}}",
                      events_next([e for e in events if "jazz" in e["group"].lower()], prefix)
                      if "{{events_jazz}}" in body else "")

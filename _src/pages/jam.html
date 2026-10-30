@@ -1,0 +1,106 @@
+<!--
+title: Jam Sessions
+description: Open jam sessions with the Angelo State University jazz combos at the House of FiFi DuBois in downtown San Angelo: dates, how to sit in, etiquette, and tunes with keys for every instrument.
+nav: jazz
+-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Jam Sessions</h1>
+        <p class="page-intro">The ASU jazz combos play a set at the House of FiFi DuBois, then open the stage. Bring your instrument and sit in with the band.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="#next">Next jam</a>
+          <a class="btn btn-outline-light" href="#tunes">Tunes and keys</a>
+        </div>
+        {{keys}}
+      </div>
+    </header>
+
+    <section class="band band-white" id="next">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Next jam</h2>
+          <p>Concert 4:00 to 5:00 p.m., open jam 5:00 to 6:00. The House of FiFi DuBois, 123 S. Chadbourne St., downtown San Angelo.</p>
+        </div>
+        {{events_jam}}
+        <p class="actions"><a class="btn btn-outline-dark" href="events.html">All events</a></p>
+      </div>
+    </section>
+
+    <section class="band" id="jam-101">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Jam Session 101</h2>
+        </div>
+        <div class="jam-101">
+          <div>
+            <h3>What is a jam session?</h3>
+            <p>A jam session is where jazz musicians can come and &ldquo;sit in&rdquo; with the house band. Historically, this is how jazz musicians discovered each other and how they advertised themselves. Jam sessions were also a place where younger players could absorb and apply what the older players were doing, as well as experiment with their own material.</p>
+            <p>Jam sessions are made possible through the shared body of jazz standards and the general knowledge of how jazz is performed and how it is structured.</p>
+          </div>
+          <div>
+            <h3>How does a jam session work?</h3>
+            <p>The house band will normally play a tune or even a full set.</p>
+            <p>Those who arrive can put their name down on a list at the bandstand and note what tune they would like to play. The tune should be a jazz standard or something in any provided fakebooks. Otherwise, the musician should bring their own charts.</p>
+            <p>Your name will be called and you go up to the bandstand to play with the band. More than one person can go up at any given time.</p>
+          </div>
+          <div>
+            <h3>What do I need to bring?</h3>
+            <p>Your instrument and anything you need to play. If there is no guitar player in the house band, bring your own amplifier. Bring your own sticks and anything else you need to perform. Music stands are normally provided.</p>
+            <p>If you play a bass clef instrument, it is wise to bring your own fakebook or iPad. Bring anything you need to be successful.</p>
+          </div>
+          <div>
+            <h3>Jam session etiquette</h3>
+            <p>Generally, musicians only play 2&ndash;4 choruses on a given tune, depending on the length of the tune. This is a performance, but you want to make room for others. No hogging the stage. Take cues from those who play before you about how long you should play!</p>
+          </div>
+          <div>
+            <h3>How can I prepare?</h3>
+            <p>Come prepared with a few jazz standards that you can call. Ideally, these are tunes you can play without music in front of you.</p>
+            <p>The number one piece of advice for a jam session is to only play tunes you are fully prepared to play. Know what key your tune is in to avoid any confusion. Have iReal Pro or a fakebook that you are familiar with if you intend to sit in on other people&rsquo;s tunes.</p>
+          </div>
+          <figure class="photo jam-photo">{{img:jazz-combo-drums}}</figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-white" id="tunes">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Tunes and keys</h2>
+          <p>Tunes from the combos' recent sets. Pick your instrument to see the key you read in.</p>
+        </div>
+        <div class="jam-inst" role="group" aria-label="Your instrument" hidden>
+          <button type="button" data-t="C" aria-pressed="true">C<small>Piano, guitar, bass, vibes, flute, trombone</small></button>
+          <button type="button" data-t="Bb" aria-pressed="false">B&#9837;<small>Trumpet, tenor sax, clarinet, soprano sax</small></button>
+          <button type="button" data-t="Eb" aria-pressed="false">E&#9837;<small>Alto and baritone sax</small></button>
+          <button type="button" data-t="F" aria-pressed="false">F<small>French horn</small></button>
+        </div>
+        {{jam_tunes}}
+        <p class="muted small note">Keys are the ones most fakebooks use. Bands sometimes call a tune in another key, so check with the band before you count it off.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap split">
+        <div>
+          <h2>Hear the combos</h2>
+          <div class="prose">
+            <p>The full September 2026 set at the House of FiFi DuBois: <i>Blue Monk</i>, <i>Four</i>, <i>Blue Bossa</i>, <i>Autumn Leaves</i>, <i>Agua de Beber</i>, <i>Summer Samba</i>, <i>Stolen Moments</i>, and <i>A Night in Tunisia</i>.</p>
+            <p><a href="programs.html#jazz">Every jazz program</a> &middot; <a href="jazz.html#sessions">Recent sessions</a></p>
+          </div>
+        </div>
+        {{video:mDvBY8oI1Dg}}
+      </div>
+    </section>
+
+    <section class="band band-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Questions about sitting in?</h2>
+          <p>Jam sessions are free and open to musicians of every level. Thank you to the House of FiFi DuBois for hosting and to FAME for supporting live jazz in San Angelo.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-light" href="mailto:{{email}}?subject=Jam%20session">Email Dr. Shuey</a>
+          <a class="btn btn-outline-light" href="jazz.html">ASU Jazz Ensembles</a>
+        </div>
+      </div>
+    </section>

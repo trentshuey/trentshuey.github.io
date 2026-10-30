@@ -55,6 +55,7 @@ PROGRAMS = [
     {
         "id": "jazz-ensemble-2026-10-13", "date": "2026-10-13", "group": "jazz",
         "ensemble": "ASU Jazz Ensemble", "title": "<i>A Tribute to Chick Corea</i>",
+        "venue": "Brooks &amp; Bates Theatre",
         "links": [("Watch", yt("qt4H3LOLcFc"))],
     },
     {

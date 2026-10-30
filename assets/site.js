@@ -423,6 +423,43 @@
     });
   })();
 
+  // Jam sessions: show every tune's key for the visitor's instrument
+  var inst = document.querySelector('.jam-inst');
+  if (inst) (function () {
+    var LET = 'CDEFGAB';
+    var PC = [0, 2, 4, 5, 7, 9, 11];
+    var SHIFT = { C: [0, 0], Bb: [1, 2], Eb: [5, 9], F: [4, 7] };   // letter steps and semitones up
+    var ACC = { '-2': '♭♭', '-1': '♭', '0': '', '1': '♯', '2': '♯♯' };
+    var MODE = { major: ' major', minor: ' minor', dorian: ' Dorian', blues: ' blues', '': '' };
+    var HEAD = { C: 'Concert key', Bb: 'Key for B♭ instruments', Eb: 'Key for E♭ instruments', F: 'Key for F instruments' };
+    var head = document.querySelector('.tunes .key-head');
+    function spell(el, t) {
+      var li = LET.indexOf(el.getAttribute('data-l'));
+      var a = el.getAttribute('data-a');
+      var nl = (li + SHIFT[t][0]) % 7;
+      var pc = (((PC[li] + (a === 'b' ? -1 : a === '#' ? 1 : 0) + SHIFT[t][1]) % 12) + 12) % 12;
+      var diff = (((pc - PC[nl]) % 12) + 12) % 12;
+      if (diff > 6) diff -= 12;
+      return LET[nl] + ACC[String(diff)] + MODE[el.getAttribute('data-m') || ''];
+    }
+    function show(t) {
+      document.querySelectorAll('.tunes .tk').forEach(function (el) { el.textContent = spell(el, t); });
+      if (head) head.textContent = HEAD[t];
+      inst.querySelectorAll('button').forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-t') === t ? 'true' : 'false');
+      });
+      try { localStorage.setItem('jam-instrument', t); } catch (e) { /* a convenience only */ }
+    }
+    inst.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-t]');
+      if (b) show(b.getAttribute('data-t'));
+    });
+    inst.hidden = false;
+    var saved = null;
+    try { saved = localStorage.getItem('jam-instrument'); } catch (e) { /* private mode */ }
+    if (saved && SHIFT[saved] && saved !== 'C') show(saved);
+  })();
+
   // Marimba: play a 3-2 son clave once on load; bars ring when hovered
   var marimba = document.querySelector('.marimba');
   if (marimba) {

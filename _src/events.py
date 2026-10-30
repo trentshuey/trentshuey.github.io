@@ -52,7 +52,8 @@ EVENTS = [
         "group": "ASU Jazz Combos",
         "venue": "The House of FiFi DuBois",
         "map": "The House of FiFi DuBois, 123 S. Chadbourne St., San Angelo, TX",
-        "note": "Concert at 4:00, open jam at 5:00.",
+        "note": "Concert at 4:00, open jam at 5:00. Bring your instrument and sit in.",
+        "link": ("How to sit in", "jam.html"),
     },
     {
         "start": "2026-12-05T09:00", "end": "2026-12-05T19:00",
