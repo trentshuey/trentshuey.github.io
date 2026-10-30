@@ -1427,3 +1427,9 @@ html { scroll-padding-top: 150px; }
 /* Two-column photo rows under a section (jazz page) */
 .photos-2 { margin-top: 36px; }
 .photos-2 .gallery { columns: 2 260px; }
+
+/* Featured photo across the top of a section (jazz page) */
+.photo-feature { margin: 0 0 44px; }
+.photo-feature img { width: 100%; height: auto; }
+.photo-feature figcaption { margin-top: 12px; }
+.jazz-intro { align-items: start; }
