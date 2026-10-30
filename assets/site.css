@@ -1336,3 +1336,7 @@ html { scroll-padding-top: 150px; }
 .timeline > div[hidden] { display: none; }
 .sessions dd > a { font-weight: 680; }
 .session-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 6px; font-size: 1rem; }
+
+/* Skills test packet download, under the C major example */
+.hb-download { margin: 20px 0 0; }
+@media print { .hb-download { display: none; } }
