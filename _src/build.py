@@ -513,7 +513,6 @@ LAYOUT = """<!doctype html>
             <li><a href="{prefix}programs.html">Concert programs</a></li>
             <li><a href="{prefix}research.html">Research</a></li>
             <li><a href="{prefix}press.html">Press</a></li>
-            <li><a href="{prefix}composers.html">Writing for percussion</a></li>
             <li><a href="{prefix}recital.html">Book a marimba recital</a></li>
             <li><a href="{prefix}shuey-hikes.html">Shuey Hikes</a></li>
           </ul>
