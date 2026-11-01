@@ -44,6 +44,8 @@ LINKS = {
     "asu_profile": "https://www.angelo.edu/live/profiles/3140-trent-shuey",
     "music_form": "https://www.angelo.edu/departments/visual-performing-arts/music/prospective-music-student-form/",
     "dissertation": "https://hdl.handle.net/2142/106958",
+    # Ram Horns audition music (Google Drive folder, same one the flyer QR codes open)
+    "ram_horns_music": "https://drive.google.com/drive/folders/1tvqO74rQBBMRtLFR8PzbTkTBojcAu5BX?usp=share_link",
 }
 
 # Visitor count: set to the GoatCounter site code (the "xyz" in xyz.goatcounter.com)
@@ -502,6 +504,7 @@ LAYOUT = """<!doctype html>
             <li><a href="{prefix}percussion.html#lessons">Private lessons</a></li>
             <li><a href="{prefix}studio.html">Studio info</a></li>
             <li><a href="{prefix}auditions.html">Auditions</a></li>
+            <li><a href="{prefix}ram-horns.html">Ram Horns</a></li>
             <li><a href="{prefix}alumni.html">Alumni</a></li>
           </ul>
         </div>
