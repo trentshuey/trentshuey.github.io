@@ -348,6 +348,12 @@ def program_archive(prefix=""):
             body.append(f'<p class="rep-head">{heading}</p>' + _pieces(pieces))
         if prog.get("personnel"):
             body.append(f'<p class="personnel">{prog["personnel"]}</p>')
+        if prog.get("photo"):
+            name, caption = prog["photo"]
+            body.append(
+                f'<figure class="program-photo"><a class="gallery-item" href="{prefix}assets/img/{IMAGES[name]["file"]}">'
+                f'{img_tag(name, prefix)}</a><figcaption>{caption}</figcaption></figure>'
+            )
         if prog.get("links"):
             links = "".join(
                 f'<a href="{href if href.startswith("http") else prefix + href}">{label}</a>'

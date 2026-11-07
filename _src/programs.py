@@ -12,6 +12,7 @@ Each program:
   sets      list of (heading, pieces) when the program is split by combo
   personnel optional string
   links     list of (label, href)
+  photo     optional (image name from images.json, caption as HTML), shown with the program
 """
 
 def yt(vid):
@@ -31,6 +32,7 @@ PROGRAMS = [
         ],
         "links": [("Watch the full concert", yt("i8DR-wduKIU"))],
         "image": "poster-asupe-2026-11-03",
+        "photo": ("in-c-ensemble-2026", "The Percussion Ensemble with the faculty and students who joined for <i>In C</i>."),
     },
     {
         "id": "jazz-combos-2026-10-31", "date": "2026-10-31", "group": "jazz",

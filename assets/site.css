@@ -1506,3 +1506,10 @@ h2 { margin-bottom: 14px; }
 .footer-social a:hover, .footer-social a:focus-visible { background: var(--yellow); border-color: var(--yellow); color: var(--ink); transform: rotate(-6deg); }
 .footer-social svg { width: 22px; height: 22px; }
 @media (prefers-reduced-motion: reduce) { .footer-social a:hover, .footer-social a:focus-visible { transform: none; } }
+
+/* ---------- Concert photo inside a program entry ---------- */
+
+.program-photo { margin: 20px 0 0; max-width: 600px; }
+.program-photo a { display: block; border-radius: var(--organic-sm); overflow: hidden; border: 1px solid var(--rule); }
+.program-photo img { width: 100%; height: auto; display: block; }
+.program-photo figcaption { margin-top: 8px; font-size: 0.95rem; color: var(--muted); }

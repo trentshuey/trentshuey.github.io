@@ -1,542 +1,548 @@
 {
- "portrait-mallets": {
-  "file": "portrait-mallets.jpg",
-  "w": 1040,
-  "h": 1300,
-  "alt": "Trent Shuey holding a handful of marimba mallets"
- },
- "portrait-2015": {
-  "file": "portrait-2015.jpg",
-  "w": 733,
-  "h": 1100,
-  "alt": "Trent Shuey in a suit holding marimba mallets"
- },
- "teaching-studio": {
-  "file": "teaching-studio.jpg",
-  "w": 1500,
-  "h": 1125,
-  "alt": "A teaching studio with a marimba, drums, and shelves of music"
- },
- "conducting-magic": {
-  "file": "conducting-magic.jpg",
-  "w": 1084,
-  "h": 1100,
-  "alt": "Dr. Shuey conducting the ASU Percussion Ensemble"
- },
- "percussion-at-asu-sketch": {
-  "file": "percussion-at-asu-sketch.jpg",
-  "w": 851,
-  "h": 315,
-  "alt": "Sketch of the ASU Percussion Ensemble in performance, titled Percussion @ ASU"
- },
- "celebration-art": {
-  "file": "celebration-art.jpg",
-  "w": 2000,
-  "h": 528,
-  "alt": "Sketch of a percussion ensemble in performance"
- },
- "pencil-sketch": {
-  "file": "pencil-sketch.jpg",
-  "w": 1600,
-  "h": 987,
-  "alt": "Pencil sketch of musicians playing marimba and strings"
- },
- "jazz-combo-drums": {
-  "file": "jazz-combo-drums.jpg",
-  "w": 1000,
-  "h": 1400,
-  "alt": "Dr. Shuey on drum set at a jazz combo performance"
- },
- "conducting-stadium": {
-  "file": "conducting-stadium.jpg",
-  "w": 1200,
-  "h": 1200,
-  "alt": "Dr. Shuey conducting a marching band in a football stadium"
- },
- "conducting-band": {
-  "file": "conducting-band.jpg",
-  "w": 960,
-  "h": 540,
-  "alt": "Dr. Shuey conducting a concert band"
- },
- "early-marching-snare": {
-  "file": "early-marching-snare.jpg",
-  "w": 960,
-  "h": 643,
-  "alt": "A young Trent Shuey playing marching snare drum"
- },
- "fort-concho": {
-  "file": "fort-concho.jpg",
-  "w": 1120,
-  "h": 1400,
-  "alt": "Dr. Shuey in period uniform with a field drum at Fort Concho, beside a bugler"
- },
- "operamaya-cancun": {
-  "file": "operamaya-cancun.jpg",
-  "w": 1500,
-  "h": 1125,
-  "alt": "Musicians at the Cancún sign, 2021"
- },
- "operamaya-cave": {
-  "file": "operamaya-cave.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "Timpani set up for a concert inside a cave, 2021"
- },
- "operamaya-church": {
-  "file": "operamaya-church.jpg",
-  "w": 946,
-  "h": 953,
-  "alt": "Dr. Shuey playing drum set in a church"
- },
- "snare-pink-stage": {
-  "file": "snare-pink-stage.jpg",
-  "w": 954,
-  "h": 957,
-  "alt": "Dr. Shuey playing snare drum on a stage lit pink"
- },
- "young-drummer": {
-  "file": "young-drummer.jpg",
-  "w": 1200,
-  "h": 1200,
-  "alt": "Dr. Shuey with a young drummer, both holding drumsticks"
- },
- "marimba-recital-hall": {
-  "file": "marimba-recital-hall.jpg",
-  "w": 340,
-  "h": 275,
-  "alt": "Dr. Shuey playing marimba on a concert stage in front of organ pipes"
- },
- "to-the-earth": {
-  "file": "to-the-earth.jpg",
-  "w": 1131,
-  "h": 751,
-  "alt": "Dr. Shuey seated behind four flowerpots for Frederic Rzewski’s To the Earth"
- },
- "drum-set-smiling": {
-  "file": "drum-set-smiling.jpg",
-  "w": 880,
-  "h": 913,
-  "alt": "Dr. Shuey smiling behind a drum set"
- },
- "drum-set-dancer": {
-  "file": "drum-set-dancer.jpg",
-  "w": 680,
-  "h": 882,
-  "alt": "Dr. Shuey on drum set with a trombonist and a dancer"
- },
- "marching-snare-students": {
-  "file": "marching-snare-students.jpg",
-  "w": 519,
-  "h": 634,
-  "alt": "Dr. Shuey playing marching snare drum with students"
- },
- "marimba-concerto": {
-  "file": "marimba-concerto.jpg",
-  "w": 1500,
-  "h": 976,
-  "alt": "A marimba concerto, with the soloist shown on screens above the stage"
- },
- "percussion-setup": {
-  "file": "percussion-setup.jpg",
-  "w": 720,
-  "h": 540,
-  "alt": "Dr. Shuey on stage beside a percussion setup"
- },
- "orchestra-snare": {
-  "file": "orchestra-snare.jpg",
-  "w": 1500,
-  "h": 844,
-  "alt": "Dr. Shuey playing snare drum in an orchestra"
- },
- "multiple-percussion": {
-  "file": "multiple-percussion.jpg",
-  "w": 1500,
-  "h": 1373,
-  "alt": "Dr. Shuey performing on a stage set with marimba, drums, and cymbals"
- },
- "snare-stage": {
-  "file": "snare-stage.jpg",
-  "w": 422,
-  "h": 358,
-  "alt": "Dr. Shuey on stage with snare drum sticks"
- },
- "timpani-sepia": {
-  "file": "timpani-sepia.jpg",
-  "w": 1500,
-  "h": 1098,
-  "alt": "Dr. Shuey playing timpani"
- },
- "timpani-close": {
-  "file": "timpani-close.jpg",
-  "w": 600,
-  "h": 400,
-  "alt": "Dr. Shuey playing timpani"
- },
- "timpani-practice": {
-  "file": "timpani-practice.jpg",
-  "w": 1211,
-  "h": 1031,
-  "alt": "Dr. Shuey playing timpani in a practice room"
- },
- "paul-sunglasses": {
-  "file": "paul-sunglasses.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey outdoors in sunglasses"
- },
- "paul-boat": {
-  "file": "paul-boat.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey in a striped shirt and visor on a boat"
- },
- "paul-track-jacket": {
-  "file": "paul-track-jacket.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey in a track jacket standing by a log"
- },
- "paul-river": {
-  "file": "paul-river.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey wading in a river with a child"
- },
- "paul-camper": {
-  "file": "paul-camper.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey with two young children beside a camper"
- },
- "paul-lake": {
-  "file": "paul-lake.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey beside a mountain lake"
- },
- "paul-backpacking": {
-  "file": "paul-backpacking.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey backpacking in a forest"
- },
- "paul-cowboy-hat": {
-  "file": "paul-cowboy-hat.jpg",
-  "w": 900,
-  "h": 1200,
-  "alt": "Paul Shuey in a cowboy hat"
- },
- "paul-rafting": {
-  "file": "paul-rafting.jpg",
-  "w": 600,
-  "h": 400,
-  "alt": "Paul and Trent Shuey with a raft on a river"
- },
- "paul-urn": {
-  "file": "paul-urn.jpg",
-  "w": 1400,
-  "h": 1050,
-  "alt": "A carved wooden urn with a mountain scene, surrounded by flowers"
- },
- "painting-ps": {
-  "file": "painting-ps.jpg",
-  "w": 1400,
-  "h": 1033,
-  "alt": "A colorful painting of fish by Paul Shuey, signed PS"
- },
- "logo-drumline": {
-  "file": "logo-drumline.jpg",
-  "w": 198,
-  "h": 200,
-  "alt": "Angelo State Drumline logo"
- },
- "logo-ram-band": {
-  "file": "logo-ram-band.png",
-  "w": 310,
-  "h": 400,
-  "alt": "Angelo State University Ram Band logo"
- },
- "logo-ram-horns-stacked": {
-  "file": "logo-ram-horns-stacked.png",
-  "w": 640,
-  "h": 218,
-  "alt": "Ram Horns logo"
- },
- "logo-ram-horns": {
-  "file": "logo-ram-horns.png",
-  "w": 640,
-  "h": 126,
-  "alt": "Ram Horns logo"
- },
- "logo-innovative-percussion": {
-  "file": "logo-innovative-percussion.png",
-  "w": 640,
-  "h": 152,
-  "alt": "Innovative Percussion logo"
- },
- "logo-percussion-ensemble": {
-  "file": "logo-percussion-ensemble.png",
-  "w": 800,
-  "h": 212,
-  "alt": "Angelo State University Percussion Ensemble logo"
- },
- "logo-jazz-ensemble": {
-  "file": "logo-jazz-ensemble.png",
-  "w": 800,
-  "h": 156,
-  "alt": "Angelo State University Jazz Ensemble logo"
- },
- "logo-jazz-combos": {
-  "file": "logo-jazz-combos.png",
-  "w": 800,
-  "h": 156,
-  "alt": "Angelo State University Jazz Combos logo"
- },
- "offered-bite": {
-  "file": "offered-bite.jpg",
-  "w": 1000,
-  "h": 966,
-  "alt": "Two hands in shadow, one holding a red apple and one offering a bitten green apple"
- },
- "company-july-2026": {
-  "file": "company-july-2026.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Singers and musicians gathered with Dr. Shuey after a performance, July 2026"
- },
- "glimmer-ensemble": {
-  "file": "glimmer-ensemble.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "The ASU Percussion Ensemble with Dr. Shuey after the Glimmer concert, November 2025"
- },
- "pasic-2025-hall": {
-  "file": "pasic-2025-hall.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey with a fellow percussionist in the PASIC 2025 exhibit hall"
- },
- "pasic-2025-booth": {
-  "file": "pasic-2025-booth.jpg",
-  "w": 1200,
-  "h": 1600,
-  "alt": "Dr. Shuey with a colleague at a mallet maker's booth at PASIC 2025"
- },
- "pasic-2025-friends-1": {
-  "file": "pasic-2025-friends-1.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey with a friend at PASIC 2025 in Indianapolis"
- },
- "pasic-2025-friends-2": {
-  "file": "pasic-2025-friends-2.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey with a friend at PASIC 2025 in Indianapolis"
- },
- "pasic-2025-friends-3": {
-  "file": "pasic-2025-friends-3.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey with a friend at PASIC 2025 in Indianapolis"
- },
- "stage-dec-2025": {
-  "file": "stage-dec-2025.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "A percussion setup on stage under green lights before a December 2025 concert"
- },
- "big-spring-rehearsal": {
-  "file": "big-spring-rehearsal.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "Two sets of timpani set up in front of the Big Spring Symphony for the Glass concerto rehearsal, February 2026"
- },
- "big-spring-concert": {
-  "file": "big-spring-concert.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "Dr. Shuey with two colleagues behind the timpani after the Glass concerto with the Big Spring Symphony, February 2026"
- },
- "orchestra-setup-2026": {
-  "file": "orchestra-setup-2026.jpg",
-  "w": 1600,
-  "h": 720,
-  "alt": "Xylophone, glockenspiel, chimes, and cymbals set up in an orchestra's percussion section, April 2026"
- },
- "orchestra-timpani-2026": {
-  "file": "orchestra-timpani-2026.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey in concert tails with a fellow percussionist at the timpani, April 2026"
- },
- "orchestra-section-2026": {
-  "file": "orchestra-section-2026.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey with a fellow musician backstage at an orchestra concert, April 2026"
- },
- "tito-puente-show": {
-  "file": "tito-puente-show-color.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "Dr. Shuey on stage in Lubbock before the Tito Puente Jr. show, May 2026"
- },
- "mambo-bell-signed": {
-  "file": "mambo-bell-signed.jpg",
-  "w": 1200,
-  "h": 1600,
-  "alt": "A well-worn mambo bell, signed, from the Tito Puente Jr. show"
- },
- "drumline-students-2026": {
-  "file": "drumline-students-2026.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "Dr. Shuey with two members of the Angelo State Drumline, May 2026"
- },
- "summer-camp-stage-2026": {
-  "file": "summer-camp-stage-2026.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey on stage with a drum set during the ASU Summer Music Camp, June 2026"
- },
- "summer-camp-staff-2026": {
-  "file": "summer-camp-staff-2026.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "ASU Summer Music Camp staff in gold camp shirts in front of the Angelo State logo, June 2026"
- },
- "band-camp-2026": {
-  "file": "band-camp-2026.jpg",
-  "w": 1200,
-  "h": 1600,
-  "alt": "Dr. Shuey in a Drumline jersey, covered in bubbles at Ram Band camp, August 2026"
- },
- "performers-oct-2026": {
-  "file": "performers-oct-2026.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "Dr. Shuey with four fellow performers in concert black, October 2026"
- },
- "wts-percussion-selfie": {
-  "file": "wts-percussion-selfie.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "Dr. Shuey with a fellow percussionist in the West Texas Symphony percussion section, October 2026"
- },
- "wts-stage": {
-  "file": "wts-stage.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "The West Texas Symphony on stage, October 2026"
- },
- "wts-percussion-section": {
-  "file": "wts-percussion-section.jpg",
-  "w": 1600,
-  "h": 1200,
-  "alt": "The West Texas Symphony percussion section, some in Halloween masks, October 2026"
- },
- "poster-asupe-2026-11-03": {
-  "file": "poster-asupe-2026-11-03.jpg",
-  "w": 864,
-  "h": 1080,
-  "alt": "Poster: ASU Percussion Ensemble, Varèse Ionisation, Mahler Adagietto, Riley In C, 7 p.m. Tuesday, Nov. 3, Elta Joyce Murphey Auditorium, free"
- },
- "poster-combos-2026-10-31": {
-  "file": "poster-combos-2026-10-31.jpg",
-  "w": 864,
-  "h": 1080,
-  "alt": "Poster: ASU Jazz Combos Halloween concert and jam session, Saturday, Oct. 31, 4 to 6 p.m., free, 123 S. Chadbourne St."
- },
- "poster-combos-2026-10-31-orange": {
-  "file": "poster-combos-2026-10-31-orange.jpg",
-  "w": 864,
-  "h": 1080,
-  "alt": "Poster: ASU Jazz Combos Halloween concert and jam session, Oct. 31, 4 to 6 p.m., free"
- },
- "hikes-zion-narrows": {
-  "file": "hikes-zion-narrows.jpg",
-  "w": 1600,
-  "h": 900,
-  "alt": "Dr. Shuey alone in the Zion Narrows, wading orange floodwater between red canyon walls"
- },
- "hikes-badge": {
-  "file": "hikes-badge.jpg",
-  "w": 640,
-  "h": 640,
-  "alt": "Shuey Hikes badge: a gold mountain peak inside a compass ring on navy"
- },
- "hikes-ep-zion": {
-  "file": "hikes-ep-zion.jpg",
-  "w": 1280,
-  "h": 720,
-  "alt": "Shuey Hikes episode card: Zion, 3 days in the canyon, with Watchman Campground, Scout's Lookout, and the Narrows"
- },
- "hikes-ep-bryce": {
-  "file": "hikes-ep-bryce.jpg",
-  "w": 1280,
-  "h": 720,
-  "alt": "Shuey Hikes episode card: Bryce Canyon, hoodoo country"
- },
- "hikes-ep-snake-river": {
-  "file": "hikes-ep-snake-river.jpg",
-  "w": 1280,
-  "h": 720,
-  "alt": "Shuey Hikes episode card: Snake River, first light, Burley, Idaho"
- },
- "jazz-fifi-keys-2026": {
-  "file": "jazz-fifi-keys-2026.jpg",
-  "w": 1200,
-  "h": 1200,
-  "alt": "A student at the keyboard with Dr. Shuey beside him at the House of FiFi DuBois, September 2026"
- },
- "jazz-fifi-combo-2026": {
-  "file": "jazz-fifi-combo-2026.jpg",
-  "w": 1800,
-  "h": 1200,
-  "alt": "Dr. Shuey on vibraphone with an ASU jazz combo at the House of FiFi DuBois, September 2026"
- },
- "jazz-ensemble-stage": {
-  "file": "jazz-ensemble-stage.jpg",
-  "w": 1800,
-  "h": 1200,
-  "alt": "The ASU Jazz Ensemble on stage, with Dr. Shuey in front of the band"
- },
- "jazz-ensemble-conducting": {
-  "file": "jazz-ensemble-conducting.jpg",
-  "w": 1800,
-  "h": 1200,
-  "alt": "Dr. Shuey conducting the ASU Jazz Ensemble, trumpets on the top riser"
- },
- "jazz-ensemble-saxes": {
-  "file": "jazz-ensemble-saxes.jpg",
-  "w": 1800,
-  "h": 1200,
-  "alt": "Two saxophonists soloing as Dr. Shuey conducts the ASU Jazz Ensemble"
- },
- "jazz-ensemble-band": {
-  "file": "jazz-ensemble-band.jpg",
-  "w": 1800,
-  "h": 1200,
-  "alt": "The ASU Jazz Ensemble in concert, with Dr. Shuey conducting"
- },
- "jazz-drums-timbales-2022": {
-  "file": "jazz-drums-timbales-2022.jpg",
-  "w": 1800,
-  "h": 1200,
-  "alt": "Dr. Shuey laughing at the drum set beside a student on timbales, November 2022"
- },
- "flyer-ram-horns-auditions-2026": {
-  "file": "flyer-ram-horns-auditions-2026.jpg",
-  "w": 1530,
-  "h": 1980,
-  "alt": "Flyer: Ram Horns auditions for brass, saxophones, and drum set, Monday, Nov. 9, 5:30 p.m., Carr EFA 134, with the 2026-27 game schedule"
- },
- "flyer-ram-horns-drum-set-2026": {
-  "file": "flyer-ram-horns-drum-set-2026.jpg",
-  "w": 1530,
-  "h": 1980,
-  "alt": "Flyer: Ram Horns drum set auditions, Wednesday, Nov. 11, 5:00 p.m., Carr EFA 288, prepared music and six styles at slow, medium, and fast tempos"
- }
+  "portrait-mallets": {
+    "file": "portrait-mallets.jpg",
+    "w": 1040,
+    "h": 1300,
+    "alt": "Trent Shuey holding a handful of marimba mallets"
+  },
+  "portrait-2015": {
+    "file": "portrait-2015.jpg",
+    "w": 733,
+    "h": 1100,
+    "alt": "Trent Shuey in a suit holding marimba mallets"
+  },
+  "teaching-studio": {
+    "file": "teaching-studio.jpg",
+    "w": 1500,
+    "h": 1125,
+    "alt": "A teaching studio with a marimba, drums, and shelves of music"
+  },
+  "conducting-magic": {
+    "file": "conducting-magic.jpg",
+    "w": 1084,
+    "h": 1100,
+    "alt": "Dr. Shuey conducting the ASU Percussion Ensemble"
+  },
+  "percussion-at-asu-sketch": {
+    "file": "percussion-at-asu-sketch.jpg",
+    "w": 851,
+    "h": 315,
+    "alt": "Sketch of the ASU Percussion Ensemble in performance, titled Percussion @ ASU"
+  },
+  "celebration-art": {
+    "file": "celebration-art.jpg",
+    "w": 2000,
+    "h": 528,
+    "alt": "Sketch of a percussion ensemble in performance"
+  },
+  "pencil-sketch": {
+    "file": "pencil-sketch.jpg",
+    "w": 1600,
+    "h": 987,
+    "alt": "Pencil sketch of musicians playing marimba and strings"
+  },
+  "jazz-combo-drums": {
+    "file": "jazz-combo-drums.jpg",
+    "w": 1000,
+    "h": 1400,
+    "alt": "Dr. Shuey on drum set at a jazz combo performance"
+  },
+  "conducting-stadium": {
+    "file": "conducting-stadium.jpg",
+    "w": 1200,
+    "h": 1200,
+    "alt": "Dr. Shuey conducting a marching band in a football stadium"
+  },
+  "conducting-band": {
+    "file": "conducting-band.jpg",
+    "w": 960,
+    "h": 540,
+    "alt": "Dr. Shuey conducting a concert band"
+  },
+  "early-marching-snare": {
+    "file": "early-marching-snare.jpg",
+    "w": 960,
+    "h": 643,
+    "alt": "A young Trent Shuey playing marching snare drum"
+  },
+  "fort-concho": {
+    "file": "fort-concho.jpg",
+    "w": 1120,
+    "h": 1400,
+    "alt": "Dr. Shuey in period uniform with a field drum at Fort Concho, beside a bugler"
+  },
+  "operamaya-cancun": {
+    "file": "operamaya-cancun.jpg",
+    "w": 1500,
+    "h": 1125,
+    "alt": "Musicians at the Cancún sign, 2021"
+  },
+  "operamaya-cave": {
+    "file": "operamaya-cave.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "Timpani set up for a concert inside a cave, 2021"
+  },
+  "operamaya-church": {
+    "file": "operamaya-church.jpg",
+    "w": 946,
+    "h": 953,
+    "alt": "Dr. Shuey playing drum set in a church"
+  },
+  "snare-pink-stage": {
+    "file": "snare-pink-stage.jpg",
+    "w": 954,
+    "h": 957,
+    "alt": "Dr. Shuey playing snare drum on a stage lit pink"
+  },
+  "young-drummer": {
+    "file": "young-drummer.jpg",
+    "w": 1200,
+    "h": 1200,
+    "alt": "Dr. Shuey with a young drummer, both holding drumsticks"
+  },
+  "marimba-recital-hall": {
+    "file": "marimba-recital-hall.jpg",
+    "w": 340,
+    "h": 275,
+    "alt": "Dr. Shuey playing marimba on a concert stage in front of organ pipes"
+  },
+  "to-the-earth": {
+    "file": "to-the-earth.jpg",
+    "w": 1131,
+    "h": 751,
+    "alt": "Dr. Shuey seated behind four flowerpots for Frederic Rzewski’s To the Earth"
+  },
+  "drum-set-smiling": {
+    "file": "drum-set-smiling.jpg",
+    "w": 880,
+    "h": 913,
+    "alt": "Dr. Shuey smiling behind a drum set"
+  },
+  "drum-set-dancer": {
+    "file": "drum-set-dancer.jpg",
+    "w": 680,
+    "h": 882,
+    "alt": "Dr. Shuey on drum set with a trombonist and a dancer"
+  },
+  "marching-snare-students": {
+    "file": "marching-snare-students.jpg",
+    "w": 519,
+    "h": 634,
+    "alt": "Dr. Shuey playing marching snare drum with students"
+  },
+  "marimba-concerto": {
+    "file": "marimba-concerto.jpg",
+    "w": 1500,
+    "h": 976,
+    "alt": "A marimba concerto, with the soloist shown on screens above the stage"
+  },
+  "percussion-setup": {
+    "file": "percussion-setup.jpg",
+    "w": 720,
+    "h": 540,
+    "alt": "Dr. Shuey on stage beside a percussion setup"
+  },
+  "orchestra-snare": {
+    "file": "orchestra-snare.jpg",
+    "w": 1500,
+    "h": 844,
+    "alt": "Dr. Shuey playing snare drum in an orchestra"
+  },
+  "multiple-percussion": {
+    "file": "multiple-percussion.jpg",
+    "w": 1500,
+    "h": 1373,
+    "alt": "Dr. Shuey performing on a stage set with marimba, drums, and cymbals"
+  },
+  "snare-stage": {
+    "file": "snare-stage.jpg",
+    "w": 422,
+    "h": 358,
+    "alt": "Dr. Shuey on stage with snare drum sticks"
+  },
+  "timpani-sepia": {
+    "file": "timpani-sepia.jpg",
+    "w": 1500,
+    "h": 1098,
+    "alt": "Dr. Shuey playing timpani"
+  },
+  "timpani-close": {
+    "file": "timpani-close.jpg",
+    "w": 600,
+    "h": 400,
+    "alt": "Dr. Shuey playing timpani"
+  },
+  "timpani-practice": {
+    "file": "timpani-practice.jpg",
+    "w": 1211,
+    "h": 1031,
+    "alt": "Dr. Shuey playing timpani in a practice room"
+  },
+  "paul-sunglasses": {
+    "file": "paul-sunglasses.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey outdoors in sunglasses"
+  },
+  "paul-boat": {
+    "file": "paul-boat.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey in a striped shirt and visor on a boat"
+  },
+  "paul-track-jacket": {
+    "file": "paul-track-jacket.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey in a track jacket standing by a log"
+  },
+  "paul-river": {
+    "file": "paul-river.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey wading in a river with a child"
+  },
+  "paul-camper": {
+    "file": "paul-camper.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey with two young children beside a camper"
+  },
+  "paul-lake": {
+    "file": "paul-lake.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey beside a mountain lake"
+  },
+  "paul-backpacking": {
+    "file": "paul-backpacking.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey backpacking in a forest"
+  },
+  "paul-cowboy-hat": {
+    "file": "paul-cowboy-hat.jpg",
+    "w": 900,
+    "h": 1200,
+    "alt": "Paul Shuey in a cowboy hat"
+  },
+  "paul-rafting": {
+    "file": "paul-rafting.jpg",
+    "w": 600,
+    "h": 400,
+    "alt": "Paul and Trent Shuey with a raft on a river"
+  },
+  "paul-urn": {
+    "file": "paul-urn.jpg",
+    "w": 1400,
+    "h": 1050,
+    "alt": "A carved wooden urn with a mountain scene, surrounded by flowers"
+  },
+  "painting-ps": {
+    "file": "painting-ps.jpg",
+    "w": 1400,
+    "h": 1033,
+    "alt": "A colorful painting of fish by Paul Shuey, signed PS"
+  },
+  "logo-drumline": {
+    "file": "logo-drumline.jpg",
+    "w": 198,
+    "h": 200,
+    "alt": "Angelo State Drumline logo"
+  },
+  "logo-ram-band": {
+    "file": "logo-ram-band.png",
+    "w": 310,
+    "h": 400,
+    "alt": "Angelo State University Ram Band logo"
+  },
+  "logo-ram-horns-stacked": {
+    "file": "logo-ram-horns-stacked.png",
+    "w": 640,
+    "h": 218,
+    "alt": "Ram Horns logo"
+  },
+  "logo-ram-horns": {
+    "file": "logo-ram-horns.png",
+    "w": 640,
+    "h": 126,
+    "alt": "Ram Horns logo"
+  },
+  "logo-innovative-percussion": {
+    "file": "logo-innovative-percussion.png",
+    "w": 640,
+    "h": 152,
+    "alt": "Innovative Percussion logo"
+  },
+  "logo-percussion-ensemble": {
+    "file": "logo-percussion-ensemble.png",
+    "w": 800,
+    "h": 212,
+    "alt": "Angelo State University Percussion Ensemble logo"
+  },
+  "logo-jazz-ensemble": {
+    "file": "logo-jazz-ensemble.png",
+    "w": 800,
+    "h": 156,
+    "alt": "Angelo State University Jazz Ensemble logo"
+  },
+  "logo-jazz-combos": {
+    "file": "logo-jazz-combos.png",
+    "w": 800,
+    "h": 156,
+    "alt": "Angelo State University Jazz Combos logo"
+  },
+  "offered-bite": {
+    "file": "offered-bite.jpg",
+    "w": 1000,
+    "h": 966,
+    "alt": "Two hands in shadow, one holding a red apple and one offering a bitten green apple"
+  },
+  "company-july-2026": {
+    "file": "company-july-2026.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Singers and musicians gathered with Dr. Shuey after a performance, July 2026"
+  },
+  "glimmer-ensemble": {
+    "file": "glimmer-ensemble.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "The ASU Percussion Ensemble with Dr. Shuey after the Glimmer concert, November 2025"
+  },
+  "pasic-2025-hall": {
+    "file": "pasic-2025-hall.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey with a fellow percussionist in the PASIC 2025 exhibit hall"
+  },
+  "pasic-2025-booth": {
+    "file": "pasic-2025-booth.jpg",
+    "w": 1200,
+    "h": 1600,
+    "alt": "Dr. Shuey with a colleague at a mallet maker's booth at PASIC 2025"
+  },
+  "pasic-2025-friends-1": {
+    "file": "pasic-2025-friends-1.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey with a friend at PASIC 2025 in Indianapolis"
+  },
+  "pasic-2025-friends-2": {
+    "file": "pasic-2025-friends-2.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey with a friend at PASIC 2025 in Indianapolis"
+  },
+  "pasic-2025-friends-3": {
+    "file": "pasic-2025-friends-3.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey with a friend at PASIC 2025 in Indianapolis"
+  },
+  "stage-dec-2025": {
+    "file": "stage-dec-2025.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "A percussion setup on stage under green lights before a December 2025 concert"
+  },
+  "big-spring-rehearsal": {
+    "file": "big-spring-rehearsal.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "Two sets of timpani set up in front of the Big Spring Symphony for the Glass concerto rehearsal, February 2026"
+  },
+  "big-spring-concert": {
+    "file": "big-spring-concert.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "Dr. Shuey with two colleagues behind the timpani after the Glass concerto with the Big Spring Symphony, February 2026"
+  },
+  "orchestra-setup-2026": {
+    "file": "orchestra-setup-2026.jpg",
+    "w": 1600,
+    "h": 720,
+    "alt": "Xylophone, glockenspiel, chimes, and cymbals set up in an orchestra's percussion section, April 2026"
+  },
+  "orchestra-timpani-2026": {
+    "file": "orchestra-timpani-2026.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey in concert tails with a fellow percussionist at the timpani, April 2026"
+  },
+  "orchestra-section-2026": {
+    "file": "orchestra-section-2026.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey with a fellow musician backstage at an orchestra concert, April 2026"
+  },
+  "tito-puente-show": {
+    "file": "tito-puente-show-color.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "Dr. Shuey on stage in Lubbock before the Tito Puente Jr. show, May 2026"
+  },
+  "mambo-bell-signed": {
+    "file": "mambo-bell-signed.jpg",
+    "w": 1200,
+    "h": 1600,
+    "alt": "A well-worn mambo bell, signed, from the Tito Puente Jr. show"
+  },
+  "drumline-students-2026": {
+    "file": "drumline-students-2026.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "Dr. Shuey with two members of the Angelo State Drumline, May 2026"
+  },
+  "summer-camp-stage-2026": {
+    "file": "summer-camp-stage-2026.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey on stage with a drum set during the ASU Summer Music Camp, June 2026"
+  },
+  "summer-camp-staff-2026": {
+    "file": "summer-camp-staff-2026.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "ASU Summer Music Camp staff in gold camp shirts in front of the Angelo State logo, June 2026"
+  },
+  "band-camp-2026": {
+    "file": "band-camp-2026.jpg",
+    "w": 1200,
+    "h": 1600,
+    "alt": "Dr. Shuey in a Drumline jersey, covered in bubbles at Ram Band camp, August 2026"
+  },
+  "performers-oct-2026": {
+    "file": "performers-oct-2026.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "Dr. Shuey with four fellow performers in concert black, October 2026"
+  },
+  "wts-percussion-selfie": {
+    "file": "wts-percussion-selfie.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "Dr. Shuey with a fellow percussionist in the West Texas Symphony percussion section, October 2026"
+  },
+  "wts-stage": {
+    "file": "wts-stage.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "The West Texas Symphony on stage, October 2026"
+  },
+  "wts-percussion-section": {
+    "file": "wts-percussion-section.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "The West Texas Symphony percussion section, some in Halloween masks, October 2026"
+  },
+  "poster-asupe-2026-11-03": {
+    "file": "poster-asupe-2026-11-03.jpg",
+    "w": 864,
+    "h": 1080,
+    "alt": "Poster: ASU Percussion Ensemble, Varèse Ionisation, Mahler Adagietto, Riley In C, 7 p.m. Tuesday, Nov. 3, Elta Joyce Murphey Auditorium, free"
+  },
+  "poster-combos-2026-10-31": {
+    "file": "poster-combos-2026-10-31.jpg",
+    "w": 864,
+    "h": 1080,
+    "alt": "Poster: ASU Jazz Combos Halloween concert and jam session, Saturday, Oct. 31, 4 to 6 p.m., free, 123 S. Chadbourne St."
+  },
+  "poster-combos-2026-10-31-orange": {
+    "file": "poster-combos-2026-10-31-orange.jpg",
+    "w": 864,
+    "h": 1080,
+    "alt": "Poster: ASU Jazz Combos Halloween concert and jam session, Oct. 31, 4 to 6 p.m., free"
+  },
+  "hikes-zion-narrows": {
+    "file": "hikes-zion-narrows.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Dr. Shuey alone in the Zion Narrows, wading orange floodwater between red canyon walls"
+  },
+  "hikes-badge": {
+    "file": "hikes-badge.jpg",
+    "w": 640,
+    "h": 640,
+    "alt": "Shuey Hikes badge: a gold mountain peak inside a compass ring on navy"
+  },
+  "hikes-ep-zion": {
+    "file": "hikes-ep-zion.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "Shuey Hikes episode card: Zion, 3 days in the canyon, with Watchman Campground, Scout's Lookout, and the Narrows"
+  },
+  "hikes-ep-bryce": {
+    "file": "hikes-ep-bryce.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "Shuey Hikes episode card: Bryce Canyon, hoodoo country"
+  },
+  "hikes-ep-snake-river": {
+    "file": "hikes-ep-snake-river.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "Shuey Hikes episode card: Snake River, first light, Burley, Idaho"
+  },
+  "jazz-fifi-keys-2026": {
+    "file": "jazz-fifi-keys-2026.jpg",
+    "w": 1200,
+    "h": 1200,
+    "alt": "A student at the keyboard with Dr. Shuey beside him at the House of FiFi DuBois, September 2026"
+  },
+  "jazz-fifi-combo-2026": {
+    "file": "jazz-fifi-combo-2026.jpg",
+    "w": 1800,
+    "h": 1200,
+    "alt": "Dr. Shuey on vibraphone with an ASU jazz combo at the House of FiFi DuBois, September 2026"
+  },
+  "jazz-ensemble-stage": {
+    "file": "jazz-ensemble-stage.jpg",
+    "w": 1800,
+    "h": 1200,
+    "alt": "The ASU Jazz Ensemble on stage, with Dr. Shuey in front of the band"
+  },
+  "jazz-ensemble-conducting": {
+    "file": "jazz-ensemble-conducting.jpg",
+    "w": 1800,
+    "h": 1200,
+    "alt": "Dr. Shuey conducting the ASU Jazz Ensemble, trumpets on the top riser"
+  },
+  "jazz-ensemble-saxes": {
+    "file": "jazz-ensemble-saxes.jpg",
+    "w": 1800,
+    "h": 1200,
+    "alt": "Two saxophonists soloing as Dr. Shuey conducts the ASU Jazz Ensemble"
+  },
+  "jazz-ensemble-band": {
+    "file": "jazz-ensemble-band.jpg",
+    "w": 1800,
+    "h": 1200,
+    "alt": "The ASU Jazz Ensemble in concert, with Dr. Shuey conducting"
+  },
+  "jazz-drums-timbales-2022": {
+    "file": "jazz-drums-timbales-2022.jpg",
+    "w": 1800,
+    "h": 1200,
+    "alt": "Dr. Shuey laughing at the drum set beside a student on timbales, November 2022"
+  },
+  "flyer-ram-horns-auditions-2026": {
+    "file": "flyer-ram-horns-auditions-2026.jpg",
+    "w": 1530,
+    "h": 1980,
+    "alt": "Flyer: Ram Horns auditions for brass, saxophones, and drum set, Monday, Nov. 9, 5:30 p.m., Carr EFA 134, with the 2026-27 game schedule"
+  },
+  "flyer-ram-horns-drum-set-2026": {
+    "file": "flyer-ram-horns-drum-set-2026.jpg",
+    "w": 1530,
+    "h": 1980,
+    "alt": "Flyer: Ram Horns drum set auditions, Wednesday, Nov. 11, 5:00 p.m., Carr EFA 288, prepared music and six styles at slow, medium, and fast tempos"
+  },
+  "in-c-ensemble-2026": {
+    "file": "in-c-ensemble-2026.jpg",
+    "w": 1600,
+    "h": 1200,
+    "alt": "The ASU Percussion Ensemble and the faculty and students who joined them for In C, on stage with their instruments, November 2026"
+  }
 }
