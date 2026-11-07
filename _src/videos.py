@@ -3,7 +3,8 @@
 Each entry: (YouTube id, title as HTML, detail line as HTML or "").
 Sources: the Trent Shuey channel (youtube.com/@TrentShuey) and the
 Angelo State Music channel (youtube.com/@AngeloStateMusic).
-Gathered October 2026. Untitled clips and duplicate uploads are left out.
+Gathered October 2026; newer concerts are added at the top of their section.
+Untitled clips and duplicate uploads are left out.
 """
 
 BATTERY = "Battery arrangement by Dr. Shuey"
@@ -12,6 +13,7 @@ RAM = "ASU Ram Band"
 
 SECTIONS = [
     ("percussion-ensemble", "Percussion Ensemble", [
+        ("i8DR-wduKIU", "Percussion Ensemble concert: <i>In C</i>", "Full concert, Nov. 3, 2026. Var&egrave;se, Mahler, and Riley, with ASU faculty and students joining for <i>In C</i>"),
         ("-pxF15mh5tc", "Percussion Ensemble concert", "Full concert, Nov. 7, 2024"),
         ("st1PSVkDEv4", "Percussion Ensemble concert", "Full concert, Apr. 11, 2024"),
         ("KJgu7S0uwFQ", "Percussion Studio Recital", "Apr. 10, 2024"),

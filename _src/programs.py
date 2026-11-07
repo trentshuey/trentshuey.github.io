@@ -23,12 +23,13 @@ PROGRAMS = [
         "id": "percussion-ensemble-2026-11-03", "date": "2026-11-03", "group": "percussion",
         "ensemble": "ASU Percussion Ensemble", "title": "<i>In C</i>",
         "venue": "Elta Joyce Murphey Auditorium",
+        "intro": "An open collaboration: ASU music faculty and students joined the ensemble for Terry Riley&rsquo;s <i>In C</i>.",
         "pieces": [
-            ("Edgard Var&egrave;se", "<i>Ionisation</i>", ""),
-            ("Gustav Mahler", "<i>Adagietto</i> from Symphony No. 5", "Arranged by Grubbs"),
-            ("Terry Riley", "<i>In C</i>", ""),
+            ("Edgard Var&egrave;se", "<i>Ionisation</i>", "Dr. Shuey, conductor"),
+            ("Gustav Mahler", "<i>Adagietto</i> from Symphony No. 5", "Arranged by Jeffrey Grubbs; Gregory Heitzenrater, conductor"),
+            ("Terry Riley", "<i>In C</i>", "Dr. Shuey, conductor, with ASU music faculty and students"),
         ],
-        "links": [("Event details", "events.html#asu-percussion-ensemble-2026-11-03")],
+        "links": [("Watch the full concert", yt("i8DR-wduKIU"))],
         "image": "poster-asupe-2026-11-03",
     },
     {

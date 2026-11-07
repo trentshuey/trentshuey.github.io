@@ -38,9 +38,13 @@ LINKS = {
     "email": "trent.shuey@angelo.edu",
     "office_phone": "325-486-6036",
     "youtube": "https://www.youtube.com/@TrentShuey",
+    "asu_youtube": "https://www.youtube.com/@AngeloStateMusic",
     "instagram": "https://www.instagram.com/drtrentshuey/",
+    "facebook": "https://www.facebook.com/profile.php?id=61579365456659",
     "hikes_youtube": "https://www.youtube.com/@ShueyHikes",
     "soundcloud": "https://soundcloud.com/trentshuey",
+    # DMA recital recordings of the Moersch commissions (SoundCloud album)
+    "soundcloud_dma": "https://soundcloud.com/trentshuey/sets/dma-project",
     "asu_profile": "https://www.angelo.edu/live/profiles/3140-trent-shuey",
     "music_form": "https://www.angelo.edu/departments/visual-performing-arts/music/prospective-music-student-form/",
     "dissertation": "https://hdl.handle.net/2142/106958",
@@ -410,16 +414,33 @@ SOCIAL_ICONS = {
     "youtube": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>',
     "hikes": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 19.5 9 8l3.6 6.2 2.2-3.6 6.7 8.9z" fill="currentColor"/><circle cx="17.5" cy="5.5" r="2" fill="currentColor"/></svg>',
     "soundcloud": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17h9.2a3.3 3.3 0 0 0 .4-6.6A5 5 0 0 0 9 8.6z" fill="currentColor"/><path d="M3 13v4M5.2 11.5V17M7.2 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    "facebook": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21v-7.6h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21z" fill="currentColor"/></svg>',
+    # Angelo State Music: a YouTube frame with an eighth note, so it reads apart from Dr. Shuey's channel
+    "asu": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="11" cy="14.6" rx="2.1" ry="1.6" fill="currentColor"/><path d="M12.9 14.4V8.6c.8 1.2 2.7 1.4 2.7 3.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
 }
+
+# Every profile, in the order the home page cards and footer icons show them.
+SOCIALS = [
+    ("instagram", "Instagram", "@drtrentshuey", "Photos and short videos, from the stage to the trail.", LINKS["instagram"]),
+    ("facebook", "Facebook", "Trent Shuey", "Concert news, photos, and updates.", LINKS["facebook"]),
+    ("youtube", "YouTube", "@TrentShuey", "Concerts, solos, and the ensembles in action.", LINKS["youtube"]),
+    ("asu", "Angelo State Music", "@AngeloStateMusic", "Full ASU concerts, including the Percussion Ensemble and Jazz Ensemble.", LINKS["asu_youtube"]),
+    ("soundcloud", "SoundCloud", "trentshuey", "The DMA recital recordings, plus older jazz and percussion recordings.", LINKS["soundcloud"]),
+    ("hikes", "Shuey Hikes", "@ShueyHikes", "Camping, backpacking, and national park road trips.", LINKS["hikes_youtube"]),
+]
+
+
+def footer_social():
+    """Small icon links for the footer on every page."""
+    items = "".join(
+        f'<li><a class="social-{key}" href="{href}" rel="me noopener" aria-label="{name}" title="{name}">{SOCIAL_ICONS[key]}</a></li>'
+        for key, name, _handle, _note, href in SOCIALS
+    )
+    return f'<ul class="footer-social">{items}</ul>'
 
 
 def social_section():
-    cards = [
-        ("instagram", "Instagram", "@drtrentshuey", "Photos and short videos, from the stage to the trail.", LINKS["instagram"]),
-        ("youtube", "YouTube", "@TrentShuey", "Concerts, solos, and the ensembles in action.", LINKS["youtube"]),
-        ("soundcloud", "SoundCloud", "trentshuey", "Recordings to listen to anywhere.", LINKS["soundcloud"]),
-        ("hikes", "Shuey Hikes", "@ShueyHikes", "Camping, backpacking, and national park road trips.", LINKS["hikes_youtube"]),
-    ]
+    cards = SOCIALS
     items = "".join(
         f'<li><a class="social-card social-{key}" href="{href}" rel="me noopener">'
         f'<span class="social-icon">{SOCIAL_ICONS[key]}</span>'
@@ -493,6 +514,7 @@ LAYOUT = """<!doctype html>
           <p class="footer-name">Trent W. Shuey, D.M.A.</p>
           <p>Assistant Director of Bands and Senior Instructor of Percussion<br>Angelo State University, San Angelo, Texas</p>
           <p><a href="mailto:{email}">{email}</a><br>Office {office_phone}</p>
+          {footersocial}
         </div>
         <div>
           <h2>Students</h2>
@@ -523,9 +545,8 @@ LAYOUT = """<!doctype html>
         <div>
           <h2>Elsewhere</h2>
           <ul>
-            <li><a href="{instagram}">Instagram</a></li>
-            <li><a href="{youtube}">YouTube</a></li>
-            <li><a href="{soundcloud}">SoundCloud</a></li>
+            <li><a href="{asu_youtube}">Angelo State Music on YouTube</a></li>
+            <li><a href="{soundcloud_dma}">DMA recordings on SoundCloud</a></li>
             <li><a href="{asu_profile}">ASU faculty profile</a></li>
             <li><a href="{prefix}cv.html">CV and teaching philosophy</a></li>
           </ul>
@@ -557,6 +578,7 @@ def parse(path):
 
 
 FOOTER_BAND = paint.footer_band()
+FOOTER_SOCIAL = footer_social()
 
 
 def build():
@@ -621,6 +643,7 @@ def build():
             visits=visits,
             verification=verification,
             footerband=FOOTER_BAND,
+            footersocial=FOOTER_SOCIAL,
             **LINKS,
         )
         if "—" in out:

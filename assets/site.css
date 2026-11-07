@@ -1486,3 +1486,23 @@ h2 { margin-bottom: 14px; }
 .rh-flyers { max-width: 820px; }
 .rh-flyers .gallery { columns: 2 240px; }
 @media (max-width: 820px) { .rh-music { margin-top: 32px; } }
+
+/* ---------- Social: Facebook, Angelo State Music, and the footer icons ---------- */
+
+.social-facebook { --accent: var(--cobalt); }
+.social-facebook .social-icon { color: var(--ink); }
+.social-asu { --accent: var(--yellow); }
+.social-asu .social-icon { color: var(--ink); }
+.social-cards { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+@media (max-width: 400px) { .social-cards { grid-template-columns: 1fr; } }
+
+.footer-social { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.footer-grid .footer-social li { margin: 0; }
+.footer-social a {
+  display: grid; place-items: center; width: 42px; height: 42px; color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.85); border-radius: 46% 54% 42% 58% / 55% 44% 56% 45%;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.footer-social a:hover, .footer-social a:focus-visible { background: var(--yellow); border-color: var(--yellow); color: var(--ink); transform: rotate(-6deg); }
+.footer-social svg { width: 22px; height: 22px; }
+@media (prefers-reduced-motion: reduce) { .footer-social a:hover, .footer-social a:focus-visible { transform: none; } }
