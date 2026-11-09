@@ -1530,7 +1530,9 @@ html { scroll-padding-top: 150px; }
 .poster figcaption { margin-top: 8px; font-size: 0.88rem; line-height: 1.35; color: var(--muted); }
 .poster figcaption i { font-style: italic; }
 .posters-kicker { margin: 36px 0 -18px; }
-.posters-kicker + .posters { margin-top: 32px; }
+.posters-kicker + .posters, .posters-kicker + .library, .posters-kicker + .gallery { margin-top: 32px; }
+.story-library { margin-top: 0; }
+.posters + .posters-kicker, .library + .posters-kicker { margin-top: 44px; }
 
 /* ===== Tighter spacing (Oct 2026) =====
    One place for the site's vertical rhythm: less air between bands, headings, and blocks,
