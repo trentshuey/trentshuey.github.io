@@ -171,6 +171,19 @@ def gallery(names, prefix=""):
     return f'<div class="gallery">{items}</div>'
 
 
+def posters(names, prefix=""):
+    """Concert posters as a row of uniform tiles, each with a caption; the poster opens full size."""
+    items = []
+    for n in names:
+        m = IMAGES[n]
+        cap = f'<figcaption>{m["cap"]}</figcaption>' if m.get("cap") else ""
+        items.append(
+            f'<figure class="poster"><a class="gallery-item" href="{prefix}assets/img/{m["file"]}">'
+            f'{img_tag(n, prefix)}</a>{cap}</figure>'
+        )
+    return f'<div class="posters">{"".join(items)}</div>'
+
+
 def video_count():
     return sum(len(items) for _, _, items in VIDEO_SECTIONS)
 
@@ -640,6 +653,8 @@ def build():
                       lambda m: img_tag(m.group(1), prefix, eager=(m.group(2) == "eager")), body)
         body = re.sub(r"\{\{gallery:([\w,-]+)\}\}",
                       lambda m: gallery(m.group(1).split(","), prefix), body)
+        body = re.sub(r"\{\{posters:([\w,-]+)\}\}",
+                      lambda m: posters(m.group(1).split(","), prefix), body)
         for key, value in LINKS.items():
             body = body.replace("{{" + key + "}}", value)
         title = meta["title"]

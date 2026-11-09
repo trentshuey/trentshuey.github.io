@@ -258,6 +258,9 @@ def page():
                 f'<svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M7 4.5v15l13-7.5z"/>'
                 f'<path class="i-stop" d="M6 6h12v12H6z"/></svg><span>Play</span>'
                 f'<span class="visually-hidden"> {html.escape(r["name"])}</span></button></div>'
+                f'<div class="rud-cover"><p>Drawn for your test. Play it from memory, eight times without a mistake, '
+                f'before you look.</p><button class="rud-reveal" type="button">Reveal<span class="visually-hidden"> '
+                f'the notation for {html.escape(r["name"])}</span></button></div>'
                 f'<div class="rud-score">{notation}</div></article>'
             )
         html_parts.append(

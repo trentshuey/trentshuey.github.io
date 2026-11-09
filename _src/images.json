@@ -357,7 +357,7 @@
     "file": "big-spring-concert.jpg",
     "w": 1600,
     "h": 1200,
-    "alt": "Dr. Shuey with two colleagues behind the timpani after the Glass concerto with the Big Spring Symphony, February 2026"
+    "alt": "Dr. Fagner Rocha, Dr. Lisa Rogers, and Dr. Shuey behind the timpani after the Glass concerto with the Big Spring Symphony, February 2026"
   },
   "orchestra-setup-2026": {
     "file": "orchestra-setup-2026.jpg",
@@ -441,13 +441,15 @@
     "file": "poster-asupe-2026-11-03.jpg",
     "w": 864,
     "h": 1080,
-    "alt": "Poster: ASU Percussion Ensemble, Varèse Ionisation, Mahler Adagietto, Riley In C, 7 p.m. Tuesday, Nov. 3, Elta Joyce Murphey Auditorium, free"
+    "alt": "Poster: ASU Percussion Ensemble, Varèse Ionisation, Mahler Adagietto, Riley In C, 7 p.m. Tuesday, Nov. 3, Elta Joyce Murphey Auditorium, free",
+    "cap": "Percussion Ensemble, Var&egrave;se, Mahler and Riley's <i>In C</i>, November 3, 2026"
   },
   "poster-combos-2026-10-31": {
     "file": "poster-combos-2026-10-31.jpg",
     "w": 864,
     "h": 1080,
-    "alt": "Poster: ASU Jazz Combos Halloween concert and jam session, Saturday, Oct. 31, 4 to 6 p.m., free, 123 S. Chadbourne St."
+    "alt": "Poster: ASU Jazz Combos Halloween concert and jam session, Saturday, Oct. 31, 4 to 6 p.m., free, 123 S. Chadbourne St.",
+    "cap": "Jazz Combos Halloween concert and jam at FiFi's, October 31, 2026"
   },
   "poster-combos-2026-10-31-orange": {
     "file": "poster-combos-2026-10-31-orange.jpg",
@@ -567,7 +569,7 @@
     "file": "story-percussion-ensemble-2022.jpg",
     "w": 1340,
     "h": 893,
-    "alt": "Dr. Shuey conducting the ASU Percussion Ensemble, spring 2022"
+    "alt": "Dr. Shuey conducting the ASU Percussion Ensemble in Magic, November 2021"
   },
   "story-jazz-cactus-2022": {
     "file": "story-jazz-cactus-2022.jpg",
@@ -634,5 +636,241 @@
     "w": 1600,
     "h": 1067,
     "alt": "Dr. Shuey on vibraphone with the ASU Jazz Combos under a Bud Light neon sign at The House of FiFi DuBois, September 2026"
+  },
+  "poster-2016-04-14-house-music-raul": {
+    "file": "poster-2016-04-14-house-music-raul.jpg",
+    "w": 1134,
+    "h": 1600,
+    "alt": "Poster: ASU Percussion Ensemble presents House Music, the Story of Raul, Thursday, April 14, 2016, 7:30 p.m., Eldon Black Recital Hall",
+    "cap": "Percussion Ensemble, <i>House Music: The Story of Raul</i>, April 14, 2016"
+  },
+  "poster-2017-01-17-faculty-recital": {
+    "file": "poster-2017-01-17-faculty-recital.jpg",
+    "w": 564,
+    "h": 639,
+    "alt": "Poster: Trent Shuey percussion faculty recital, Tuesday, January 17, 2017, 7:30 p.m., Eldon Black Recital Hall, works by Barati, Lansky, Ling, Friedman, Volans and Kohei",
+    "cap": "Faculty recital, January 17, 2017"
+  },
+  "poster-2017-11-18-day-of-percussion": {
+    "file": "poster-2017-11-18-day-of-percussion.jpg",
+    "w": 1159,
+    "h": 1600,
+    "alt": "Poster: Angelo State University inaugural Day of Percussion, Saturday, November 18, 2017, with guest artist Peter Breithaupt, the Ram Band Drumline, the Percussion Ensemble and ASU music faculty",
+    "cap": "Inaugural ASU Day of Percussion, November 18, 2017"
+  },
+  "poster-2018-04-13-exhilaration": {
+    "file": "poster-2018-04-13-exhilaration.jpg",
+    "w": 1600,
+    "h": 1054,
+    "alt": "Poster: Percussion Ensemble, Trumpet Ensemble and Low Brass Ensemble present Exhilaration, Friday, April 13, 2018, Eldon Black Recital Hall",
+    "cap": "<i>Exhilaration</i> with the Trumpet and Low Brass Ensembles, April 13, 2018"
+  },
+  "poster-2018-10-16-jazz-ensemble": {
+    "file": "poster-2018-10-16-jazz-ensemble.jpg",
+    "w": 695,
+    "h": 900,
+    "alt": "Poster: ASU Jazz Ensemble concert with the Jazz Combos and the ASU Big Band, Tuesday, October 16, 2018, University Auditorium",
+    "cap": "Jazz Ensemble concert, October 16, 2018"
+  },
+  "poster-2018-11-09-percussion-ensemble": {
+    "file": "poster-2018-11-09-percussion-ensemble.jpg",
+    "w": 695,
+    "h": 873,
+    "alt": "Poster: ASU Percussion Ensemble concert, Friday, November 9, 2018, Eldon Black Recital Hall, music by Skidmore, Chavez, Pawassar, Gomez and Green",
+    "cap": "Percussion Ensemble concert, November 9, 2018"
+  },
+  "poster-2018-12-02-jazz-ensemble": {
+    "file": "poster-2018-12-02-jazz-ensemble.jpg",
+    "w": 1229,
+    "h": 1600,
+    "alt": "Poster: ASU Jazz Ensemble concert, December 2, 2018, University Auditorium, featuring Ellington, Mark Taylor, Miles Davis, Bart Howard, Charles Mingus and Alfred James",
+    "cap": "Jazz Ensemble concert, December 2, 2018"
+  },
+  "poster-2019-10-22-big-band": {
+    "file": "poster-2019-10-22-big-band.jpg",
+    "w": 1140,
+    "h": 1600,
+    "alt": "Poster: ASU Big Band, Tuesday, October 22, 2019, ASU Auditorium, music by Horace Silver, Chuck Mangione, Woody Herman, Tower of Power, Don Ellis and Michael League",
+    "cap": "Big Band, October 22, 2019"
+  },
+  "poster-2019-11-11-percussion-ensemble": {
+    "file": "poster-2019-11-11-percussion-ensemble.jpg",
+    "w": 792,
+    "h": 612,
+    "alt": "Poster: ASU Percussion Ensemble concert, Monday, November 11, 2019, ASU Auditorium, music by Reich, Novotney, Rosauro, Yoshioka, Green and Becker",
+    "cap": "Percussion Ensemble concert, November 11, 2019"
+  },
+  "poster-2021-04-22-big-band-blues": {
+    "file": "poster-2021-04-22-big-band-blues.jpg",
+    "w": 1600,
+    "h": 1038,
+    "alt": "Poster: ASU Jazz Ensemble, Big Band Blues, Thursday, April 22, 2021, noon, under the blue canopy outside the University Center",
+    "cap": "Jazz Ensemble, <i>Big Band Blues</i>, April 22, 2021"
+  },
+  "poster-2021-10-26-sammy-nestico": {
+    "file": "poster-2021-10-26-sammy-nestico.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: ASU Big Band concert, a tribute to Sammy Nestico, Tuesday, October 26, 2021, ASU Auditorium",
+    "cap": "Big Band tribute to Sammy Nestico, October 26, 2021"
+  },
+  "poster-2021-11-17-jazz-combo-night": {
+    "file": "poster-2021-11-17-jazz-combo-night.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: the inaugural ASU Jazz Combo Night, Wednesday, November 17, 2021, Back Beat Music Company, San Angelo, with an open jam session after the concert",
+    "cap": "The inaugural Jazz Combo Night at Back Beat Music Company, November 17, 2021"
+  },
+  "poster-2021-11-19-percussion-magic": {
+    "file": "poster-2021-11-19-percussion-magic.jpg",
+    "w": 1600,
+    "h": 1236,
+    "alt": "Poster: ASU Percussion Ensemble presents Magic, Friday, November 19, 2021, University Auditorium, works by Daughtrey, Walker, Green, Rzewski, Udow, Collins, Bach and Akiho",
+    "cap": "Percussion Ensemble, <i>Magic</i>, November 19, 2021"
+  },
+  "poster-2021-12-03-el-mambo": {
+    "file": "poster-2021-12-03-el-mambo.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: ASU Big Band concert, El Mambo!, Friday, December 3, 2021, ASU Auditorium, with the world premiere of El Mambo!",
+    "cap": "Big Band, <i>El Mambo!</i>, December 3, 2021"
+  },
+  "poster-2022-03-09-luke-wingfield": {
+    "file": "poster-2022-03-09-luke-wingfield.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: ASU Big Band concert featuring trumpeter Luke Wingfield, Wednesday, March 9, 2022, ASU Auditorium",
+    "cap": "Big Band with trumpeter Luke Wingfield, March 9, 2022"
+  },
+  "poster-2022-03-22-rides-games-trickery": {
+    "file": "poster-2022-03-22-rides-games-trickery.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: ASU Percussion Ensemble concert, Rides, Games, and Trickery, Tuesday, March 22, 2022, ASU Auditorium",
+    "cap": "Percussion Ensemble, <i>Rides, Games, and Trickery</i>, March 22, 2022"
+  },
+  "poster-2022-03-26-day-of-percussion-fetz": {
+    "file": "poster-2022-03-26-day-of-percussion-fetz.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: ASU Day of Percussion with guest artist Dr. Teun Fetz, Saturday, March 26, 2022, ASU Auditorium, with masterclasses, presentations and a Percussion Ensemble concert",
+    "cap": "Day of Percussion with guest artist Dr. Teun Fetz, March 26, 2022"
+  },
+  "poster-2022-04-06-jazz-night-cactus": {
+    "file": "poster-2022-04-06-jazz-night-cactus.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: Jazz Night at the Cactus featuring the ASU Jazz Combos and ASU Trumpet Ensembles, Wednesday, April 6, 2022, the Cactus Hotel, with a jam session after the concert",
+    "cap": "Jazz Night at the Cactus, April 6, 2022"
+  },
+  "poster-2022-04-21-bein-green": {
+    "file": "poster-2022-04-21-bein-green.jpg",
+    "w": 1035,
+    "h": 1600,
+    "alt": "Poster: ASU Big Band concert, Bein' Green, Thursday, April 21, 2022, 11:30 a.m., outside the Porter Henderson Library",
+    "cap": "Big Band, <i>Bein' Green</i>, April 21, 2022"
+  },
+  "poster-2022-09-29-wonderful-world": {
+    "file": "poster-2022-09-29-wonderful-world.jpg",
+    "w": 1600,
+    "h": 1035,
+    "alt": "Poster: ASU Jazz Ensemble, What a Wonderful World, Thursday, September 29, 2022, Elta Joyce Murphey Auditorium",
+    "cap": "Jazz Ensemble, <i>What a Wonderful World</i>, September 29, 2022"
+  },
+  "poster-2023-02-15-jazz-combo-night": {
+    "file": "poster-2023-02-15-jazz-combo-night.jpg",
+    "w": 1600,
+    "h": 1035,
+    "alt": "Poster: ASU Jazz Combo Night, Wednesday, February 15, 2023, The House of FiFi DuBois, downtown San Angelo, with an open jam session after the concert",
+    "cap": "Jazz Combo Night at The House of FiFi DuBois, February 15, 2023"
+  },
+  "poster-2023-02-17-jazz-ensemble": {
+    "file": "poster-2023-02-17-jazz-ensemble.jpg",
+    "w": 1600,
+    "h": 1035,
+    "alt": "Poster: ASU Jazz Ensemble concert, Friday, February 17, 2023, Elta Joyce Murphey Auditorium",
+    "cap": "Jazz Ensemble concert, February 17, 2023"
+  },
+  "poster-2023-04-26-jazz-combo-night": {
+    "file": "poster-2023-04-26-jazz-combo-night.jpg",
+    "w": 1600,
+    "h": 838,
+    "alt": "Poster: ASU Jazz Combo Night, Wednesday, April 26, 2023, The House of FiFi DuBois, with an open jam session after the concert",
+    "cap": "Jazz Combo Night at FiFi's, April 26, 2023"
+  },
+  "poster-2023-10-25-big-band-blue-buffalo": {
+    "file": "poster-2023-10-25-big-band-blue-buffalo.jpg",
+    "w": 776,
+    "h": 1200,
+    "alt": "Poster: ASU Big Band at the Blue Buffalo Art Gallery, Wednesday, October 25, 2023, San Angelo",
+    "cap": "ASU Big Band at the Blue Buffalo Art Gallery, October 25, 2023"
+  },
+  "poster-2023-10-28-jazz-combo": {
+    "file": "poster-2023-10-28-jazz-combo.jpg",
+    "w": 1200,
+    "h": 628,
+    "alt": "Poster: ASU Jazz Combo concert, Saturday, October 28, 2023, The House of FiFi DuBois, with an open jam session after the concert",
+    "cap": "Jazz Combo concert at FiFi's, October 28, 2023"
+  },
+  "poster-2023-11-18-jazz-combo": {
+    "file": "poster-2023-11-18-jazz-combo.jpg",
+    "w": 1600,
+    "h": 1035,
+    "alt": "Poster: ASU Jazz Combo concert, Saturday, November 18, 2023, The House of FiFi DuBois, with an open jam session after the concert",
+    "cap": "Jazz Combo concert at FiFi's, November 18, 2023"
+  },
+  "poster-2023-11-30-fiesta-latina": {
+    "file": "poster-2023-11-30-fiesta-latina.jpg",
+    "w": 1600,
+    "h": 838,
+    "alt": "Poster: ASU Percussion Ensemble concert, Fiesta Latina, Thursday, November 30, 2023, Eldon Black Recital Hall, with special guest ASU Brass Ensembles",
+    "cap": "Percussion Ensemble, <i>Fiesta Latina</i>, November 30, 2023"
+  },
+  "poster-2023-12-06-swingin-christmas": {
+    "file": "poster-2023-12-06-swingin-christmas.jpg",
+    "w": 1140,
+    "h": 1600,
+    "alt": "Poster: ASU Big Bands, Have a Swingin' Christmas, Wednesday, December 6, 2023, Brooks and Bates Theatre, directed by Dr. Trent Shuey",
+    "cap": "Big Bands, <i>Have a Swingin' Christmas</i>, December 6, 2023"
+  },
+  "poster-2025-09-13-jazz-combo": {
+    "file": "poster-2025-09-13-jazz-combo.jpg",
+    "w": 1236,
+    "h": 1600,
+    "alt": "Poster: ASU Jazz Combo concert and jam session, Saturday, September 13, 2025, 4 to 6 p.m., The House of FiFi DuBois",
+    "cap": "Jazz Combo concert and jam session at FiFi's, September 13, 2025"
+  },
+  "poster-2026-04-07-house-music": {
+    "file": "poster-2026-04-07-house-music.jpg",
+    "w": 861,
+    "h": 1104,
+    "alt": "Poster: ASU Percussion Ensemble presents House Music, Tuesday, April 7, 2026, Elta Joyce Murphey Auditorium",
+    "cap": "Percussion Ensemble, <i>House Music</i>, April 7, 2026"
+  },
+  "poster-2026-09-26-jazz-combo-fifi": {
+    "file": "poster-2026-09-26-jazz-combo-fifi.jpg",
+    "w": 1600,
+    "h": 838,
+    "alt": "Poster: ASU Jazz Combo, Saturday, September 26, 2026, 4 to 6 p.m., The House of FiFi DuBois, the combo at 4 and an open jam at 5",
+    "cap": "Jazz Combo and open jam at FiFi's, September 26, 2026"
+  },
+  "poster-2026-10-13-chick-corea": {
+    "file": "poster-2026-10-13-chick-corea.jpg",
+    "w": 1080,
+    "h": 1080,
+    "alt": "Poster: ASU Jazz Ensemble presents a tribute to Chick Corea, Tuesday, October 13, 2026, Brooks and Bates Theatre, San Angelo Performing Arts Center",
+    "cap": "Jazz Ensemble tribute to Chick Corea, October 13, 2026"
+  },
+  "story-fifi-combo-2025": {
+    "file": "story-fifi-combo-2025.jpg",
+    "w": 1600,
+    "h": 1067,
+    "alt": "An ASU jazz combo under the string lights at The House of FiFi DuBois, the saxophonist soloing over keys, bass, and congas, September 2025"
+  },
+  "story-fifi-jam-2025": {
+    "file": "story-fifi-jam-2025.jpg",
+    "w": 1600,
+    "h": 1067,
+    "alt": "Trumpet, flute, and bass players sitting in at the open jam after the combo concert at The House of FiFi DuBois, September 2025"
   }
 }

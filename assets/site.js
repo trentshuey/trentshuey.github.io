@@ -405,7 +405,7 @@
       var pool = data.map(function (r) { return r.n; });
       var pick = [];
       while (pick.length < 4) pick.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
-      document.querySelectorAll('.rud.is-drawn').forEach(function (c) { c.classList.remove('is-drawn'); });
+      document.querySelectorAll('.rud.is-drawn').forEach(function (c) { c.classList.remove('is-drawn', 'is-covered'); });
       var list = drawn.querySelector('ol');
       list.innerHTML = '';
       pick.forEach(function (n) {
@@ -416,10 +416,29 @@
         li.appendChild(a);
         list.appendChild(li);
         var card = document.getElementById('r' + n);
-        if (card) card.classList.add('is-drawn');
+        if (card) {
+          // Hide the notation and the player, as on the test: play it from memory, then reveal to check
+          card.classList.add('is-drawn', 'is-covered');
+          if (playing && playing.card === card) stop();
+        }
       });
       drawn.hidden = false;
       drawBtn.textContent = 'Draw again';
+    });
+
+    // Reveal one drawn rudiment, or all four at once
+    document.addEventListener('click', function (e) {
+      var one = e.target.closest('.rud-reveal');
+      if (one) {
+        var card = one.closest('.rud');
+        card.classList.remove('is-covered');
+        var play = card.querySelector('.rud-play');
+        if (play && !play.hidden) play.focus();
+        return;
+      }
+      if (e.target.closest('.rud-reveal-all')) {
+        document.querySelectorAll('.rud.is-covered').forEach(function (c) { c.classList.remove('is-covered'); });
+      }
     });
   })();
 
