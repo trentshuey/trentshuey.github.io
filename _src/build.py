@@ -63,6 +63,7 @@ SITE_VERIFICATION = ""
 
 NAV = [
     ("about", "About", "about.html"),
+    ("story", "Story", "story.html"),
     ("percussion", "Percussion", "percussion.html"),
     ("jazz", "Jazz", "jazz.html"),
     ("performances", "Performances", "performances.html"),
@@ -539,6 +540,7 @@ LAYOUT = """<!doctype html>
         <div>
           <h2>More</h2>
           <ul>
+            <li><a href="{prefix}story.html">The story so far</a></li>
             <li><a href="{prefix}events.html">Events</a></li>
             <li><a href="{prefix}jam.html">Jam sessions</a></li>
             <li><a href="{prefix}programs.html">Concert programs</a></li>
