@@ -26,6 +26,7 @@ from events import EVENTS  # noqa: E402
 from programs import PROGRAMS  # noqa: E402
 import rudiments_render  # noqa: E402
 import scales_render  # noqa: E402
+import modes_render  # noqa: E402
 import jam  # noqa: E402
 import paint  # noqa: E402
 
@@ -530,6 +531,7 @@ LAYOUT = """<!doctype html>
             <li><a href="{prefix}handbook.html">Studio handbook</a></li>
             <li><a href="{prefix}rudiments.html">Rudiments</a></li>
             <li><a href="{prefix}scales.html">Scales and arpeggios</a></li>
+            <li><a href="{prefix}modes.html">Modes</a></li>
             <li><a href="{prefix}percussion.html#lessons">Private lessons</a></li>
             <li><a href="{prefix}studio.html">Studio info</a></li>
             <li><a href="{prefix}auditions.html">Auditions</a></li>
@@ -629,6 +631,9 @@ def build():
             .replace("{{scales_data}}", scales_render.data_script() if "{{scales_data}}" in body else "")
             .replace("{{scale_keys_major}}", scales_render.key_buttons("major") if "{{scale_keys_major}}" in body else "")
             .replace("{{scale_keys_minor}}", scales_render.key_buttons("minor") if "{{scale_keys_minor}}" in body else "")
+            .replace("{{modes_data}}", modes_render.data_script() if "{{modes_data}}" in body else "")
+            .replace("{{mode_tonics}}", modes_render.tonic_buttons() if "{{mode_tonics}}" in body else "")
+            .replace("{{mode_rows}}", modes_render.mode_rows() if "{{mode_rows}}" in body else "")
         )
         body = re.sub(r"\{\{video:([\w-]{11})\}\}", lambda m: video_figure(m.group(1)), body)
         body = re.sub(r"\{\{img:([\w-]+)(?:\|(\w+))?\}\}",

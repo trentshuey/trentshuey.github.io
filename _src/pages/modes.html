@@ -1,0 +1,117 @@
+<!--
+title: Modes
+description: William Moersch's mode exercise for marimba, interactive: the eight modes in order of alteration, in every key, with notation and playback at any tempo, from one octave to the full twelve-level version.
+nav: students
+-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Modes</h1>
+        <p class="page-intro">The eight modes in the order William Moersch teaches them: by how far each one bends away from the major scale. Pick a tonic, choose a step of the exercise, and press play to hear it at your tempo while the notes light up.</p>
+        {{keys}}
+      </div>
+    </header>
+
+    <div class="rud-controls sc-controls" hidden>
+      <div class="wrap rud-controls-inner">
+        <p class="sc-now" aria-live="polite"><span class="mo-now">C, one mode at a time</span><span class="mo-now-level"></span></p>
+        <button class="btn btn-dark mo-play-all" type="button" aria-pressed="false"><span>Play</span></button>
+        <div class="rud-tempo">
+          <label for="mo-bpm">Tempo <output id="mo-bpm-out" for="mo-bpm">80</output> bpm</label>
+          <input id="mo-bpm" type="range" min="40" max="160" step="2" value="80" list="mo-bpm-marks">
+          <datalist id="mo-bpm-marks"><option value="120" label="Goal"></option></datalist>
+        </div>
+        <label class="check rud-opt"><input id="mo-click" type="checkbox" checked> Metronome</label>
+        <label class="check rud-opt"><input id="mo-loop" type="checkbox"> Loop</label>
+      </div>
+    </div>
+
+    <section class="band band-tight band-white" id="modes">
+      <div class="wrap">
+        <div class="sc-intro mo-intro">
+          <div>
+            <p>Most books list the modes in white-key order, Ionian on C, Dorian on D, and so on, each with its own pattern of whole and half steps. Prof. Moersch orders them instead by their <b>degree of alteration from the major scale</b>, and adds one synthetic mode, Lydian ♭7, to make an even eight.</p>
+            <p>Start from the major scale with nothing changed. Lydian raises one note, the fourth. From there the modes grow flatter one note at a time: Mixolydian lowers the seventh, Dorian the third as well, Aeolian the sixth, Phrygian the second, and Locrian the fifth, until five of the seven notes are lowered. Heard in this order the scale bends slightly sharp, comes back, and then darkens step by step.</p>
+          </div>
+          <div>
+            <p>Everything on this page keeps that progression in view: <span class="mo-swatch sharp">raised notes are gold</span> and <span class="mo-swatch">lowered notes are blue</span>, in the grid, in the labels, and in the notation itself. Each pitch level carries the key signature of its tonic's major scale, so the accidentals you see are exactly the alterations Moersch describes.</p>
+            <p class="muted small">The exercise is from his handout <i>Modes (Version 3.0)</i> for the percussion studio at the University of Illinois, where Dr. Shuey studied with him. One octave is written in quarter notes, two in eighth notes, three in eighth-note triplets, so every scale takes seven beats; the lowest notes are written under <i>8vb</i> and the highest under <i>8va</i>. Set the metronome to quarter notes.</p>
+          </div>
+        </div>
+
+        <div class="sc-pick mo-pick">
+          <div>
+            <p class="mo-pick-label" id="mo-tonic-label">Tonic</p>
+            <nav class="sc-keys" aria-labelledby="mo-tonic-label">{{mode_tonics}}</nav>
+          </div>
+          <div class="mo-pick-row">
+            <div>
+              <p class="mo-pick-label" id="mo-stage-label">Step</p>
+              <div class="sc-mode mo-stage" role="group" aria-labelledby="mo-stage-label">
+                <button type="button" data-stage="single" aria-pressed="true"><span class="mo-step">1</span>One mode at a time</button>
+                <button type="button" data-stage="chain" aria-pressed="false"><span class="mo-step">2</span>All modes together</button>
+                <button type="button" data-stage="levels" aria-pressed="false"><span class="mo-step">3</span>All modes, twelve keys</button>
+                <button type="button" data-stage="full" aria-pressed="false"><span class="mo-step">4</span>Full version</button>
+              </div>
+            </div>
+            <div>
+              <p class="mo-pick-label" id="mo-oct-label">Octaves</p>
+              <div class="sc-mode mo-oct" role="group" aria-labelledby="mo-oct-label">
+                <button type="button" data-oct="1" aria-pressed="true">1</button>
+                <button type="button" data-oct="2" aria-pressed="false">2</button>
+                <button type="button" data-oct="3" aria-pressed="false">3</button>
+              </div>
+            </div>
+            <div>
+              <p class="mo-pick-label" id="mo-spell-label">Spelling</p>
+              <div class="sc-mode mo-spell" role="group" aria-labelledby="mo-spell-label">
+                <button type="button" data-spell="alt" aria-pressed="true">Alterations</button>
+                <button type="button" data-spell="simple" aria-pressed="false">Simplest</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mo-ladder">
+          <h2 class="mo-ladder-title">The eight modes, one alteration at a time</h2>
+          <p class="mo-ladder-sub">Read down the grid: one raised note, then the lowered notes pile up until Locrian has five.</p>
+          <div class="mo-table-wrap">
+            <table class="table mo-table">
+              <caption class="visually-hidden">The eight modes in order of alteration, with the scale degrees that change and their notes in the chosen tonic</caption>
+              <thead><tr><th scope="col">Mode</th><th scope="col">Scale degrees, altered from major</th><th scope="col" class="mo-notes-head">Notes in <span class="mo-tonic-name">C</span></th><th scope="col"><span class="visually-hidden">Listen</span></th></tr></thead>
+              <tbody>{{mode_rows}}</tbody>
+            </table>
+          </div>
+        </div>
+
+        <noscript><p class="sc-noscript">The notation and playback need JavaScript. The order of the modes is in the table above: Ionian, Lydian, Lydian ♭7, Mixolydian, Dorian, Aeolian, Phrygian, Locrian.</p></noscript>
+
+        <div class="sc-sheet mo-sheet">
+          <div class="sc-title-row">
+            <div>
+              <h2 class="sc-title"><span class="mo-title">One mode at a time</span></h2>
+              <p class="mo-how"></p>
+            </div>
+            <button class="btn btn-dark mo-play-all" type="button" aria-pressed="false" hidden><span>Play</span></button>
+          </div>
+          <p class="mo-range muted small"></p>
+          <div class="sc-sections mo-sections"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-dark">
+      <div class="wrap split">
+        <div>
+          <div class="section-head">
+            <h2>The four steps</h2>
+            <p>Begin slowly, within a single octave, going up and down in the same mode before changing to the next. Then, still within a single octave, go up in one mode and down in the next, all eight modes together. Then transpose that up by half steps until all twelve pitch levels have been completed. The full version links everything without a pause: the descending Locrian stops on its ♭2 and strikes it twice, and that second strike is the new tonic, a half step up, so the whole cycle begins again. The goal is to start on C, in eighth-note triplets, three octaves, at quarter note = 120, and eventually to start on any lower-register pitch.</p>
+          </div>
+          <div class="actions">
+            <a class="btn btn-light" href="scales.html">Scales and arpeggios</a>
+            <a class="btn btn-outline-light" href="rudiments.html">Rudiments</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{{modes_data}}
+    <script src="assets/modes.js" defer></script>
