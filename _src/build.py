@@ -546,6 +546,7 @@ LAYOUT = """<!doctype html>
             <li><a href="{prefix}scales.html">Scales and arpeggios</a></li>
             <li><a href="{prefix}modes.html">Modes</a></li>
             <li><a href="{prefix}polyrhythm.html">Polyrhythm</a></li>
+            <li><a href="{prefix}polyrhythm-lab.html">Polyrhythm Lab</a></li>
             <li><a href="{prefix}percussion.html#lessons">Private lessons</a></li>
             <li><a href="{prefix}studio.html">Studio info</a></li>
             <li><a href="{prefix}auditions.html">Auditions</a></li>
