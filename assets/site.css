@@ -1743,6 +1743,30 @@ h2 { margin-bottom: 14px; }
   .po-card { box-shadow: none; }
 }
 
+/* Polyrhythm: the levels and rates reference tables */
+.po-ref { margin: 0 0 52px; min-width: 0; }
+.po-ref h3 { font-size: clamp(1.35rem, 2.2vw, 1.7rem); margin: 0 0 8px; }
+.po-ref > p { max-width: 74ch; margin: 0 0 18px; }
+.po-ref-table { background: var(--white); border: 2px solid var(--ink); border-radius: var(--organic-sm); border-collapse: separate; border-spacing: 0; overflow: hidden; }
+.po-ref-table th, .po-ref-table td { padding: 9px 16px; }
+.po-ref-table th.num, .po-ref-table td.num { padding-left: 16px; padding-right: 16px; }
+.po-ref-table thead th { background: var(--paper); padding-top: 12px; padding-bottom: 10px; vertical-align: bottom; }
+.po-ref-table tbody tr:last-child th, .po-ref-table tbody tr:last-child td { border-bottom: 0; }
+.po-ref-table tbody th { font-weight: 700; white-space: nowrap; }
+.po-ref-table tbody th.num { font-weight: 760; }
+.po-ref-table .po-swatch { width: 14px; height: 14px; vertical-align: -1px; }
+.po-swatch.g { background: var(--green); border-color: #2F6B14; }
+.po-ref-table tr.po-hit th, .po-ref-table tr.po-hit td { background: #EEF3FC; font-weight: 700; }
+.po-ref-table tr.po-ghost th, .po-ref-table tr.po-ghost td { color: var(--muted); font-style: italic; }
+.po-ref-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; align-items: start; }
+.po-ref-pair .po-ref-table th, .po-ref-pair .po-ref-table td { padding: 8px 10px; white-space: nowrap; }
+.po-ref-pair .po-ref-table { font-size: 0.98rem; }
+.po-ref-download { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: -8px; }
+.po-ref-download .actions { margin: 0; }
+.po-ref-download p { margin: 0; max-width: 56ch; }
+@media (max-width: 1000px) { .po-ref-pair { grid-template-columns: 1fr; } }
+@media print { .po-ref-download { display: none; } .po-ref { break-inside: avoid; } }
+
 /* Polyrhythm Lab (polyrhythm-lab.html). Shares the bubble and notation styles of the Polyrhythm page above. */
 .lab-app[hidden] { display: none; }
 .lab-presets { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }

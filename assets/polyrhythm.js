@@ -62,7 +62,8 @@
   var MINI5 = [0, 1, 2, 3, 4].map(function (i) {
     var real = i === 1 || i === 4;
     return ev(60 + 6 * i, 6, i === 4 ? 'ht' : 'lb', 'u', {
-      key: i === 1 ? 'u2' : i === 4 ? 'u3' : 'g' + i, label: String(i + 1), vel: real ? 0.95 : 0.34, soft: !real
+      key: i === 1 ? 'u2' : i === 4 ? 'u3' : 'g' + i, label: String(i + 1), vel: real ? 0.95 : 0.34, soft: !real,
+      beams: 4          // five in the time of four sixty-fourths
     });
   });
   var TRIPLET = LOWER.slice(2, 5);
@@ -509,6 +510,8 @@
     });
     rows.end.textContent = ms(120);
     unitOut.textContent = ms(1);
+    // the reference tables further down the page
+    document.querySelectorAll('[data-po-ms]').forEach(function (el) { el.textContent = ms(parseFloat(el.getAttribute('data-po-ms'))); });
   }
 
   /* ---------- Sound ---------- */
