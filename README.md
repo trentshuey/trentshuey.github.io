@@ -17,6 +17,7 @@ Website of Dr. Trent W. Shuey, percussionist and educator at Angelo State Univer
 - **Concert programs:** `_src/programs.py`, newest first. Printed programs (PDF) go in `assets/docs/programs/`.
 - **Rudiments:** `_src/rudiments.json` holds the notation for all 40 PAS rudiments; `_src/rudiments_render.py` draws it and `assets/site.js` plays it.
 - **Scales and Modes:** `_src/scales.json` holds the skills test pattern and `assets/scales.js` draws and plays it; `_src/modes_render.py` holds the eight modes and the twelve tonics of Moersch's mode exercise and `assets/modes.js` draws and plays every stage of it. Both share the Bravura symbols in `_src/scales_glyphs.json`.
+- **Polyrhythm:** `assets/polyrhythm.js` holds one beat of Xenakis's *Rebonds a* (measure 21, beat 1), counted in ninetieths of a dotted eighth, along with the eight practice steps and their wording; it draws the notation and the bubbles and plays them. The page text is `_src/pages/polyrhythm.html`.
 - **Ram Horns:** dates and the game schedule are in `_src/pages/ram-horns.html`, with the audition dates repeated on `_src/pages/auditions.html`. The audition music link is `ram_horns_music` in `_src/build.py`.
 - **Studio handbook:** the web version is `_src/pages/handbook.html`; the PDF is `assets/docs/asu-percussion-studio-handbook.pdf`.
 - **Visitor count:** set `GOATCOUNTER_CODE` in `_src/build.py` once the GoatCounter account exists.

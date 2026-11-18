@@ -1,0 +1,142 @@
+<!--
+title: Polyrhythm
+description: One beat of Xenakis's Rebonds a, taken apart: five against three with a triplet inside, shown in notation and as bubbles, with playback at any tempo and eight steps for learning it.
+nav: students
+-->
+    <header class="page-head">
+      <div class="wrap">
+        <h1>Polyrhythm</h1>
+        <p class="page-intro">One beat of Xenakis, taken apart. Measure 21 of <i>Rebonds a</i> sets five against three and hides a triplet in the middle. Press play, watch every stroke land as a bubble, and build the beat back up one layer at a time.</p>
+        {{keys}}
+      </div>
+    </header>
+
+    <div class="rud-controls sc-controls po-controls" hidden>
+      <div class="wrap rud-controls-inner">
+        <p class="sc-now" aria-live="polite"><span class="po-now">The whole beat</span></p>
+        <button class="btn btn-dark po-play" type="button" aria-pressed="false"><span>Play</span></button>
+        <div class="rud-tempo">
+          <label for="po-bpm">Tempo <output id="po-bpm-out" for="po-bpm">40</output> bpm</label>
+          <input id="po-bpm" type="range" min="8" max="60" step="1" value="40" list="po-bpm-marks">
+          <datalist id="po-bpm-marks"><option value="20" label="Half"></option><option value="40" label="Printed"></option></datalist>
+        </div>
+        <label class="check rud-opt"><input id="po-click" type="checkbox" checked> Sixteenth click</label>
+        <label class="check rud-opt"><input id="po-trade" type="checkbox"> Take turns</label>
+      </div>
+    </div>
+
+    <section class="band band-tight band-white" id="polyrhythm">
+      <div class="wrap">
+        <div class="sc-intro po-intro">
+          <div>
+            <p>The first beat of measure 21 is one of the knots in <i>Rebonds a</i>. After a single sixteenth on the high bongo, two voices share the rest of the beat. The upper voice plays <b>five even notes in the time of three sixteenths</b>. Under it, the lower voice plays those same three sixteenths as <b>two notes, a triplet, and two notes</b>.</p>
+            <p>That is eleven attacks in about a second at the printed tempo, and the space between them changes every single time. The way in is to stop hearing eleven attacks and start hearing three sixteenths, each with its own small shape.</p>
+          </div>
+          <div>
+            <p><b>Each bubble is as wide as its note is long.</b> Five equal bubbles sit on the line; two, three, and two hang under it, and the two rows fill the same space. Wherever two bubbles meet, a stroke lands. Tap any bubble to hear its drum.</p>
+            <p class="muted small">Work through the eight steps in order, slowly, and come back to the first one often. <b>Take turns</b> plays the beat, then leaves the same space for you to play it back. Upper notes sound slightly to the right and lower notes slightly to the left, so headphones help.</p>
+          </div>
+        </div>
+
+        <noscript><p class="sc-noscript">The notation, bubbles, and playback need JavaScript. In words: after one sixteenth on the high bongo, the upper voice plays five even notes across three sixteenths while the lower voice plays two thirty-seconds, a thirty-second triplet, and two thirty-seconds.</p></noscript>
+
+        <div class="po-app" hidden>
+          <div class="po-steps" role="group" aria-label="Steps"></div>
+
+          <div class="po-card">
+            <div class="po-card-head">
+              <div class="po-card-text">
+                <p class="kicker po-count">Step 1 of 8</p>
+                <h2 class="po-title">The whole beat</h2>
+                <p class="po-text"></p>
+                <p class="po-cue"></p>
+              </div>
+              <div class="po-card-actions">
+                <button class="btn btn-dark po-play" type="button" aria-pressed="false"><span>Play</span></button>
+                <button class="btn btn-outline-dark po-next" type="button">Next step</button>
+              </div>
+            </div>
+
+            <div class="po-stage"></div>
+
+            <div class="po-tools">
+              <fieldset class="po-voices">
+                <legend class="mo-pick-label">Voices</legend>
+                <label class="check"><input id="po-up" type="checkbox" checked> <span class="po-swatch u"></span>Upper: five</label>
+                <label class="check"><input id="po-low" type="checkbox" checked> <span class="po-swatch l"></span>Lower: two, three, two</label>
+              </fieldset>
+              <div>
+                <p class="mo-pick-label" id="po-sound-label">Sound</p>
+                <div class="sc-mode po-sound" role="group" aria-labelledby="po-sound-label">
+                  <button type="button" data-sound="drums" aria-pressed="true">Drums</button>
+                  <button type="button" data-sound="two" aria-pressed="false">Two blocks</button>
+                  <button type="button" data-sound="one" aria-pressed="false">One block</button>
+                </div>
+              </div>
+              <p class="po-turn" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="po-below">
+            <div>
+              <h2 class="po-h">The drums in this beat</h2>
+              <p class="muted small"><i>Rebonds a</i> is for seven skins: two bongos, three tom-toms, and two bass drums, tuned over a very wide range. Six of them play here; the low bass drum sits this beat out. Tap one to hear it.</p>
+              <ul class="po-kit"></ul>
+            </div>
+            <div>
+              <h2 class="po-h">Every stroke, in order</h2>
+              <p class="muted small">Units are ninetieths of the dotted eighth, counted from where the five begins. Times are from the start of the beat at the tempo you have set, where one unit is <output class="po-unit" for="po-bpm">12.5 ms</output>.</p>
+              <div class="table-wrap">
+                <table class="table po-table">
+                  <caption class="visually-hidden">Every stroke in the beat, in order: its voice, its drum, where it falls, and how long until the next one</caption>
+                  <thead><tr><th scope="col">Voice</th><th scope="col">Drum</th><th scope="col" class="num">Unit</th><th scope="col" class="num">Time</th><th scope="col" class="num">Then wait</th></tr></thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How the beat is built</h2>
+          <p>Four ideas hold the whole thing together. Each one is a step on the page above.</p>
+        </div>
+        <div class="po-how">
+          <div>
+            <h3>Five against three</h3>
+            <p>Count each sixteenth in five, and the upper voice takes every third count: 1 and 4, then 2 and 5, then 3. That is the whole polyrhythm. The lower voice only fills in around it.</p>
+          </div>
+          <div>
+            <h3>Two, three, two</h3>
+            <p>The lower voice keeps the three sixteenths in plain sight: two thirty-seconds, a thirty-second triplet, two thirty-seconds. The first note of each group is one sixteenth of the frame.</p>
+          </div>
+          <div>
+            <h3>Why ninety</h3>
+            <p>The five cuts the dotted eighth into fifths. The lower voice cuts it into sixths and ninths. The smallest ruler that holds all three has 90 marks, so every stroke here is counted in ninetieths. At quarter note = 40, one mark is 12.5 milliseconds.</p>
+          </div>
+          <div>
+            <h3>The mirror</h3>
+            <p>The beat reads the same in both directions. The first sixteenth has a flam led by the lower voice, the third has a flam led by the upper voice, and the middle sixteenth is its own mirror. Learn the first half well and you already know the second.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Now put it back in the piece</h2>
+          <p>One beat is a study, not a performance. Play measure 21 from your own score, at a tempo where the five stays even, and let the beats on either side tell you where it sits. <i>Rebonds</i> (1987&ndash;89) by Iannis Xenakis is published by &Eacute;ditions Salabert; this page quotes a single beat for study.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-light" href="rudiments.html">Practice the rudiments</a>
+          <a class="btn btn-outline-light" href="modes.html">Practice the modes</a>
+          <a class="btn btn-outline-light" href="resources.html">Studio resources</a>
+        </div>
+      </div>
+    </section>
+    <script src="assets/polyrhythm.js" defer></script>
